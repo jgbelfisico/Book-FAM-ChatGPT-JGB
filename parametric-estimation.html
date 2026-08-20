@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 - Parametric Estimation | Fundamentals of Actuarial Mathematics</title>
+  <meta name="description" content="3 - Parametric Estimation | Fundamentals of Actuarial Mathematics" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 - Parametric Estimation | Fundamentals of Actuarial Mathematics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 - Parametric Estimation | Fundamentals of Actuarial Mathematics" />
+  
+  
+  
+
+<meta name="author" content="John Rodríguez" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="severity-frequency-and-aggregate-models.html"/>
+<link rel="next" href="introduction-to-credibility.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="estilo.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html"><i class="fa fa-check"></i>1 - Short-Term Insurance and Reinsurance Coverages</a>
+<ul>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#coverage-modifications-and-reinsurance"><i class="fa fa-check"></i>1.1 - Coverage Modifications and Reinsurance</a>
+<ul>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-siniestro-original-no-es-la-p%C3%A9rdida-final-de-la-aseguradora"><i class="fa fa-check"></i>1.1.1 El siniestro original no es la pérdida final de la aseguradora</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-deducible-el-l%C3%ADmite-de-cobertura-y-el-coaseguro-esculpen-el-pago-bruto"><i class="fa fa-check"></i>1.1.2 El deducible, el límite de cobertura y el coaseguro esculpen el pago bruto</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-factor-de-eliminaci%C3%B3n-de-p%C3%A9rdidas-ler-mide-d%C3%B3lares-de-siniestro-no-cantidad-de-reclamaciones"><i class="fa fa-check"></i>1.1.3 El factor de eliminación de pérdidas (LER) mide dólares de siniestro, no cantidad de reclamaciones</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#los-deducibles-nominales-fijos-distorsionan-la-transmisi%C3%B3n-de-la-inflaci%C3%B3n"><i class="fa fa-check"></i>1.1.4 Los deducibles nominales fijos distorsionan la transmisión de la inflación</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-reaseguro-no-reduce-la-deuda-con-el-asegurado-redistribuye-el-costo-de-los-pagos"><i class="fa fa-check"></i>1.1.5 El reaseguro no reduce la deuda con el asegurado: redistribuye el costo de los pagos</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#quota-share-y-exceso-de-p%C3%A9rdida-reestructuran-el-perfil-de-riesgo-retenido-de-formas-opuestas"><i class="fa fa-check"></i>1.1.6 Quota Share y Exceso de Pérdida reestructuran el perfil de riesgo retenido de formas opuestas</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#la-tarificaci%C3%B3n-y-la-constituci%C3%B3n-de-reservas-exigen-definir-si-la-base-es-bruta-o-neta"><i class="fa fa-check"></i>1.1.7 La tarificación y la constitución de reservas exigen definir si la base es bruta o neta</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#cierre-y-puente-final"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#ejercicios"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html"><i class="fa fa-check"></i>2 - Severity, Frequency, and Aggregate Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#basics"><i class="fa fa-check"></i>2.1 - Basics</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-media-de-18000-d%C3%B3lares-puede-ocultar-casi-toda-la-historia"><i class="fa fa-check"></i>2.1.1 Una media de 18,000 dólares puede ocultar casi toda la historia</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-probabilidad-acumulada-y-la-supervivencia-describen-los-umbrales-del-contrato"><i class="fa fa-check"></i>2.1.2 La probabilidad acumulada y la supervivencia describen los umbrales del contrato</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-intervalo-mide-el-evento-y-la-probabilidad-condicional-cambia-el-denominador"><i class="fa fa-check"></i>2.1.3 El intervalo mide el evento y la probabilidad condicional cambia el denominador</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-percentiles-marcan-fronteras-pero-no-describen-el-riesgo-de-cola"><i class="fa fa-check"></i>2.1.4 Los percentiles marcan fronteras pero no describen el riesgo de cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-momentos-resumen-la-forma-de-la-incertidumbre-en-unidades-f%C3%ADsicas-y-cuadr%C3%A1ticas"><i class="fa fa-check"></i>2.1.5 Los momentos resumen la forma de la incertidumbre en unidades físicas y cuadráticas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-observado-en-el-mundo-no-es-la-distribuci%C3%B3n-te%C3%B3rica-del-actuario"><i class="fa fa-check"></i>2.1.6 El valor observado en el mundo no es la distribución teórica del actuario</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-1"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#severity-models"><i class="fa fa-check"></i>2.2 - Severity Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-candidatos-que-comparten-la-media-pueden-esconder-colas-opuestas"><i class="fa fa-check"></i>2.2.1 Dos candidatos que comparten la media pueden esconder colas opuestas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-escala-expande-la-dimensi%C3%B3n-monetaria-sin-alterar-la-forma-relativa"><i class="fa fa-check"></i>2.2.2 El parámetro de escala expande la dimensión monetaria sin alterar la forma relativa</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-forma-esculpe-la-asimetr%C3%ADa-y-el-espesor-de-la-cola"><i class="fa fa-check"></i>2.2.3 El parámetro de forma esculpe la asimetría y el espesor de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#lognormal-y-lomax-revelan-la-divergencia-invisible-en-la-cola-extrema"><i class="fa fa-check"></i>2.2.4 Lognormal y Lomax revelan la divergencia invisible en la cola extrema</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#las-familias-de-distribuciones-se-entrelazan-mediante-transformaciones-y-l%C3%ADmites"><i class="fa fa-check"></i>2.2.5 Las familias de distribuciones se entrelazan mediante transformaciones y límites</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-2"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#severity-models-with-coverage-modifications"><i class="fa fa-check"></i>2.3 - Severity Models with Coverage Modifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-promedios-correctos-revelan-que-el-denominador-determina-el-significado-del-pago"><i class="fa fa-check"></i>2.3.1 Dos promedios correctos revelan que el denominador determina el significado del pago</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-deducible-acumula-masa-en-el-cero-y-desplaza-los-pagos-positivos"><i class="fa fa-check"></i>2.3.2 El deducible acumula masa en el cero y desplaza los pagos positivos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-factor-de-eliminaci%C3%B3n-de-p%C3%A9rdidas-mide-d%C3%B3lares-no-conteos-de-siniestros"><i class="fa fa-check"></i>2.3.3 El factor de eliminación de pérdidas mide dólares, no conteos de siniestros</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-l%C3%ADmite-trunca-la-cola-extrema-y-crea-un-punto-de-acumulaci%C3%B3n-contractual"><i class="fa fa-check"></i>2.3.4 El límite trunca la cola extrema y crea un punto de acumulación contractual</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-l%C3%ADmites-incrementados-dependen-del-comportamiento-asint%C3%B3tico-de-la-cola"><i class="fa fa-check"></i>2.3.5 Los límites incrementados dependen del comportamiento asintótico de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-inflaci%C3%B3n-interact%C3%BAa-de-forma-no-lineal-con-los-umbrales-nominales-fijos"><i class="fa fa-check"></i>2.3.6 La inflación interactúa de forma no lineal con los umbrales nominales fijos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-3"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#frequency-models"><i class="fa fa-check"></i>2.4 - Frequency Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-frecuencia-media-de-0.060-no-decide-cu%C3%A1ntos-claims-veremos"><i class="fa fa-check"></i>2.4.1 Una frecuencia media de 0.060 no decide cuántos claims veremos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-clase-ab0-unifica-las-distribuciones-discretas-mediante-su-relaci%C3%B3n-recursiva"><i class="fa fa-check"></i>2.4.2 La clase <span class="math inline">\((a,b,0)\)</span> unifica las distribuciones discretas mediante su relación recursiva</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#poisson-binomial-y-binomial-negativa-representan-tres-estructuras-de-dispersi%C3%B3n-distintas"><i class="fa fa-check"></i>2.4.3 Poisson, Binomial y Binomial Negativa representan tres estructuras de dispersión distintas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-clase-ab1-flexibiliza-el-origen-para-modelar-ceros-modificados-o-truncados"><i class="fa fa-check"></i>2.4.4 La clase <span class="math inline">\((a,b,1)\)</span> flexibiliza el origen para modelar ceros modificados o truncados</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-selecci%C3%B3n-del-modelo-de-frecuencia-exige-interrogar-la-naturaleza-del-proceso"><i class="fa fa-check"></i>2.4.5 La selección del modelo de frecuencia exige interrogar la naturaleza del proceso</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-4"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#aggregate-models"><i class="fa fa-check"></i>2.5 - Aggregate Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-cartera-no-paga-el-presupuesto-esperado-el-costo-anual-es-una-suma-aleatoria"><i class="fa fa-check"></i>2.5.1 La cartera no paga el presupuesto esperado: el costo anual es una suma aleatoria</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-fuentes-de-incertidumbre-componen-la-volatilidad-agregada-de-la-cartera"><i class="fa fa-check"></i>2.5.2 Dos fuentes de incertidumbre componen la volatilidad agregada de la cartera</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-misma-media-agregada-puede-esconder-perfiles-de-riesgo-y-volatilidades-incompatibles"><i class="fa fa-check"></i>2.5.3 Una misma media agregada puede esconder perfiles de riesgo y volatilidades incompatibles</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-modelo-de-riesgo-individual-expone-el-aporte-espec%C3%ADfico-de-cada-exposici%C3%B3n"><i class="fa fa-check"></i>2.5.4 El modelo de riesgo individual expone el aporte específico de cada exposición</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-aproximaci%C3%B3n-normal-impone-simetr%C3%ADa-pero-simplifica-el-c%C3%A1lculo-del-centro"><i class="fa fa-check"></i>2.5.5 La aproximación Normal impone simetría pero simplifica el cálculo del centro</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-aproximaci%C3%B3n-lognormal-respeta-la-naturaleza-no-negativa-y-asim%C3%A9trica-de-las-p%C3%A9rdidas"><i class="fa fa-check"></i>2.5.6 La aproximación Lognormal respeta la naturaleza no negativa y asimétrica de las pérdidas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-momentos-id%C3%A9nticos-no-determinan-la-cola-de-la-distribuci%C3%B3n-agregada"><i class="fa fa-check"></i>2.5.7 Dos momentos idénticos no determinan la cola de la distribución agregada</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-5"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#risk-measures"><i class="fa fa-check"></i>2.6 - Risk Measures</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-percentil-define-la-frontera-de-la-cola-pero-ignora-lo-que-ocurre-dentro-de-ella"><i class="fa fa-check"></i>2.6.1 El percentil define la frontera de la cola pero ignora lo que ocurre dentro de ella</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-en-riesgo-de-cola-integra-la-severidad-promedio-de-los-escenarios-extremos"><i class="fa fa-check"></i>2.6.2 El Valor en Riesgo de Cola integra la severidad promedio de los escenarios extremos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#lognormal-y-lomax-revelan-por-qu%C3%A9-el-umbral-de-entrada-no-determina-el-costo-de-la-cola"><i class="fa fa-check"></i>2.6.3 Lognormal y Lomax revelan por qué el umbral de entrada no determina el costo de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#las-propiedades-deseables-exigen-un-comportamiento-l%C3%B3gico-de-la-medida-de-riesgo"><i class="fa fa-check"></i>2.6.4 Las propiedades deseables exigen un comportamiento lógico de la medida de riesgo</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-en-riesgo-puede-fallar-la-subaditividad"><i class="fa fa-check"></i>2.6.5 El Valor en Riesgo puede fallar la subaditividad</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-cola-determina-qu%C3%A9-momentos-existen-y-qu%C3%A9-c%C3%A1lculos-siguen-siendo-v%C3%A1lidos"><i class="fa fa-check"></i>2.6.6 El parámetro de cola determina qué momentos existen y qué cálculos siguen siendo válidos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#un-percentil-finito-puede-convivir-con-un-tvar-infinito"><i class="fa fa-check"></i>2.6.7 Un percentil finito puede convivir con un TVaR infinito</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-6"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html"><i class="fa fa-check"></i>3 - Parametric Estimation</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#section-3.1---maximum-likelihood-estimators"><i class="fa fa-check"></i>Section 3.1 - Maximum Likelihood Estimators</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-verosimilitud-mide-la-compatibilidad-de-los-par%C3%A1metros-con-los-datos-que-alcanzamos-a-observar"><i class="fa fa-check"></i>3.1.1 La verosimilitud mide la compatibilidad de los parámetros con los datos que alcanzamos a observar</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-logaritmo-convierte-la-acumulaci%C3%B3n-multiplicativa-en-una-suma-anal%C3%ADticamente-manejable"><i class="fa fa-check"></i>3.1.2 El logaritmo convierte la acumulación multiplicativa en una suma analíticamente manejable</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-volumen-de-exposici%C3%B3n-define-la-escala-de-la-verosimilitud-de-frecuencia"><i class="fa fa-check"></i>3.1.3 El volumen de exposición define la escala de la verosimilitud de frecuencia</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#las-carteras-agregadas-exigen-distinguir-entre-observar-componentes-y-observar-%C3%BAnicamente-el-total"><i class="fa fa-check"></i>3.1.4 Las carteras agregadas exigen distinguir entre observar componentes y observar únicamente el total</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#agrupar-datos-destruye-la-precisi%C3%B3n-individual-pero-conserva-la-estructura-del-intervalo"><i class="fa fa-check"></i>3.1.5 Agrupar datos destruye la precisión individual pero conserva la estructura del intervalo</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-truncamiento-condicional-cambia-la-distribuci%C3%B3n-de-las-observaciones-que-alcanzan-la-muestra"><i class="fa fa-check"></i>3.1.6 El truncamiento condicional cambia la distribución de las observaciones que alcanzan la muestra</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-censura-preserva-la-existencia-de-la-observaci%C3%B3n-pero-limita-el-conocimiento-de-su-magnitud"><i class="fa fa-check"></i>3.1.7 La censura preserva la existencia de la observación pero limita el conocimiento de su magnitud</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-contribuci%C3%B3n-a-la-likelihood-depende-del-evento-que-realmente-qued%C3%B3-registrado"><i class="fa fa-check"></i>3.1.8 La contribución a la likelihood depende del evento que realmente quedó registrado</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-1---datos-completos-de-severity-y-frequency"><i class="fa fa-check"></i>Ejercicio 1 - Datos completos de severity y frequency</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-2---datos-agrupados-de-severity"><i class="fa fa-check"></i>Ejercicio 2 - Datos agrupados de severity</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-3---truncation-y-censoring"><i class="fa fa-check"></i>Ejercicio 3 - Truncation y censoring</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#cierre-y-puente-final-7"><i class="fa fa-check"></i>Cierre y puente final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html"><i class="fa fa-check"></i>4 - Introduction to Credibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#section-4.1---classical-credibility"><i class="fa fa-check"></i>Section 4.1 - Classical Credibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-especificidad-del-dato-propio-no-garantiza-la-estabilidad-de-su-promedio"><i class="fa fa-check"></i>4.1.1 La especificidad del dato propio no garantiza la estabilidad de su promedio</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-factor-de-credibilidad-es-una-ponderaci%C3%B3n-de-evidencia-no-una-probabilidad-de-certeza"><i class="fa fa-check"></i>4.1.2 El factor de credibilidad es una ponderación de evidencia, no una probabilidad de certeza</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-est%C3%A1ndar-de-fluctuaci%C3%B3n-limitada-exige-acotar-el-error-de-la-cola-con-alta-probabilidad"><i class="fa fa-check"></i>4.1.3 El estándar de fluctuación limitada exige acotar el error de la cola con alta probabilidad</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-ra%C3%ADz-cuadrada-de-la-exposici%C3%B3n-rescata-el-valor-informativo-de-las-muestras-peque%C3%B1as"><i class="fa fa-check"></i>4.1.4 La raíz cuadrada de la exposición rescata el valor informativo de las muestras pequeñas</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-estimaci%C3%B3n-ponderada-devuelve-el-precio-hacia-el-centro-de-gravedad-de-la-cartera"><i class="fa fa-check"></i>4.1.5 La estimación ponderada devuelve el precio hacia el centro de gravedad de la cartera</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-est%C3%A1ndar-pertenece-a-la-variable-de-riesgo-y-no-se-transfiere-de-forma-autom%C3%A1tica"><i class="fa fa-check"></i>4.1.6 El estándar pertenece a la variable de riesgo y no se transfiere de forma automática</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#cierre-y-puente-final-8"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html"><i class="fa fa-check"></i>5 - Pricing and Reserving for Short-Term Insurance Coverages</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.1---loss-reserving-expected-loss-ratio-chain-ladder-y-bornhuetter-ferguson"><i class="fa fa-check"></i>Section 5.1 - Loss Reserving: Expected Loss Ratio, Chain-Ladder y Bornhuetter-Ferguson</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-costo-%C3%BAltimo-de-un-a%C3%B1o-de-accidentes-no-es-la-cifra-que-hoy-registra-la-diagonal"><i class="fa fa-check"></i>5.1.1 El costo último de un año de accidentes no es la cifra que hoy registra la diagonal</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-esperada-se-aferra-a-la-expectativa-previa-e-ignora-la-inmadurez-de-la-diagonal"><i class="fa fa-check"></i>5.1.2 El método de Razón de Siniestralidad Esperada se aferra a la expectativa previa e ignora la inmadurez de la diagonal</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-chain-ladder-cree-en-la-inercia-de-la-siniestralidad-emergente-para-proyectar-su-escala-final"><i class="fa fa-check"></i>5.1.3 El método Chain-Ladder cree en la inercia de la siniestralidad emergente para proyectar su escala final</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-bornhuetter-ferguson-aplica-el-priori-%C3%BAnicamente-a-la-porci%C3%B3n-de-desarrollo-pendiente"><i class="fa fa-check"></i>5.1.4 El método Bornhuetter-Ferguson aplica el priori únicamente a la porción de desarrollo pendiente</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-los-m%C3%A9todos-se-revela-ante-perturbaciones-en-los-datos-o-en-el-priori"><i class="fa fa-check"></i>5.1.5 La asimetría de los métodos se revela ante perturbaciones en los datos o en el priori</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-9"><i class="fa fa-check"></i>Cierre y puente final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.2---data-preparation-for-ratemaking"><i class="fa fa-check"></i>Section 5.2 - Data Preparation for Ratemaking</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ratio-de-siniestralidad-crudo-es-una-ilusi%C3%B3n-temporal-y-operativa"><i class="fa fa-check"></i>5.2.1 El ratio de siniestralidad crudo es una ilusión temporal y operativa</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ajuste-por-desarrollo-traduce-la-inmadurez-de-la-diagonal-en-escala-%C3%BAltima"><i class="fa fa-check"></i>5.2.2 El ajuste por desarrollo traduce la inmadurez de la diagonal en escala última</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-tendencia-de-costo-proyecta-la-severidad-y-frecuencia-hacia-el-futuro-econ%C3%B3mico"><i class="fa fa-check"></i>5.2.3 La tendencia de costo proyecta la severidad y frecuencia hacia el futuro económico</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-premium-on-leveling-reconstruye-los-ingresos-bajo-la-estructura-tarifaria-actual"><i class="fa fa-check"></i>5.2.4 La premium on-leveling reconstruye los ingresos bajo la estructura tarifaria actual</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-de-gastos-fijos-y-variables-proh%C3%ADbe-el-recargo-porcentual-simple"><i class="fa fa-check"></i>5.2.5 La estructura de gastos fijos y variables prohíbe el recargo porcentual simple</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-intuici%C3%B3n-que-falla---el-recargo-porcentual-simple-subfinancia-la-operaci%C3%B3n"><i class="fa fa-check"></i>La intuición que falla - El recargo porcentual simple subfinancia la operación</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-10"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.3---ratemaking-loss-cost-and-loss-ratio-methods"><i class="fa fa-check"></i>Section 5.3 - Ratemaking: Loss Cost and Loss Ratio Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-costo-de-siniestralidad-calcula-el-financiamiento-directo-por-exposici%C3%B3n"><i class="fa fa-check"></i>5.3.1 El método de Costo de Siniestralidad calcula el financiamiento directo por exposición</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-traduce-la-necesidad-en-ratios-de-prima-actual"><i class="fa fa-check"></i>5.3.2 El método de Razón de Siniestralidad traduce la necesidad en ratios de prima actual</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#dos-m%C3%A9todos-un-solo-balance-la-reconciliaci%C3%B3n-algebraica-perfecta"><i class="fa fa-check"></i>5.3.3 Dos métodos, un solo balance: la reconciliación algebraica perfecta</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-las-indicaciones-se-revela-ante-shocks-en-el-entorno-de-suscripci%C3%B3n"><i class="fa fa-check"></i>5.3.4 La asimetría de las indicaciones se revela ante shocks en el entorno de suscripción</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-t%C3%A9cnica-de-la-tarifa-requiere-transparencia-en-la-composici%C3%B3n-de-cada-d%C3%B3lar"><i class="fa fa-check"></i>5.3.5 La estructura técnica de la tarifa requiere transparencia en la composición de cada dólar</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-de-paradigm-shift-tr%C3%A1nsito-a-part-6"><i class="fa fa-check"></i>Cierre y Puente de Paradigm Shift (Tránsito a Part 6)</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-1---determinaci%C3%B3n-de-la-tarifa-t%C3%A9cnica-mediante-el-loss-cost-method"><i class="fa fa-check"></i>Ejercicio 1 - Determinación de la Tarifa Técnica mediante el Loss Cost Method</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-2---reconstrucci%C3%B3n-de-tarifas-mediante-el-loss-ratio-method"><i class="fa fa-check"></i>Ejercicio 2 - Reconstrucción de Tarifas mediante el Loss Ratio Method</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-3---auditor%C3%ADa-de-una-discrepancia-entre-m%C3%A9todos"><i class="fa fa-check"></i>Ejercicio 3 - Auditoría de una discrepancia entre métodos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html"><i class="fa fa-check"></i>6 - Option Pricing Fundamentals</a>
+<ul>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#section-6.1---introduction-to-options"><i class="fa fa-check"></i>Section 6.1 - Introduction to Options</a>
+<ul>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-compra-define-un-derecho-asim%C3%A9trico-a-adquirir-sin-obligaci%C3%B3n"><i class="fa fa-check"></i>6.1.1 La opción de compra define un derecho asimétrico a adquirir sin obligación</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-venta-define-un-derecho-asim%C3%A9trico-a-vender-para-proteger-la-ca%C3%ADda"><i class="fa fa-check"></i>6.1.2 La opción de venta define un derecho asimétrico a vender para proteger la caída</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#el-tiempo-separa-la-prima-pagada-hoy-del-pago-contingente-recibido-ma%C3%B1ana"><i class="fa fa-check"></i>6.1.3 El tiempo separa la prima pagada hoy del pago contingente recibido mañana</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#tenedor-frente-a-emisor-la-transferencia-sim%C3%A9trica-de-suma-cero"><i class="fa fa-check"></i>6.1.4 Tenedor frente a emisor: la transferencia simétrica de suma cero</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#estar-in-the-money-define-viabilidad-de-ejercicio-no-rentabilidad-final"><i class="fa fa-check"></i>6.1.5 Estar <em>in-the-money</em> define viabilidad de ejercicio, no rentabilidad final</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-venta-como-cobertura-el-portafolio-protector"><i class="fa fa-check"></i>6.1.6 La opción de venta como cobertura: el portafolio protector</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#cierre-y-puente-hacia-section-6.2"><i class="fa fa-check"></i>Cierre y puente hacia Section 6.2</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fundamentals of Actuarial Mathematics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="parametric-estimation" class="section level1 hasAnchor">
+<h1>3 - Parametric Estimation<a href="parametric-estimation.html#parametric-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="section-3.1---maximum-likelihood-estimators" class="section level2 hasAnchor">
+<h2>Section 3.1 - Maximum Likelihood Estimators<a href="parametric-estimation.html#section-3.1---maximum-likelihood-estimators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><em>La verosimilitud describe lo que observamos, no lo que ocurrió fuera de nuestra vista</em></p>
+</blockquote>
+<div id="la-verosimilitud-mide-la-compatibilidad-de-los-parámetros-con-los-datos-que-alcanzamos-a-observar" class="section level3 hasAnchor">
+<h3>3.1.1 La verosimilitud mide la compatibilidad de los parámetros con los datos que alcanzamos a observar<a href="parametric-estimation.html#la-verosimilitud-mide-la-compatibilidad-de-los-par%C3%A1metros-con-los-datos-que-alcanzamos-a-observar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En la práctica de la modelación actuarial de seguros de daños, disponer de una familia paramétrica candidata -como la Lognormal o la Lomax estudiadas en la Part 2 para representar severidades- es solo el primer paso del modelado de pérdidas. El verdadero desafío analítico consiste en calibrar los parámetros específicos, como <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(\alpha\)</span> o <span class="math inline">\(\theta\)</span>, que gobiernan la distribución. En los capítulos previos, estos parámetros eran tratados como cantidades conocidas para poder estudiar las consecuencias de cada modelo. Sin embargo, una aseguradora real observa datos, no parámetros.</p>
+<p>Para ilustrar este conflicto de estimación, consideremos la experiencia de severidad de Meridiano Seguros. Si la actuaria de Pricing, <strong>Lucía</strong>, decide ajustar un modelo para las pérdidas individuales, de inmediato se enfrenta a una pregunta fundamental de control formulada por la actuaria jefa, <strong>Irene</strong>:</p>
+<p><em>«¿Con qué datos vas a calibrar el modelo, Lucía? ¿Dispones de los importes ground-up completos, de payments, de buckets o de claims cuyo importe quedó capped en el sistema?»</em></p>
+<p>La pregunta es más importante de lo que parece. Una condición contractual puede transformar el payment, pero que esa transformación produzca truncation o censoring en el dataset depende de lo que el sistema de observación conserve. Un deductible no elimina por sí solo la existencia de una ground-up loss del archivo si la compañía sigue registrándola; un policy limit tampoco censura automáticamente el ground-up amount si ese importe continúa disponible. La inferencia debe construirse desde la información que efectivamente llegó al archivo utilizado por el actuario.</p>
+<p>Para un modelo continuo, una observación exacta <span class="math inline">\(X=x\)</span> aporta una density <span class="math inline">\(f_X(x;\theta)\)</span>. Para observaciones independientes <span class="math inline">\(x_1,\ldots,x_n\)</span>, la función de verosimilitud es</p>
+<p><span class="math display">\[
+\mathcal{L}(\theta;\mathbf{x})
+=
+\prod_{i=1}^{n} f_X(x_i;\theta).
+\]</span></p>
+<p>Para un modelo discreto, la contribución correspondiente es una probability mass. Si <span class="math inline">\(N_i=n_i\)</span> y su PMF es <span class="math inline">\(p_N(n;\theta)\)</span>,</p>
+<p><span class="math display">\[
+\mathcal{L}(\theta;\mathbf{n})
+=
+\prod_{i=1}^{n} p_N(n_i;\theta).
+\]</span></p>
+<p>En ambos casos, los datos permanecen fijos y la función se estudia como función del parámetro.</p>
+<p>La verosimilitud <span class="math inline">\(\mathcal{L}(\theta;\mathbf{x})\)</span> <strong>no representa la probabilidad de que <span class="math inline">\(\theta\)</span> sea el verdadero parámetro</strong>. En el marco frecuentista utilizado aquí, <span class="math inline">\(\theta\)</span> es una constante fija pero desconocida. La verosimilitud permite comparar qué valores del parámetro hacen más compatible el registro observado con el modelo especificado.</p>
+<p>Esto conduce a la pregunta que gobernará toda la sección:</p>
+<p><strong>¿Qué valores de los parámetros hacen que los datos que realmente observamos sean más compatibles con el modelo elegido?</strong></p>
+<p>Antes de construir cualquier likelihood, el actuario debe poder responder cuatro preguntas:</p>
+<ol style="list-style-type: decimal">
+<li><p>¿Qué variable estamos modelando?</p></li>
+<li><p>¿Qué se observa exactamente?</p></li>
+<li><p>¿Qué observaciones pueden faltar por diseño?</p></li>
+<li><p>¿Qué valores pueden estar solo parcialmente observados?</p></li>
+</ol>
+<p>Si alguna de esas respuestas cambia, la likelihood puede cambiar aunque las cifras visibles parezcan las mismas.</p>
+</div>
+<div id="el-logaritmo-convierte-la-acumulación-multiplicativa-en-una-suma-analíticamente-manejable" class="section level3 hasAnchor">
+<h3>3.1.2 El logaritmo convierte la acumulación multiplicativa en una suma analíticamente manejable<a href="parametric-estimation.html#el-logaritmo-convierte-la-acumulaci%C3%B3n-multiplicativa-en-una-suma-anal%C3%ADticamente-manejable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La función de verosimilitud suele construirse como un producto de muchas contribuciones. Para muestras grandes, ese producto puede alcanzar magnitudes numéricamente extremas y resultar poco cómodo tanto para el cálculo analítico como para la optimización computacional. La transformación logarítmica resuelve ambos problemas sin cambiar el parámetro que maximiza la función.</p>
+<p>Como el logaritmo natural es estrictamente creciente,</p>
+<p><span class="math display">\[
+\arg\max_{\theta}\mathcal{L}(\theta;\mathbf{x})
+=
+\arg\max_{\theta}\ell(\theta),
+\]</span></p>
+<p>donde</p>
+<p><span class="math display">\[
+\ell(\theta)
+=
+\ln\mathcal{L}(\theta;\mathbf{x}).
+\]</span></p>
+<p>Para observaciones continuas independientes,</p>
+<p><span class="math display">\[
+\ell(\theta)
+=
+\ln\left(
+\prod_{i=1}^{n}f_X(x_i;\theta)
+\right)
+=
+\sum_{i=1}^{n}\ln f_X(x_i;\theta).
+\]</span></p>
+<p>La transformación cambia productos por sumas, pero no crea un estimador diferente.</p>
+<p>Consideremos ahora la muestra pedagógica completa de severidad de Meridiano, expresada en miles de USD:</p>
+<p><span class="math display">\[
+\mathbf{x}
+=
+\{4,6,8,10,12,14,18,24,36,48\}.
+\]</span></p>
+<p>Tenemos</p>
+<p><span class="math display">\[
+n=10,
+\]</span></p>
+<p><span class="math display">\[
+\sum_{i=1}^{10}x_i=180,
+\]</span></p>
+<p>y por tanto</p>
+<p><span class="math display">\[
+\bar{x}=18\text{ mil USD}.
+\]</span></p>
+<p>Supongamos que, para este ejercicio de estimación, se ha elegido un modelo Exponencial parametrizado por su media:</p>
+<p><span class="math display">\[
+X\sim Exponential(\theta),
+\qquad
+\theta&gt;0,
+\]</span></p>
+<p>con density</p>
+<p><span class="math display">\[
+f_X(x;\theta)
+=
+\frac{1}{\theta}e^{-x/\theta},
+\qquad
+x&gt;0.
+\]</span></p>
+<p>Aquí</p>
+<p><span class="math display">\[
+E[X]=\theta.
+\]</span></p>
+<p><strong>Desafío al lector:</strong> la muestra tiene media empírica de <span class="math inline">\(18\)</span> mil USD. ¿Debe coincidir necesariamente con la MLE de <span class="math inline">\(\theta\)</span>, o hay que demostrarlo desde la likelihood?</p>
+<p>Bajo independencia,</p>
+<p><span class="math display">\[
+\mathcal{L}(\theta;\mathbf{x})
+=
+\prod_{i=1}^{10}
+\frac{1}{\theta}e^{-x_i/\theta}
+=
+\theta^{-10}
+\exp\left(
+-\frac{\sum_{i=1}^{10}x_i}{\theta}
+\right).
+\]</span></p>
+<p>La log-verosimilitud es</p>
+<p><span class="math display">\[
+\ell(\theta)
+=
+-10\ln\theta
+-
+\frac{180}{\theta}.
+\]</span></p>
+<p>La ecuación de score es</p>
+<p><span class="math display">\[
+\ell&#39;(\theta)
+=
+-\frac{10}{\theta}
++
+\frac{180}{\theta^2}.
+\]</span></p>
+<p>Igualando a cero,</p>
+<p><span class="math display">\[
+-\frac{10}{\theta}
++
+\frac{180}{\theta^2}
+=
+0,
+\]</span></p>
+<p><span class="math display">\[
+10\theta=180,
+\]</span></p>
+<p>y por tanto</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{MLE}
+=
+18\text{ mil USD}
+}.
+\]</span></p>
+<p>Es decir,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{MLE}
+=
+18{,}000\text{ USD}
+}.
+\]</span></p>
+<p>Sin embargo, resolver <span class="math inline">\(\ell&#39;(\theta)=0\)</span> solo produce un candidato. Hay que comprobar que realmente maximiza la función sobre el espacio <span class="math inline">\(\theta&gt;0\)</span>.</p>
+<p>Podemos escribir</p>
+<p><span class="math display">\[
+\ell&#39;(\theta)
+=
+\frac{180-10\theta}{\theta^2}.
+\]</span></p>
+<p>Como <span class="math inline">\(\theta^2&gt;0\)</span> para todo <span class="math inline">\(\theta&gt;0\)</span>,</p>
+<p><span class="math display">\[
+\ell&#39;(\theta)&gt;0
+\qquad
+\text{si }
+0&lt;\theta&lt;18,
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+\ell&#39;(\theta)&lt;0
+\qquad
+\text{si }
+\theta&gt;18.
+\]</span></p>
+<p>Por tanto, la log-verosimilitud aumenta hasta <span class="math inline">\(\theta=18\)</span> y disminuye después de ese punto. Esto demuestra que <span class="math inline">\(\hat{\theta}=18\)</span> es el máximo global único en el espacio de parámetros.</p>
+<p>La segunda derivada es</p>
+<p><span class="math display">\[
+\ell&#39;&#39;(\theta)
+=
+\frac{10}{\theta^2}
+-
+\frac{360}{\theta^3}.
+\]</span></p>
+<p>Evaluada en el punto crítico,</p>
+<p><span class="math display">\[
+\ell&#39;&#39;(18)
+=
+\frac{10}{18^2}
+-
+\frac{360}{18^3}
+=
+-\frac{10}{324}
+\approx
+-0.03086&lt;0.
+\]</span></p>
+<p>Esta comprobación confirma que el punto crítico es localmente un máximo; la unicidad global proviene del cambio de signo del score sobre <span class="math inline">\(\theta&gt;0\)</span>, no de afirmar que <span class="math inline">\(\ell&#39;&#39;(\theta)\)</span> sea negativa para todos los valores posibles de <span class="math inline">\(\theta\)</span>.</p>
+<p>La interpretación también debe mantenerse disciplinada. No hemos descubierto que la verdadera media poblacional sea <span class="math inline">\(18{,}000\)</span> USD. Hemos demostrado que, <strong>bajo el modelo Exponencial y para esta muestra individual completa</strong>, la máxima verosimilitud se alcanza en</p>
+<p><span class="math display">\[
+\hat{\theta}=18{,}000\text{ USD}.
+\]</span></p>
+<p>Tampoco hemos demostrado que la Exponencial sea una buena representación de la severidad de Meridiano. La máxima verosimilitud responde a una pregunta condicional:</p>
+<p><strong>dentro de esta familia, ¿qué parámetro hace más compatibles los datos observados?</strong></p>
+<p>La adecuación de la familia es otra pregunta.</p>
+</div>
+<div id="el-volumen-de-exposición-define-la-escala-de-la-verosimilitud-de-frecuencia" class="section level3 hasAnchor">
+<h3>3.1.3 El volumen de exposición define la escala de la verosimilitud de frecuencia<a href="parametric-estimation.html#el-volumen-de-exposici%C3%B3n-define-la-escala-de-la-verosimilitud-de-frecuencia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El mismo principio se aplica a variables discretas. Consideremos ahora la frecuencia de Meridiano Seguros durante <span class="math inline">\(2024\)</span>:</p>
+<p><span class="math display">\[
+12{,}000\text{ policy-years},
+\]</span></p>
+<p>con</p>
+<p><span class="math display">\[
+720\text{ ground-up claims}.
+\]</span></p>
+<p>Sea <span class="math inline">\(N_i\)</span> el número de claims correspondiente al policy-year <span class="math inline">\(i\)</span>. Bajo el modelo simplificado</p>
+<p><span class="math display">\[
+N_i\sim Poisson(\lambda),
+\]</span></p>
+<p>con observaciones independientes y una misma tasa <span class="math inline">\(\lambda\)</span> por policy-year,</p>
+<p><span class="math display">\[
+P(N_i=n_i)
+=
+e^{-\lambda}
+\frac{\lambda^{n_i}}{n_i!}.
+\]</span></p>
+<p>La verosimilitud completa es</p>
+<p><span class="math display">\[
+\mathcal{L}(\lambda;\mathbf{n})
+=
+\prod_{i=1}^{12{,}000}
+e^{-\lambda}
+\frac{\lambda^{n_i}}{n_i!}.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\mathcal{L}(\lambda;\mathbf{n})
+=
+e^{-12{,}000\lambda}
+\frac{
+\lambda^{\sum_i n_i}
+}{
+\prod_i n_i!
+}.
+\]</span></p>
+<p>La log-verosimilitud es</p>
+<p><span class="math display">\[
+\ell(\lambda)
+=
+-12{,}000\lambda
++
+\left(\sum_i n_i\right)\ln\lambda
+-
+\sum_i\ln(n_i!).
+\]</span></p>
+<p>El último término depende de los datos, pero no de <span class="math inline">\(\lambda\)</span>. Su derivada respecto del parámetro es cero.</p>
+<p>Como</p>
+<p><span class="math display">\[
+\sum_i n_i=720,
+\]</span></p>
+<p>la ecuación de score es</p>
+<p><span class="math display">\[
+\ell&#39;(\lambda)
+=
+-12{,}000
++
+\frac{720}{\lambda}
+=
+0.
+\]</span></p>
+<p>Así,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\lambda}_{MLE}
+=
+\frac{720}{12{,}000}
+=
+0.060\text{ claims por policy-year}
+}.
+\]</span></p>
+<p>La MLE coincide con la frecuencia media empírica.</p>
+<p>Existe aquí una diferencia importante entre <strong>agrupar valores discretos exactos</strong> y agrupar una variable continua en intervalos. La tabla canónica de frequency de Meridiano es</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Claims por policy-year <span class="math inline">\(k\)</span></th>
+<th align="right">Policy-years <span class="math inline">\(m_k\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><span class="math inline">\(0\)</span></td>
+<td align="right"><span class="math inline">\(11{,}325\)</span></td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(1\)</span></td>
+<td align="right"><span class="math inline">\(635\)</span></td>
+</tr>
+<tr class="odd">
+<td align="right"><span class="math inline">\(2\)</span></td>
+<td align="right"><span class="math inline">\(35\)</span></td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(3\)</span></td>
+<td align="right"><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="odd">
+<td align="right"><strong>Total</strong></td>
+<td align="right"><strong><span class="math inline">\(12{,}000\)</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Desafío al lector:</strong> si el archivo contiene esta tabla en lugar de los <span class="math inline">\(12{,}000\)</span> registros individuales, ¿hemos perdido la información necesaria para estimar <span class="math inline">\(\lambda\)</span> por máxima verosimilitud?</p>
+<p>No, porque cada categoría identifica todavía el valor discreto exacto de <span class="math inline">\(N\)</span>. La likelihood puede escribirse, salvo un coeficiente combinatorio independiente de <span class="math inline">\(\lambda\)</span>, como</p>
+<p><span class="math display">\[
+\mathcal{L}(\lambda)
+\propto
+\prod_{k=0}^{3}
+\left[
+e^{-\lambda}\frac{\lambda^k}{k!}
+\right]^{m_k}.
+\]</span></p>
+<p>El exponente total de <span class="math inline">\(e^{-\lambda}\)</span> es</p>
+<p><span class="math display">\[
+11{,}325+635+35+5
+=
+12{,}000,
+\]</span></p>
+<p>mientras que el exponente total de <span class="math inline">\(\lambda\)</span> es</p>
+<p><span class="math display">\[
+0(11{,}325)+1(635)+2(35)+3(5)
+=
+720.
+\]</span></p>
+<p>Por tanto, la parte de la log-verosimilitud que depende de <span class="math inline">\(\lambda\)</span> vuelve a ser</p>
+<p><span class="math display">\[
+\ell(\lambda)
+=
+-12{,}000\lambda
++
+720\ln\lambda
++
+\text{constante},
+\]</span></p>
+<p>y produce nuevamente</p>
+<p><span class="math display">\[
+\hat{\lambda}=0.060.
+\]</span></p>
+<p>Aquí la tabla de frecuencias conserva los counts de cada valor discreto exacto. Esto es distinto de observar únicamente que una severidad cayó dentro de un intervalo amplio, donde el importe exacto sí desaparece.</p>
+<p>La distribución observada de <span class="math inline">\(N\)</span> tiene media empírica</p>
+<p><span class="math display">\[
+0.060
+\]</span></p>
+<p>y varianza poblacional empírica aproximadamente</p>
+<p><span class="math display">\[
+0.06473.
+\]</span></p>
+<p>Su ratio es</p>
+<p><span class="math display">\[
+\frac{0.06473}{0.060}
+\approx
+1.0789.
+\]</span></p>
+<p>La pequeña discrepancia respecto de la igualdad teórica <span class="math inline">\(E[N]=Var(N)=\lambda\)</span> genera una pregunta sobre el modelo, pero no un veredicto automático. La muestra no tiene por qué reproducir exactamente los momentos teóricos. Poisson puede mantenerse como modelo candidato para este ejercicio de estimación, pero una MLE correctamente calculada no demuestra por sí sola que el modelo sea adecuado.</p>
+</div>
+<div id="las-carteras-agregadas-exigen-distinguir-entre-observar-componentes-y-observar-únicamente-el-total" class="section level3 hasAnchor">
+<h3>3.1.4 Las carteras agregadas exigen distinguir entre observar componentes y observar únicamente el total<a href="parametric-estimation.html#las-carteras-agregadas-exigen-distinguir-entre-observar-componentes-y-observar-%C3%BAnicamente-el-total" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En la Part 2 construimos una pérdida agregada <span class="math inline">\(S\)</span> a partir de frequency y severity. Al estimar parámetros, la primera pregunta vuelve a ser: <strong>¿qué información observamos?</strong></p>
+<p>Supongamos primero que la aseguradora conserva tanto el count <span class="math inline">\(N\)</span> como las severidades individuales <span class="math inline">\(X_1,\ldots,X_N\)</span>. Bajo los supuestos de independencia utilizados en el modelo, la información permite construir separadamente las likelihoods de frequency y severity:</p>
+<p><span class="math display">\[
+\mathcal{L}(\boldsymbol{\theta}_N,\boldsymbol{\theta}_X)
+=
+\mathcal{L}_N(\boldsymbol{\theta}_N)
+\mathcal{L}_X(\boldsymbol{\theta}_X).
+\]</span></p>
+<p>Esto permite estimar directamente parámetros de ambos componentes.</p>
+<p>Pero puede ocurrir que el actuario reciba únicamente totales agregados anuales</p>
+<p><span class="math display">\[
+S_1,S_2,\ldots,S_m,
+\]</span></p>
+<p>sin conservar el detalle de cuántos claims formaron cada total ni sus severidades individuales. Entonces la likelihood debe construirse desde la distribución marginal de <span class="math inline">\(S\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{L}(\boldsymbol{\vartheta};\mathbf{s})
+=
+\prod_{j=1}^{m}
+g_S(s_j;\boldsymbol{\vartheta}),
+\]</span></p>
+<p>cuando <span class="math inline">\(S\)</span> se modela como continua con density <span class="math inline">\(g_S\)</span>.</p>
+<p><strong>Desafío al lector:</strong> si solo observamos <span class="math inline">\(S\)</span>, ¿podemos tratar ese total como si también hubiéramos observado los valores de <span class="math inline">\(N\)</span> y de cada <span class="math inline">\(X_i\)</span> que lo produjeron?</p>
+<p>No. Un mismo aggregate total puede surgir de diferentes combinaciones de frecuencia y severidad. Observar solo <span class="math inline">\(S\)</span> contiene menos información sobre los componentes que observar simultáneamente <span class="math inline">\(N\)</span> y los <span class="math inline">\(X_i\)</span>.</p>
+<p>Para ilustrar la estimación directa de una aggregate distribution, utilizamos el caso pedagógico local de cinco totales anuales, expresados en millones de USD:</p>
+<p><span class="math display">\[
+\mathbf{s}
+=
+\{11.8,12.4,13.0,13.2,14.4\}.
+\]</span></p>
+<p>Supongamos</p>
+<p><span class="math display">\[
+S_j\sim Normal(\mu_S,\sigma_S^2),
+\]</span></p>
+<p>independientemente, con</p>
+<p><span class="math display">\[
+\sigma_S^2&gt;0.
+\]</span></p>
+<p>La log-verosimilitud, omitiendo constantes que no dependen de los parámetros, es</p>
+<p><span class="math display">\[
+\ell(\mu_S,\sigma_S^2)
+=
+-\frac{5}{2}\ln(\sigma_S^2)
+-
+\frac{1}{2\sigma_S^2}
+\sum_{j=1}^{5}(s_j-\mu_S)^2
++
+\text{constante}.
+\]</span></p>
+<p>La MLE de la media es</p>
+<p><span class="math display">\[
+\hat{\mu}_S
+=
+\bar{S}
+=
+\frac{11.8+12.4+13.0+13.2+14.4}{5}
+=
+\boxed{
+12.96\text{ millones USD}
+}.
+\]</span></p>
+<p>Para la varianza,</p>
+<p><span class="math display">\[
+\hat{\sigma}_S^2
+=
+\frac{1}{5}
+\sum_{j=1}^{5}
+(s_j-\bar{S})^2.
+\]</span></p>
+<p>Los residuos respecto de <span class="math inline">\(12.96\)</span> son</p>
+<p><span class="math display">\[
+-1.16,\quad
+-0.56,\quad
+0.04,\quad
+0.24,\quad
+1.44.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\sum_{j=1}^{5}
+(s_j-\bar{S})^2
+=
+1.3456+0.3136+0.0016+0.0576+2.0736
+=
+3.792.
+\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\sigma}_S^2
+=
+\frac{3.792}{5}
+=
+0.7584\text{ (millones USD)}^2
+}.
+\]</span></p>
+<p>Y</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\sigma}_S
+=
+\sqrt{0.7584}
+\approx
+0.8709\text{ millones USD}
+}.
+\]</span></p>
+<p>La MLE utiliza divisor <span class="math inline">\(m=5\)</span>, no <span class="math inline">\(m-1=4\)</span>. La varianza muestral corregida sería</p>
+<p><span class="math display">\[
+\frac{3.792}{4}
+=
+0.9480\text{ (millones USD)}^2.
+\]</span></p>
+<p>No existe contradicción: los dos estimadores responden a criterios diferentes. La MLE maximiza la likelihood bajo el modelo Normal especificado; no está definida por exigir insesgadez en muestra finita.</p>
+</div>
+<div id="agrupar-datos-destruye-la-precisión-individual-pero-conserva-la-estructura-del-intervalo" class="section level3 hasAnchor">
+<h3>3.1.5 Agrupar datos destruye la precisión individual pero conserva la estructura del intervalo<a href="parametric-estimation.html#agrupar-datos-destruye-la-precisi%C3%B3n-individual-pero-conserva-la-estructura-del-intervalo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos ahora que el Claims System no conserva los importes exactos de cada severity y solo informa cuántas observaciones pertenecen a cada banda. En ese caso tenemos <strong>grouped data</strong>.</p>
+<p>Para la cartera canónica de Meridiano, los counts son</p>
+<table>
+<thead>
+<tr class="header">
+<th>Intervalo de ground-up severity, miles de USD</th>
+<th align="right">Claims</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((0,2.5]\)</span></td>
+<td align="right"><span class="math inline">\(96\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((2.5,10]\)</span></td>
+<td align="right"><span class="math inline">\(288\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((10,25]\)</span></td>
+<td align="right"><span class="math inline">\(196\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((25,50]\)</span></td>
+<td align="right"><span class="math inline">\(87\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((50,77.5]\)</span></td>
+<td align="right"><span class="math inline">\(28\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((77.5,\infty)\)</span></td>
+<td align="right"><span class="math inline">\(25\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td align="right"><strong><span class="math inline">\(720\)</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>En el segundo intervalo sabemos que existen <span class="math inline">\(288\)</span> claims con</p>
+<p><span class="math display">\[
+2.5&lt;X\le10,
+\]</span></p>
+<p>pero no conocemos sus <span class="math inline">\(288\)</span> valores exactos.</p>
+<p><strong>Desafío al lector:</strong> ¿por qué no sustituir simplemente las <span class="math inline">\(288\)</span> observaciones por el midpoint</p>
+<p><span class="math display">\[
+\frac{2.5+10}{2}
+=
+6.25\text{ mil USD}?
+\]</span></p>
+<p>Porque hacerlo introduciría una afirmación que el archivo nunca proporcionó: que cada uno de esos claims vale exactamente <span class="math inline">\(6.25\)</span> mil USD. Además, bajo un modelo no uniforme, la distribución de probabilidad dentro del intervalo no tiene por qué estar centrada en el midpoint. Por ejemplo, una Exponencial asignaría diferente densidad a distintas zonas de la banda. Eso es una implicación del modelo; no sabemos cuál fue la suma real de las <span class="math inline">\(288\)</span> observaciones porque precisamente sus valores exactos no están disponibles.</p>
+<p>La información observada es el evento</p>
+<p><span class="math display">\[
+a_j&lt;X\le b_j.
+\]</span></p>
+<p>Por tanto, cada claim de ese grupo contribuye mediante</p>
+<p><span class="math display">\[
+P(a_j&lt;X\le b_j;\theta)
+=
+F_X(b_j;\theta)-F_X(a_j;\theta).
+\]</span></p>
+<p>Si el grupo contiene <span class="math inline">\(n_j\)</span> observaciones,</p>
+<p><span class="math display">\[
+\mathcal{L}(\theta;\mathbf{n})
+\propto
+\prod_{j=1}^{M}
+\left[
+F_X(b_j;\theta)-F_X(a_j;\theta)
+\right]^{n_j},
+\]</span></p>
+<p>donde el coeficiente multinomial puede omitirse al maximizar respecto de <span class="math inline">\(\theta\)</span> porque no depende del parámetro.</p>
+<p>Para</p>
+<p><span class="math display">\[
+X\sim Exponential(\theta),
+\]</span></p>
+<p>con <span class="math inline">\(\theta\)</span> expresado en miles de USD, las probabilidades de los seis grupos son</p>
+<p><span class="math display">\[
+\pi_1(\theta)
+=
+1-e^{-2.5/\theta},
+\]</span></p>
+<p><span class="math display">\[
+\pi_2(\theta)
+=
+e^{-2.5/\theta}-e^{-10/\theta},
+\]</span></p>
+<p><span class="math display">\[
+\pi_3(\theta)
+=
+e^{-10/\theta}-e^{-25/\theta},
+\]</span></p>
+<p><span class="math display">\[
+\pi_4(\theta)
+=
+e^{-25/\theta}-e^{-50/\theta},
+\]</span></p>
+<p><span class="math display">\[
+\pi_5(\theta)
+=
+e^{-50/\theta}-e^{-77.5/\theta},
+\]</span></p>
+<p>y para el grupo abierto superior,</p>
+<p><span class="math display">\[
+\pi_6(\theta)
+=
+P(X&gt;77.5)
+=
+e^{-77.5/\theta}.
+\]</span></p>
+<p>La likelihood agrupada es</p>
+<p><span class="math display">\[
+\mathcal{L}(\theta)
+\propto
+\left[1-e^{-2.5/\theta}\right]^{96}
+\left[e^{-2.5/\theta}-e^{-10/\theta}\right]^{288}
+\left[e^{-10/\theta}-e^{-25/\theta}\right]^{196}
+\]</span></p>
+<p><span class="math display">\[
+\times
+\left[e^{-25/\theta}-e^{-50/\theta}\right]^{87}
+\left[e^{-50/\theta}-e^{-77.5/\theta}\right]^{28}
+\left[e^{-77.5/\theta}\right]^{25}.
+\]</span></p>
+<p>La correspondiente ecuación de score no produce aquí una solución cerrada conveniente, por lo que se maximiza numéricamente.</p>
+<p>El resultado es</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{\text{grouped}}
+\approx
+16.7987\text{ mil USD}
+}.
+\]</span></p>
+<p>Equivalentemente,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{\text{grouped}}
+\approx
+16{,}799\text{ USD}
+}.
+\]</span></p>
+<p>La muestra individual completa utilizada como control tiene media empírica de</p>
+<p><span class="math display">\[
+18{,}000\text{ USD}.
+\]</span></p>
+<p>La diferencia entre ambas estimates es aproximadamente</p>
+<p><span class="math display">\[
+18{,}000-16{,}799
+=
+1{,}201\text{ USD}.
+\]</span></p>
+<p>Esta diferencia <strong>no debe interpretarse como una medida numérica universal de la cantidad de información perdida</strong>, ni como evidencia de que grouping necesariamente reduce la MLE. Lo que sí podemos afirmar es que el grouping eliminó los importes exactos dentro de cada banda y obligó a construir la likelihood con probabilidades de intervalo. Para este dataset y este modelo concreto, ese cambio de información produce una MLE de aproximadamente <span class="math inline">\(16{,}799\)</span> USD en lugar de <span class="math inline">\(18{,}000\)</span> USD.</p>
+</div>
+<div id="el-truncamiento-condicional-cambia-la-distribución-de-las-observaciones-que-alcanzan-la-muestra" class="section level3 hasAnchor">
+<h3>3.1.6 El truncamiento condicional cambia la distribución de las observaciones que alcanzan la muestra<a href="parametric-estimation.html#el-truncamiento-condicional-cambia-la-distribuci%C3%B3n-de-las-observaciones-que-alcanzan-la-muestra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El truncamiento por la izquierda ocurre cuando las unidades con valores inferiores o iguales a un threshold no aparecen en el dataset utilizado para la estimación. Lo decisivo no es que exista un deductible, sino que el <strong>mecanismo de observación</strong> excluya esos records.</p>
+<p>Esta distinción importa especialmente en Meridiano. El dataset ground-up canónico de <span class="math inline">\(2024\)</span> conserva <span class="math inline">\(720\)</span> claims, incluidos claims por debajo del deductible contractual de <span class="math inline">\(2{,}500\)</span> USD. Por tanto, el mero hecho de que el contrato contenga ese deductible no convierte automáticamente ese archivo ground-up en una muestra truncada.</p>
+<p>Para aislar el efecto estadístico, consideremos un escenario alternativo de extracción: el sistema de datos entregado al actuario conserva únicamente losses exactas cuando</p>
+<p><span class="math display">\[
+X&gt;d,
+\]</span></p>
+<p>con</p>
+<p><span class="math display">\[
+d=2.5\text{ mil USD}.
+\]</span></p>
+<p>Los valores con <span class="math inline">\(X\le d\)</span> no aparecen en esa extracción. Entonces la muestra observada debe modelarse condicionalmente a haber superado el threshold.</p>
+<p>Para una variable continua,</p>
+<p><span class="math display">\[
+f_{X\mid X&gt;d}(x;\theta)
+=
+\frac{
+f_X(x;\theta)
+}{
+P(X&gt;d;\theta)
+}
+=
+\frac{
+f_X(x;\theta)
+}{
+\bar{F}_X(d;\theta)
+},
+\qquad
+x&gt;d.
+\]</span></p>
+<p>Utilicemos nuevamente las mismas diez cifras visibles:</p>
+<p><span class="math display">\[
+\mathbf{x}
+=
+\{4,6,8,10,12,14,18,24,36,48\}\text{ mil USD}.
+\]</span></p>
+<p><strong>Desafío al lector:</strong> si las diez cifras visibles son exactamente las mismas que en la muestra completa, ¿debe permanecer necesariamente igual la MLE?</p>
+<p>No. Cambió el statement de información.</p>
+<p>En el primer caso sabemos:</p>
+<blockquote>
+<p>estas son observaciones de una muestra completa.</p>
+</blockquote>
+<p>En el segundo sabemos:</p>
+<blockquote>
+<p>estas son observaciones exactas tomadas condicionalmente a <span class="math inline">\(X&gt;2.5\)</span>.</p>
+</blockquote>
+<p>Bajo</p>
+<p><span class="math display">\[
+X\sim Exponential(\theta),
+\]</span></p>
+<p>la survival function es</p>
+<p><span class="math display">\[
+\bar{F}_X(d;\theta)
+=
+e^{-d/\theta}.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+f_{X\mid X&gt;d}(x;\theta)
+=
+\frac{
+\theta^{-1}e^{-x/\theta}
+}{
+e^{-d/\theta}
+}
+=
+\frac{1}{\theta}
+e^{-(x-d)/\theta}.
+\]</span></p>
+<p>Para las diez observaciones,</p>
+<p><span class="math display">\[
+\mathcal{L}_{tr}(\theta)
+=
+\prod_{i=1}^{10}
+\frac{1}{\theta}
+e^{-(x_i-2.5)/\theta}.
+\]</span></p>
+<p>Así,</p>
+<p><span class="math display">\[
+\mathcal{L}_{tr}(\theta)
+=
+\theta^{-10}
+\exp\left(
+-\frac{
+\sum_{i=1}^{10}(x_i-2.5)
+}{\theta}
+\right).
+\]</span></p>
+<p>La log-verosimilitud es</p>
+<p><span class="math display">\[
+\ell_{tr}(\theta)
+=
+-10\ln\theta
+-
+\frac{
+\sum_{i=1}^{10}(x_i-2.5)
+}{\theta}.
+\]</span></p>
+<p>Como</p>
+<p><span class="math display">\[
+\sum_{i=1}^{10}x_i=180,
+\]</span></p>
+<p>tenemos</p>
+<p><span class="math display">\[
+\sum_{i=1}^{10}(x_i-2.5)
+=
+180-10(2.5)
+=
+155.
+\]</span></p>
+<p>La ecuación de score es</p>
+<p><span class="math display">\[
+\ell_{tr}&#39;(\theta)
+=
+-\frac{10}{\theta}
++
+\frac{155}{\theta^2}
+=
+0.
+\]</span></p>
+<p>De aquí,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{tr}
+=
+\frac{155}{10}
+=
+15.5\text{ mil USD}
+}.
+\]</span></p>
+<p>Equivalentemente,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{tr}
+=
+15{,}500\text{ USD}
+}.
+\]</span></p>
+<p>La comparación es</p>
+<p><span class="math display">\[
+\hat{\theta}_{complete}
+=
+18\text{ mil USD},
+\]</span></p>
+<p>frente a</p>
+<p><span class="math display">\[
+\hat{\theta}_{tr}
+=
+15.5\text{ mil USD}.
+\]</span></p>
+<p>Las cifras visibles son idénticas. La likelihood no lo es.</p>
+<p>En una Exponencial, el memoryless property hace que el conditional excess <span class="math inline">\(X-d\mid X&gt;d\)</span> vuelva a tener media <span class="math inline">\(\theta\)</span>, razón por la cual aparece analíticamente</p>
+<p><span class="math display">\[
+\hat{\theta}_{tr}
+=
+\bar{X}-d.
+\]</span></p>
+<p>Este resultado es una <strong>estimación bajo el modelo Exponencial y el mecanismo de truncamiento especificado</strong>. No garantiza que la estimate sea exactamente igual al parámetro verdadero ni demuestra que la Exponencial sea adecuada. Tampoco autoriza a describir el archivo ground-up canónico de Meridiano como truncado: el truncamiento existe únicamente en el escenario donde el proceso de registro realmente elimina las unidades bajo el threshold.</p>
+</div>
+<div id="la-censura-preserva-la-existencia-de-la-observación-pero-limita-el-conocimiento-de-su-magnitud" class="section level3 hasAnchor">
+<h3>3.1.7 La censura preserva la existencia de la observación pero limita el conocimiento de su magnitud<a href="parametric-estimation.html#la-censura-preserva-la-existencia-de-la-observaci%C3%B3n-pero-limita-el-conocimiento-de-su-magnitud" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El right-censoring representa una situación diferente. La observación permanece en la muestra, pero el sistema deja de revelar su magnitud exacta por encima de un threshold.</p>
+<p><strong>Desafío al lector:</strong> ¿truncation y censoring son dos nombres para el mismo problema de datos incompletos?</p>
+<p>No.</p>
+<p>En left truncation, una unidad que no supera el threshold no aparece en la muestra. En right censoring, la unidad sí aparece, pero parte de la información sobre su valor se pierde.</p>
+<p>Un policy limit puede motivar un threshold relevante, pero tampoco produce por sí mismo censoring del ground-up amount. Si Meridiano conserva el valor original <span class="math inline">\(X\)</span>, el actuario sigue teniendo una observación completa de <span class="math inline">\(X\)</span> aunque el payment contractual esté capped. Existe censoring de ground-up severity únicamente si la base utilizada para estimación conserva, por encima de cierto punto, solo la información de que</p>
+<p><span class="math display">\[
+X&gt;u
+\]</span></p>
+<p>y ya no mantiene el valor exacto.</p>
+<p>Para el caso canónico utilizaremos</p>
+<p><span class="math display">\[
+u=77.5\text{ mil USD}.
+\]</span></p>
+<p>Este threshold coincide con</p>
+<p><span class="math display">\[
+d+\ell
+=
+2.5+75
+=
+77.5\text{ mil USD}
+\]</span></p>
+<p>bajo el contrato base, pero la inferencia censurada que sigue supone expresamente que el archivo entregado al actuario ha perdido los ground-up amounts exactos por encima de ese umbral.</p>
+<p>Sea</p>
+<p><span class="math display">\[
+z_i=\min(X_i,u)
+\]</span></p>
+<p>el valor almacenado y sea <span class="math inline">\(\delta_i\)</span> un indicador:</p>
+<p><span class="math display">\[
+\delta_i
+=
+\begin{cases}
+1, &amp; \text{si el valor de }X_i\text{ se observa exactamente},\\
+0, &amp; \text{si solo sabemos que }X_i&gt;u.
+\end{cases}
+\]</span></p>
+<p>Entonces una observación exacta contribuye mediante</p>
+<p><span class="math display">\[
+f_X(z_i;\theta),
+\]</span></p>
+<p>mientras que una observación censurada contribuye mediante</p>
+<p><span class="math display">\[
+P(X_i&gt;u;\theta)
+=
+\bar{F}_X(u;\theta).
+\]</span></p>
+<p>La likelihood es</p>
+<p><span class="math display">\[
+\mathcal{L}(\theta)
+=
+\prod_{i=1}^{n}
+\left[
+f_X(z_i;\theta)
+\right]^{\delta_i}
+\left[
+\bar{F}_X(u;\theta)
+\right]^{1-\delta_i}.
+\]</span></p>
+<p>Consideremos la muestra canónica, expresada en miles de USD:</p>
+<p><span class="math display">\[
+\{10,20,30,50,70,&gt;77.5,&gt;77.5\}.
+\]</span></p>
+<p>Hay cinco observaciones exactas:</p>
+<p><span class="math display">\[
+10,\quad20,\quad30,\quad50,\quad70,
+\]</span></p>
+<p>cuya suma es</p>
+<p><span class="math display">\[
+10+20+30+50+70
+=
+180.
+\]</span></p>
+<p>Además existen dos observaciones censuradas en</p>
+<p><span class="math display">\[
+u=77.5.
+\]</span></p>
+<p>Bajo</p>
+<p><span class="math display">\[
+X\sim Exponential(\theta),
+\]</span></p>
+<p>las cinco observaciones exactas contribuyen</p>
+<p><span class="math display">\[
+\theta^{-5}
+e^{-180/\theta}.
+\]</span></p>
+<p>Cada observación censurada contribuye</p>
+<p><span class="math display">\[
+\bar{F}_X(77.5;\theta)
+=
+e^{-77.5/\theta}.
+\]</span></p>
+<p>Las dos juntas aportan</p>
+<p><span class="math display">\[
+e^{-155/\theta}.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\mathcal{L}(\theta)
+=
+\theta^{-5}
+\exp\left(
+-\frac{335}{\theta}
+\right),
+\]</span></p>
+<p>porque</p>
+<p><span class="math display">\[
+180+155
+=
+335.
+\]</span></p>
+<p>La log-verosimilitud es</p>
+<p><span class="math display">\[
+\ell(\theta)
+=
+-5\ln\theta
+-
+\frac{335}{\theta}.
+\]</span></p>
+<p>La ecuación de score produce</p>
+<p><span class="math display">\[
+-\frac{5}{\theta}
++
+\frac{335}{\theta^2}
+=
+0,
+\]</span></p>
+<p>y por tanto</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{cens}
+=
+\frac{335}{5}
+=
+67\text{ mil USD}
+}.
+\]</span></p>
+<p>Equivalentemente,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{cens}
+=
+67{,}000\text{ USD}
+}.
+\]</span></p>
+<p>Este valor estima, bajo el modelo Exponencial, el parámetro de media de la <strong>distribución ground-up incondicional</strong>. No es la «media de la cola».</p>
+<p>Ahora comparemos con un procedimiento naive que sustituye los dos records censurados por valores exactos de <span class="math inline">\(77.5\)</span>:</p>
+<p><span class="math display">\[
+\hat{\theta}_{naive}
+=
+\frac{
+10+20+30+50+70+77.5+77.5
+}{7}.
+\]</span></p>
+<p>Así,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{naive}
+=
+\frac{335}{7}
+\approx
+47.86\text{ mil USD}
+}.
+\]</span></p>
+<p><strong>Desafío al lector:</strong> ¿qué afirmación adicional ha introducido el procedimiento naive?</p>
+<p>Ha sustituido la información</p>
+<p><span class="math display">\[
+X&gt;77.5
+\]</span></p>
+<p>por la afirmación mucho más fuerte</p>
+<p><span class="math display">\[
+X=77.5.
+\]</span></p>
+<p>En este caso particular,</p>
+<p><span class="math display">\[
+\frac{
+67-47.8571
+}{67}
+\approx
+28.57\%.
+\]</span></p>
+<p>Es decir, el naive estimate queda aproximadamente <span class="math inline">\(28.57\%\)</span> por debajo de la MLE que utiliza correctamente la censura.</p>
+<p>Esto demuestra que ignorar el mecanismo de observación puede alterar materialmente una parameter estimate y, por extensión, las decisiones que utilicen después ese parámetro. No demuestra que censoring siempre eleve la MLE: la dirección y magnitud del cambio dependen del modelo, del threshold y de la muestra.</p>
+<p>Existe además una distinción conceptual útil. Un grupo abierto</p>
+<p><span class="math display">\[
+X&gt;77.5
+\]</span></p>
+<p>en grouped data y una observación individual right-censored en <span class="math inline">\(77.5\)</span> pueden aportar matemáticamente la misma survival probability</p>
+<p><span class="math display">\[
+\bar{F}_X(77.5;\theta).
+\]</span></p>
+<p>Pero la estructura de la información no es la misma. En grouped data, el sistema almacena pertenencia a una categoría. En censoring, sabemos que existe una observación individual, pero no conocemos su valor exacto después del threshold.</p>
+</div>
+<div id="la-contribución-a-la-likelihood-depende-del-evento-que-realmente-quedó-registrado" class="section level3 hasAnchor">
+<h3>3.1.8 La contribución a la likelihood depende del evento que realmente quedó registrado<a href="parametric-estimation.html#la-contribuci%C3%B3n-a-la-likelihood-depende-del-evento-que-realmente-qued%C3%B3-registrado" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Los casos anteriores pueden condensarse en una sola disciplina:</p>
+<p><strong>cada observación debe contribuir exactamente con la probability o density correspondiente a la información que contiene, ni más ni menos.</strong></p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de observación</th>
+<th>Información disponible</th>
+<th>Contribución</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exacta continua</td>
+<td><span class="math inline">\(W=w\)</span> exactamente</td>
+<td><span class="math inline">\(f_W(w;\boldsymbol{\theta})\)</span></td>
+</tr>
+<tr class="even">
+<td>Exacta discreta</td>
+<td><span class="math inline">\(W=w\)</span> exactamente</td>
+<td><span class="math inline">\(p_W(w;\boldsymbol{\theta})\)</span></td>
+</tr>
+<tr class="odd">
+<td>Agrupada</td>
+<td><span class="math inline">\(a&lt;W\le b\)</span></td>
+<td><span class="math inline">\(P(a&lt;W\le b)\)</span></td>
+</tr>
+<tr class="even">
+<td>Left-truncated</td>
+<td><span class="math inline">\(W=w\)</span> y sabemos que solo entran unidades con <span class="math inline">\(W&gt;d\)</span></td>
+<td><span class="math inline">\(f_W(w)/P(W&gt;d)\)</span> o su versión discreta</td>
+</tr>
+<tr class="odd">
+<td>Right-censored</td>
+<td>Sabemos únicamente que <span class="math inline">\(W&gt;u\)</span></td>
+<td><span class="math inline">\(P(W&gt;u)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Para una variable continua,</p>
+<p><span class="math display">\[
+P(a&lt;W\le b)
+=
+F_W(b)-F_W(a).
+\]</span></p>
+<p>Para una variable discreta,</p>
+<p><span class="math display">\[
+P(a&lt;W\le b)
+=
+\sum_{\substack{k:\\a&lt;k\le b}}
+p_W(k).
+\]</span></p>
+<p>Y para una muestra truncada discreta,</p>
+<p><span class="math display">\[
+P(W=w\mid W&gt;d)
+=
+\frac{
+p_W(w)
+}{
+P(W&gt;d)
+}.
+\]</span></p>
+<p>Estas reglas no pertenecen exclusivamente a severity. El mismo principio se aplica a las tres clases de objetos que aparecen en el learning objective de esta sección:</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Datos completos</th>
+<th>Datos agrupados</th>
+<th>Datos truncados o censurados</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severity <span class="math inline">\(X\)</span></td>
+<td><span class="math inline">\(f_X(x)\)</span> para exact continuous severity</td>
+<td><span class="math inline">\(F_X(b)-F_X(a)\)</span></td>
+<td><span class="math inline">\(f_X(x)/\bar F_X(d)\)</span> si left-truncated; <span class="math inline">\(\bar F_X(u)\)</span> si right-censored</td>
+</tr>
+<tr class="even">
+<td>Frequency <span class="math inline">\(N\)</span></td>
+<td><span class="math inline">\(p_N(n)\)</span> para exact count</td>
+<td><span class="math inline">\(\sum_{k\in B}p_N(k)\)</span> para un count group <span class="math inline">\(B\)</span></td>
+<td><span class="math inline">\(p_N(n)/P(N&gt;d)\)</span> si truncated; <span class="math inline">\(P(N&gt;u)\)</span> si censored</td>
+</tr>
+<tr class="odd">
+<td>Aggregate <span class="math inline">\(S\)</span></td>
+<td><span class="math inline">\(g_S(s)\)</span> o PMF, según el aggregate model</td>
+<td><span class="math inline">\(G_S(b)-G_S(a)\)</span> o suma de masses</td>
+<td>conditional contribution si truncated; survival contribution si censored</td>
+</tr>
+</tbody>
+</table>
+<p>No necesitamos un ejemplo numérico distinto en cada celda. La regla es la misma: primero identificar qué evento observó el sistema y después escribir la probabilidad de ese evento bajo el modelo.</p>
+<p>La comparación fundamental entre los cuatro mecanismos queda así:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pregunta</th>
+<th>Complete</th>
+<th>Grouped</th>
+<th>Left truncation</th>
+<th>Right censoring</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>¿La unidad aparece?</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Solo si supera el threshold</td>
+<td>Sí</td>
+</tr>
+<tr class="even">
+<td>¿Sabemos que existió?</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>No para unidades excluidas</td>
+<td>Sí</td>
+</tr>
+<tr class="odd">
+<td>¿Conocemos el valor exacto?</td>
+<td>Sí</td>
+<td>No; solo intervalo</td>
+<td>Sí, una vez observada</td>
+<td>No por encima del threshold</td>
+</tr>
+<tr class="even">
+<td>¿Hay conditioning denominator?</td>
+<td>No</td>
+<td>No</td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>¿Hay survival contribution?</td>
+<td>No, salvo que ese sea el evento exacto registrado</td>
+<td>Puede existir en un grupo superior abierto</td>
+<td>En el denominador</td>
+<td>Sí para cada observación censurada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Desafío al lector:</strong> ¿pueden dos archivos mostrar exactamente las mismas cifras visibles y aun así producir likelihoods distintas?</p>
+<p>Sí. Las diez severidades</p>
+<p><span class="math display">\[
+\{4,6,8,10,12,14,18,24,36,48\}
+\]</span></p>
+<p>producen</p>
+<p><span class="math display">\[
+\hat{\theta}=18\text{ mil USD}
+\]</span></p>
+<p>cuando representan una muestra completa, pero</p>
+<p><span class="math display">\[
+\hat{\theta}=15.5\text{ mil USD}
+\]</span></p>
+<p>cuando representan una muestra observada condicionalmente a <span class="math inline">\(X&gt;2.5\)</span>.</p>
+<p>No cambiaron las cifras.</p>
+<p>Cambió la afirmación estadística acerca de cómo llegaron a la muestra.</p>
+<p>Ese principio también explica por qué observar solo aggregate totals no equivale a observar counts y severities individuales, por qué los grouped severity data requieren interval probabilities y por qué un censored value no puede sustituirse silenciosamente por el cap.</p>
+</div>
+</div>
+<div id="ejercicios-7" class="section level2 hasAnchor">
+<h2>Ejercicios<a href="parametric-estimation.html#ejercicios-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicio-1---datos-completos-de-severity-y-frequency" class="section level3 hasAnchor">
+<h3>Ejercicio 1 - Datos completos de severity y frequency<a href="parametric-estimation.html#ejercicio-1---datos-completos-de-severity-y-frequency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="a.-severity-completa" class="section level4 hasAnchor">
+<h4>A. Severity completa<a href="parametric-estimation.html#a.-severity-completa" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se modela una severidad ground-up mediante</p>
+<p><span class="math display">\[
+X\sim Exponential(\theta),
+\qquad
+\theta&gt;0.
+\]</span></p>
+<p>El actuario dispone de la muestra individual completa, en miles de USD:</p>
+<p><span class="math display">\[
+\mathbf{x}
+=
+\{6,12,18,30,54\}.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Construya <span class="math inline">\(\mathcal{L}(\theta;\mathbf{x})\)</span>.</p></li>
+<li><p>Obtenga <span class="math inline">\(\ell(\theta)\)</span>.</p></li>
+<li><p>Derive la ecuación de score y calcule <span class="math inline">\(\hat{\theta}_{MLE}\)</span>.</p></li>
+<li><p>Verifique el espacio de parámetros.</p></li>
+<li><p>Compruebe el máximo global mediante el comportamiento del score antes y después del candidato; utilice <span class="math inline">\(\ell&#39;&#39;(\hat{\theta})&lt;0\)</span> solo como comprobación local adicional.</p></li>
+<li><p>Interprete el resultado sin denominarlo «true parameter».</p></li>
+</ol>
+<p>La suma es</p>
+<p><span class="math display">\[
+6+12+18+30+54
+=
+120\text{ mil USD}.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\ell(\theta)
+=
+-5\ln\theta
+-
+\frac{120}{\theta},
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{MLE}
+=
+\frac{120}{5}
+=
+24\text{ mil USD}
+}.
+\]</span></p>
+<p>El score puede escribirse como</p>
+<p><span class="math display">\[
+\ell&#39;(\theta)
+=
+\frac{120-5\theta}{\theta^2}.
+\]</span></p>
+<p>Es positivo para</p>
+<p><span class="math display">\[
+0&lt;\theta&lt;24,
+\]</span></p>
+<p>y negativo para</p>
+<p><span class="math display">\[
+\theta&gt;24.
+\]</span></p>
+<p>Así, <span class="math inline">\(24\)</span> mil USD es el máximo global único. Además,</p>
+<p><span class="math display">\[
+\ell&#39;&#39;(24)
+=
+-\frac{5}{24^2}
+=
+-\frac{5}{576}
+&lt;0.
+\]</span></p>
+<p>La interpretación correcta es que <span class="math inline">\(24\)</span> mil USD maximiza la likelihood dentro del modelo Exponencial para esta muestra completa.</p>
+</div>
+<div id="b.-frequency-completa" class="section level4 hasAnchor">
+<h4>B. Frequency completa<a href="parametric-estimation.html#b.-frequency-completa" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Utilice ahora la experiencia canónica de Meridiano:</p>
+<p><span class="math display">\[
+12{,}000\text{ policy-years}
+\]</span></p>
+<p>y la tabla</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right"><span class="math inline">\(N=k\)</span></th>
+<th align="right">Policy-years</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><span class="math inline">\(0\)</span></td>
+<td align="right"><span class="math inline">\(11{,}325\)</span></td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(1\)</span></td>
+<td align="right"><span class="math inline">\(635\)</span></td>
+</tr>
+<tr class="odd">
+<td align="right"><span class="math inline">\(2\)</span></td>
+<td align="right"><span class="math inline">\(35\)</span></td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(3\)</span></td>
+<td align="right"><span class="math inline">\(5\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Suponga</p>
+<p><span class="math display">\[
+N\sim Poisson(\lambda).
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Construya la likelihood a partir de las cuatro exact count categories.</p></li>
+<li><p>Muestre que el total observado de claims es</p></li>
+</ol>
+<p><span class="math display">\[
+635+2(35)+3(5)
+=
+720.
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Derive la MLE.</p></li>
+<li><p>Explique por qué esta forma de resumir los datos conserva la información necesaria para la MLE de <span class="math inline">\(\lambda\)</span>.</p></li>
+</ol>
+<p>El resultado debe ser</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\lambda}
+=
+\frac{720}{12{,}000}
+=
+0.060\text{ claims por policy-year}
+}.
+\]</span></p>
+<p>El estudiante debe distinguir una tabla de frecuencias que conserva cada count exacto de un grouped continuous dataset que solo conserva interval membership.</p>
+</div>
+</div>
+<div id="ejercicio-2---datos-agrupados-de-severity" class="section level3 hasAnchor">
+<h3>Ejercicio 2 - Datos agrupados de severity<a href="parametric-estimation.html#ejercicio-2---datos-agrupados-de-severity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Meridiano conserva únicamente la siguiente información de <span class="math inline">\(720\)</span> ground-up claims:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Intervalo, miles de USD</th>
+<th align="right">Claims</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((0,2.5]\)</span></td>
+<td align="right"><span class="math inline">\(96\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((2.5,10]\)</span></td>
+<td align="right"><span class="math inline">\(288\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((10,25]\)</span></td>
+<td align="right"><span class="math inline">\(196\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((25,50]\)</span></td>
+<td align="right"><span class="math inline">\(87\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((50,77.5]\)</span></td>
+<td align="right"><span class="math inline">\(28\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((77.5,\infty)\)</span></td>
+<td align="right"><span class="math inline">\(25\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Suponga</p>
+<p><span class="math display">\[
+X\sim Exponential(\theta),
+\qquad
+\theta&gt;0.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Escriba la probability correspondiente a cada intervalo.</p></li>
+<li><p>Construya la grouped likelihood.</p></li>
+<li><p>Explique qué información se inventaría al sustituir cada intervalo por un midpoint.</p></li>
+<li><p>Señale por qué el open upper group <span class="math inline">\((77.5,\infty)\)</span> ni siquiera posee un midpoint finito sin introducir una assumption adicional.</p></li>
+<li><p>Maximice numéricamente la grouped likelihood y compare la estimate con la MLE de la muestra individual completa.</p></li>
+<li><p>Explique por qué la diferencia entre las dos estimates no debe interpretarse como una cantidad universal de «sesgo por grouping».</p></li>
+</ol>
+<p>Las probabilidades correctas son</p>
+<p><span class="math display">\[
+1-e^{-2.5/\theta},
+\]</span></p>
+<p><span class="math display">\[
+e^{-2.5/\theta}-e^{-10/\theta},
+\]</span></p>
+<p><span class="math display">\[
+e^{-10/\theta}-e^{-25/\theta},
+\]</span></p>
+<p><span class="math display">\[
+e^{-25/\theta}-e^{-50/\theta},
+\]</span></p>
+<p><span class="math display">\[
+e^{-50/\theta}-e^{-77.5/\theta},
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+e^{-77.5/\theta}.
+\]</span></p>
+<p>La maximización numérica debe producir aproximadamente</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{grouped}
+=
+16.7987\text{ mil USD}
+\approx
+16{,}799\text{ USD}
+}.
+\]</span></p>
+<p>La complete-data reference es</p>
+<p><span class="math display">\[
+18{,}000\text{ USD}.
+\]</span></p>
+<p>El grouped estimate es menor en este caso concreto, pero la dirección no constituye una propiedad universal del grouping.</p>
+</div>
+<div id="ejercicio-3---truncation-y-censoring" class="section level3 hasAnchor">
+<h3>Ejercicio 3 - Truncation y censoring<a href="parametric-estimation.html#ejercicio-3---truncation-y-censoring" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Considere dos datasets diferentes bajo un modelo Exponencial de media <span class="math inline">\(\theta&gt;0\)</span>.</p>
+<div id="dataset-a---left-truncation" class="section level4 hasAnchor">
+<h4>Dataset A - Left truncation<a href="parametric-estimation.html#dataset-a---left-truncation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las cifras visibles, en miles de USD, son</p>
+<p><span class="math display">\[
+\{4,6,8,10,12,14,18,24,36,48\},
+\]</span></p>
+<p>pero el sistema que produjo este archivo incluye una observación únicamente si</p>
+<p><span class="math display">\[
+X&gt;2.5.
+\]</span></p>
+</div>
+<div id="dataset-b---right-censoring" class="section level4 hasAnchor">
+<h4>Dataset B - Right censoring<a href="parametric-estimation.html#dataset-b---right-censoring" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El archivo contiene</p>
+<p><span class="math display">\[
+\{10,20,30,50,70,&gt;77.5,&gt;77.5\}\text{ mil USD}.
+\]</span></p>
+<p>En este segundo archivo, las cinco primeras severities son exactas y las dos últimas permanecen en la muestra, pero solo sabemos que exceden <span class="math inline">\(77.5\)</span> mil USD.</p>
+<p>Para ambos datasets:</p>
+<ol style="list-style-type: decimal">
+<li><p>Identifique cuál es truncated y cuál censored.</p></li>
+<li><p>Explique en palabras qué información contiene cada record antes de escribir la likelihood.</p></li>
+<li><p>Construya las dos likelihoods.</p></li>
+<li><p>Calcule las dos MLE correctas.</p></li>
+<li><p>Calcule la MLE naive que surgiría al ignorar cada observation mechanism.</p></li>
+<li><p>Explique por qué cambian las estimates sin afirmar que la dirección del cambio sea universal.</p></li>
+</ol>
+<p>Para el Dataset A,</p>
+<p><span class="math display">\[
+\mathcal{L}_{tr}(\theta)
+=
+\prod_{i=1}^{10}
+\frac{
+\theta^{-1}e^{-x_i/\theta}
+}{
+e^{-2.5/\theta}
+},
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{tr}
+=
+18-2.5
+=
+15.5\text{ mil USD}
+}.
+\]</span></p>
+<p>Si se ignorara el truncamiento,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{naive}
+=
+18\text{ mil USD}
+}.
+\]</span></p>
+<p>Para el Dataset B,</p>
+<p><span class="math display">\[
+\mathcal{L}_{cens}(\theta)
+=
+\theta^{-5}
+\exp\left(
+-\frac{335}{\theta}
+\right),
+\]</span></p>
+<p>por lo que</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{cens}
+=
+\frac{335}{5}
+=
+67\text{ mil USD}
+}.
+\]</span></p>
+<p>Si las dos observaciones censuradas fueran tratadas erróneamente como exactas en <span class="math inline">\(77.5\)</span>,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\theta}_{naive}
+=
+\frac{335}{7}
+\approx
+47.86\text{ mil USD}
+}.
+\]</span></p>
+<p>El criterio de éxito es que el estudiante pueda explicar la diferencia antes de calcular:</p>
+<ul>
+<li><p>en truncation, ciertas unidades nunca aparecen en la muestra y la distribución observada debe condicionarse;</p></li>
+<li><p>en censoring, la unidad permanece observada, pero su valor exacto después del threshold se desconoce.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="cierre-y-puente-final-7" class="section level2 hasAnchor">
+<h2>Cierre y puente final<a href="parametric-estimation.html#cierre-y-puente-final-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La pregunta inicial de Irene era aparentemente sencilla:</p>
+<p><strong>«¿De dónde salen los parámetros?»</strong></p>
+<p>Ya no podemos responder únicamente:</p>
+<p><strong>«del histórico».</strong></p>
+<p>Depende de qué histórico llegó realmente al actuario.</p>
+<p>Un exact continuous claim aporta</p>
+<p><span class="math display">\[
+f_X(x;\theta).
+\]</span></p>
+<p>Un exact discrete count aporta</p>
+<p><span class="math display">\[
+p_N(n;\theta).
+\]</span></p>
+<p>Un intervalo aporta</p>
+<p><span class="math display">\[
+F_X(b;\theta)-F_X(a;\theta).
+\]</span></p>
+<p>Una observación tomada bajo left truncation aporta</p>
+<p><span class="math display">\[
+\frac{
+f_X(x;\theta)
+}{
+\bar F_X(d;\theta)
+}.
+\]</span></p>
+<p>Una observación right-censored aporta</p>
+<p><span class="math display">\[
+\bar F_X(u;\theta).
+\]</span></p>
+<p>Y si observamos únicamente aggregate totals, la likelihood debe construirse desde la distribución de <span class="math inline">\(S\)</span>, no desde counts y severities individuales que el archivo no contiene.</p>
+<p>Part 3 ha respondido así una pregunta concreta:</p>
+<p><strong>¿Qué estimate producen los datos que realmente observamos bajo el modelo especificado?</strong></p>
+<p>Pero esa respuesta abre inmediatamente otra.</p>
+<p>Consideremos el subportfolio canónico de restaurantes de Meridiano. Tiene</p>
+<p><span class="math display">\[
+400\text{ policy-years}
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+34\text{ claims}.
+\]</span></p>
+<p>Bajo un modelo Poisson,</p>
+<p><span class="math display">\[
+\boxed{
+\hat{\lambda}_{restaurants}
+=
+\frac{34}{400}
+=
+0.085\text{ claims por policy-year}
+}.
+\]</span></p>
+<p>La frecuencia general de Meridiano es</p>
+<p><span class="math display">\[
+0.060\text{ claims por policy-year}.
+\]</span></p>
+<p>Por tanto, la estimate específica de restaurantes es superior en</p>
+<p><span class="math display">\[
+\frac{0.085}{0.060}-1
+=
+0.4167
+\approx
+41.7\%.
+\]</span></p>
+<p>No hay nada incorrecto en la MLE de <span class="math inline">\(0.085\)</span> dentro del modelo y de la muestra especificados.</p>
+<p>Irene formula entonces una pregunta que máxima verosimilitud no puede responder por sí sola:</p>
+<p><strong>«¿Treinta y cuatro claims son suficientes para dejar que <span class="math inline">\(0.085\)</span> domine nuestra decisión frente a una experiencia mucho mayor?»</strong></p>
+<p>Maximum likelihood nos ha enseñado a preguntar:</p>
+<p><strong>¿Qué estimate producen los datos?</strong></p>
+<p>La siguiente parte preguntará:</p>
+<p><strong>¿Cuánto peso merece esa estimate?</strong></p>
+<p>Si una clase pequeña produce una estimate específica distinta de la experiencia general, <strong>¿cuánta experiencia necesitamos antes de permitir que esa cifra domine?</strong></p>
+<p>Esa es la pregunta que abre la <strong>Part 4 - Introduction to Credibility</strong>, comenzando con la <strong>Section 4.1 - Classical Credibility</strong>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="severity-frequency-and-aggregate-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction-to-credibility.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": null,
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

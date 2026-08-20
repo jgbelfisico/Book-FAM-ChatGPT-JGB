@@ -1,0 +1,35 @@
+/***************************************/
+
+/* Permitir scroll horizontal en ecuaciones de bloque largas */
+.math.display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  display: block;
+  padding: 10px 0; /* Espacio extra para que no se corte la ecuación por arriba/abajo */
+}
+
+/* Forzar barra de desplazamiento horizontal en tablas largas de forma segura */
+.book .book-body .page-wrapper .page-inner table {
+  display: inline-block; /* Evita que las tablas cortas se deformen */
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+
+/* Opcional: Hacer las barras de desplazamiento más finas y estéticas */
+.math.display::-webkit-scrollbar,
+.book .book-body .page-wrapper .page-inner table::-webkit-scrollbar {
+  height: 6px;
+}
+
+.math.display::-webkit-scrollbar-thumb,
+.book .book-body .page-wrapper .page-inner table::-webkit-scrollbar-thumb {
+  background: #cccccc; 
+  border-radius: 4px;
+}
+/***************************************/
+

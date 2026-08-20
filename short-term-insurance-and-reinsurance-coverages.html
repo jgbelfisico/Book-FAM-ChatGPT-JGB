@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 - Short-Term Insurance and Reinsurance Coverages | Fundamentals of Actuarial Mathematics</title>
+  <meta name="description" content="1 - Short-Term Insurance and Reinsurance Coverages | Fundamentals of Actuarial Mathematics" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 - Short-Term Insurance and Reinsurance Coverages | Fundamentals of Actuarial Mathematics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 - Short-Term Insurance and Reinsurance Coverages | Fundamentals of Actuarial Mathematics" />
+  
+  
+  
+
+<meta name="author" content="John Rodríguez" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="severity-frequency-and-aggregate-models.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="estilo.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html"><i class="fa fa-check"></i>1 - Short-Term Insurance and Reinsurance Coverages</a>
+<ul>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#coverage-modifications-and-reinsurance"><i class="fa fa-check"></i>1.1 - Coverage Modifications and Reinsurance</a>
+<ul>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-siniestro-original-no-es-la-p%C3%A9rdida-final-de-la-aseguradora"><i class="fa fa-check"></i>1.1.1 El siniestro original no es la pérdida final de la aseguradora</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-deducible-el-l%C3%ADmite-de-cobertura-y-el-coaseguro-esculpen-el-pago-bruto"><i class="fa fa-check"></i>1.1.2 El deducible, el límite de cobertura y el coaseguro esculpen el pago bruto</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-factor-de-eliminaci%C3%B3n-de-p%C3%A9rdidas-ler-mide-d%C3%B3lares-de-siniestro-no-cantidad-de-reclamaciones"><i class="fa fa-check"></i>1.1.3 El factor de eliminación de pérdidas (LER) mide dólares de siniestro, no cantidad de reclamaciones</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#los-deducibles-nominales-fijos-distorsionan-la-transmisi%C3%B3n-de-la-inflaci%C3%B3n"><i class="fa fa-check"></i>1.1.4 Los deducibles nominales fijos distorsionan la transmisión de la inflación</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-reaseguro-no-reduce-la-deuda-con-el-asegurado-redistribuye-el-costo-de-los-pagos"><i class="fa fa-check"></i>1.1.5 El reaseguro no reduce la deuda con el asegurado: redistribuye el costo de los pagos</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#quota-share-y-exceso-de-p%C3%A9rdida-reestructuran-el-perfil-de-riesgo-retenido-de-formas-opuestas"><i class="fa fa-check"></i>1.1.6 Quota Share y Exceso de Pérdida reestructuran el perfil de riesgo retenido de formas opuestas</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#la-tarificaci%C3%B3n-y-la-constituci%C3%B3n-de-reservas-exigen-definir-si-la-base-es-bruta-o-neta"><i class="fa fa-check"></i>1.1.7 La tarificación y la constitución de reservas exigen definir si la base es bruta o neta</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#cierre-y-puente-final"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#ejercicios"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html"><i class="fa fa-check"></i>2 - Severity, Frequency, and Aggregate Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#basics"><i class="fa fa-check"></i>2.1 - Basics</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-media-de-18000-d%C3%B3lares-puede-ocultar-casi-toda-la-historia"><i class="fa fa-check"></i>2.1.1 Una media de 18,000 dólares puede ocultar casi toda la historia</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-probabilidad-acumulada-y-la-supervivencia-describen-los-umbrales-del-contrato"><i class="fa fa-check"></i>2.1.2 La probabilidad acumulada y la supervivencia describen los umbrales del contrato</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-intervalo-mide-el-evento-y-la-probabilidad-condicional-cambia-el-denominador"><i class="fa fa-check"></i>2.1.3 El intervalo mide el evento y la probabilidad condicional cambia el denominador</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-percentiles-marcan-fronteras-pero-no-describen-el-riesgo-de-cola"><i class="fa fa-check"></i>2.1.4 Los percentiles marcan fronteras pero no describen el riesgo de cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-momentos-resumen-la-forma-de-la-incertidumbre-en-unidades-f%C3%ADsicas-y-cuadr%C3%A1ticas"><i class="fa fa-check"></i>2.1.5 Los momentos resumen la forma de la incertidumbre en unidades físicas y cuadráticas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-observado-en-el-mundo-no-es-la-distribuci%C3%B3n-te%C3%B3rica-del-actuario"><i class="fa fa-check"></i>2.1.6 El valor observado en el mundo no es la distribución teórica del actuario</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-1"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#severity-models"><i class="fa fa-check"></i>2.2 - Severity Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-candidatos-que-comparten-la-media-pueden-esconder-colas-opuestas"><i class="fa fa-check"></i>2.2.1 Dos candidatos que comparten la media pueden esconder colas opuestas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-escala-expande-la-dimensi%C3%B3n-monetaria-sin-alterar-la-forma-relativa"><i class="fa fa-check"></i>2.2.2 El parámetro de escala expande la dimensión monetaria sin alterar la forma relativa</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-forma-esculpe-la-asimetr%C3%ADa-y-el-espesor-de-la-cola"><i class="fa fa-check"></i>2.2.3 El parámetro de forma esculpe la asimetría y el espesor de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#lognormal-y-lomax-revelan-la-divergencia-invisible-en-la-cola-extrema"><i class="fa fa-check"></i>2.2.4 Lognormal y Lomax revelan la divergencia invisible en la cola extrema</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#las-familias-de-distribuciones-se-entrelazan-mediante-transformaciones-y-l%C3%ADmites"><i class="fa fa-check"></i>2.2.5 Las familias de distribuciones se entrelazan mediante transformaciones y límites</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-2"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#severity-models-with-coverage-modifications"><i class="fa fa-check"></i>2.3 - Severity Models with Coverage Modifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-promedios-correctos-revelan-que-el-denominador-determina-el-significado-del-pago"><i class="fa fa-check"></i>2.3.1 Dos promedios correctos revelan que el denominador determina el significado del pago</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-deducible-acumula-masa-en-el-cero-y-desplaza-los-pagos-positivos"><i class="fa fa-check"></i>2.3.2 El deducible acumula masa en el cero y desplaza los pagos positivos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-factor-de-eliminaci%C3%B3n-de-p%C3%A9rdidas-mide-d%C3%B3lares-no-conteos-de-siniestros"><i class="fa fa-check"></i>2.3.3 El factor de eliminación de pérdidas mide dólares, no conteos de siniestros</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-l%C3%ADmite-trunca-la-cola-extrema-y-crea-un-punto-de-acumulaci%C3%B3n-contractual"><i class="fa fa-check"></i>2.3.4 El límite trunca la cola extrema y crea un punto de acumulación contractual</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-l%C3%ADmites-incrementados-dependen-del-comportamiento-asint%C3%B3tico-de-la-cola"><i class="fa fa-check"></i>2.3.5 Los límites incrementados dependen del comportamiento asintótico de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-inflaci%C3%B3n-interact%C3%BAa-de-forma-no-lineal-con-los-umbrales-nominales-fijos"><i class="fa fa-check"></i>2.3.6 La inflación interactúa de forma no lineal con los umbrales nominales fijos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-3"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#frequency-models"><i class="fa fa-check"></i>2.4 - Frequency Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-frecuencia-media-de-0.060-no-decide-cu%C3%A1ntos-claims-veremos"><i class="fa fa-check"></i>2.4.1 Una frecuencia media de 0.060 no decide cuántos claims veremos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-clase-ab0-unifica-las-distribuciones-discretas-mediante-su-relaci%C3%B3n-recursiva"><i class="fa fa-check"></i>2.4.2 La clase <span class="math inline">\((a,b,0)\)</span> unifica las distribuciones discretas mediante su relación recursiva</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#poisson-binomial-y-binomial-negativa-representan-tres-estructuras-de-dispersi%C3%B3n-distintas"><i class="fa fa-check"></i>2.4.3 Poisson, Binomial y Binomial Negativa representan tres estructuras de dispersión distintas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-clase-ab1-flexibiliza-el-origen-para-modelar-ceros-modificados-o-truncados"><i class="fa fa-check"></i>2.4.4 La clase <span class="math inline">\((a,b,1)\)</span> flexibiliza el origen para modelar ceros modificados o truncados</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-selecci%C3%B3n-del-modelo-de-frecuencia-exige-interrogar-la-naturaleza-del-proceso"><i class="fa fa-check"></i>2.4.5 La selección del modelo de frecuencia exige interrogar la naturaleza del proceso</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-4"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#aggregate-models"><i class="fa fa-check"></i>2.5 - Aggregate Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-cartera-no-paga-el-presupuesto-esperado-el-costo-anual-es-una-suma-aleatoria"><i class="fa fa-check"></i>2.5.1 La cartera no paga el presupuesto esperado: el costo anual es una suma aleatoria</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-fuentes-de-incertidumbre-componen-la-volatilidad-agregada-de-la-cartera"><i class="fa fa-check"></i>2.5.2 Dos fuentes de incertidumbre componen la volatilidad agregada de la cartera</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-misma-media-agregada-puede-esconder-perfiles-de-riesgo-y-volatilidades-incompatibles"><i class="fa fa-check"></i>2.5.3 Una misma media agregada puede esconder perfiles de riesgo y volatilidades incompatibles</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-modelo-de-riesgo-individual-expone-el-aporte-espec%C3%ADfico-de-cada-exposici%C3%B3n"><i class="fa fa-check"></i>2.5.4 El modelo de riesgo individual expone el aporte específico de cada exposición</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-aproximaci%C3%B3n-normal-impone-simetr%C3%ADa-pero-simplifica-el-c%C3%A1lculo-del-centro"><i class="fa fa-check"></i>2.5.5 La aproximación Normal impone simetría pero simplifica el cálculo del centro</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-aproximaci%C3%B3n-lognormal-respeta-la-naturaleza-no-negativa-y-asim%C3%A9trica-de-las-p%C3%A9rdidas"><i class="fa fa-check"></i>2.5.6 La aproximación Lognormal respeta la naturaleza no negativa y asimétrica de las pérdidas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-momentos-id%C3%A9nticos-no-determinan-la-cola-de-la-distribuci%C3%B3n-agregada"><i class="fa fa-check"></i>2.5.7 Dos momentos idénticos no determinan la cola de la distribución agregada</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-5"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#risk-measures"><i class="fa fa-check"></i>2.6 - Risk Measures</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-percentil-define-la-frontera-de-la-cola-pero-ignora-lo-que-ocurre-dentro-de-ella"><i class="fa fa-check"></i>2.6.1 El percentil define la frontera de la cola pero ignora lo que ocurre dentro de ella</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-en-riesgo-de-cola-integra-la-severidad-promedio-de-los-escenarios-extremos"><i class="fa fa-check"></i>2.6.2 El Valor en Riesgo de Cola integra la severidad promedio de los escenarios extremos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#lognormal-y-lomax-revelan-por-qu%C3%A9-el-umbral-de-entrada-no-determina-el-costo-de-la-cola"><i class="fa fa-check"></i>2.6.3 Lognormal y Lomax revelan por qué el umbral de entrada no determina el costo de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#las-propiedades-deseables-exigen-un-comportamiento-l%C3%B3gico-de-la-medida-de-riesgo"><i class="fa fa-check"></i>2.6.4 Las propiedades deseables exigen un comportamiento lógico de la medida de riesgo</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-en-riesgo-puede-fallar-la-subaditividad"><i class="fa fa-check"></i>2.6.5 El Valor en Riesgo puede fallar la subaditividad</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-cola-determina-qu%C3%A9-momentos-existen-y-qu%C3%A9-c%C3%A1lculos-siguen-siendo-v%C3%A1lidos"><i class="fa fa-check"></i>2.6.6 El parámetro de cola determina qué momentos existen y qué cálculos siguen siendo válidos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#un-percentil-finito-puede-convivir-con-un-tvar-infinito"><i class="fa fa-check"></i>2.6.7 Un percentil finito puede convivir con un TVaR infinito</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-6"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html"><i class="fa fa-check"></i>3 - Parametric Estimation</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#section-3.1---maximum-likelihood-estimators"><i class="fa fa-check"></i>Section 3.1 - Maximum Likelihood Estimators</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-verosimilitud-mide-la-compatibilidad-de-los-par%C3%A1metros-con-los-datos-que-alcanzamos-a-observar"><i class="fa fa-check"></i>3.1.1 La verosimilitud mide la compatibilidad de los parámetros con los datos que alcanzamos a observar</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-logaritmo-convierte-la-acumulaci%C3%B3n-multiplicativa-en-una-suma-anal%C3%ADticamente-manejable"><i class="fa fa-check"></i>3.1.2 El logaritmo convierte la acumulación multiplicativa en una suma analíticamente manejable</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-volumen-de-exposici%C3%B3n-define-la-escala-de-la-verosimilitud-de-frecuencia"><i class="fa fa-check"></i>3.1.3 El volumen de exposición define la escala de la verosimilitud de frecuencia</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#las-carteras-agregadas-exigen-distinguir-entre-observar-componentes-y-observar-%C3%BAnicamente-el-total"><i class="fa fa-check"></i>3.1.4 Las carteras agregadas exigen distinguir entre observar componentes y observar únicamente el total</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#agrupar-datos-destruye-la-precisi%C3%B3n-individual-pero-conserva-la-estructura-del-intervalo"><i class="fa fa-check"></i>3.1.5 Agrupar datos destruye la precisión individual pero conserva la estructura del intervalo</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-truncamiento-condicional-cambia-la-distribuci%C3%B3n-de-las-observaciones-que-alcanzan-la-muestra"><i class="fa fa-check"></i>3.1.6 El truncamiento condicional cambia la distribución de las observaciones que alcanzan la muestra</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-censura-preserva-la-existencia-de-la-observaci%C3%B3n-pero-limita-el-conocimiento-de-su-magnitud"><i class="fa fa-check"></i>3.1.7 La censura preserva la existencia de la observación pero limita el conocimiento de su magnitud</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-contribuci%C3%B3n-a-la-likelihood-depende-del-evento-que-realmente-qued%C3%B3-registrado"><i class="fa fa-check"></i>3.1.8 La contribución a la likelihood depende del evento que realmente quedó registrado</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-1---datos-completos-de-severity-y-frequency"><i class="fa fa-check"></i>Ejercicio 1 - Datos completos de severity y frequency</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-2---datos-agrupados-de-severity"><i class="fa fa-check"></i>Ejercicio 2 - Datos agrupados de severity</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-3---truncation-y-censoring"><i class="fa fa-check"></i>Ejercicio 3 - Truncation y censoring</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#cierre-y-puente-final-7"><i class="fa fa-check"></i>Cierre y puente final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html"><i class="fa fa-check"></i>4 - Introduction to Credibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#section-4.1---classical-credibility"><i class="fa fa-check"></i>Section 4.1 - Classical Credibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-especificidad-del-dato-propio-no-garantiza-la-estabilidad-de-su-promedio"><i class="fa fa-check"></i>4.1.1 La especificidad del dato propio no garantiza la estabilidad de su promedio</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-factor-de-credibilidad-es-una-ponderaci%C3%B3n-de-evidencia-no-una-probabilidad-de-certeza"><i class="fa fa-check"></i>4.1.2 El factor de credibilidad es una ponderación de evidencia, no una probabilidad de certeza</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-est%C3%A1ndar-de-fluctuaci%C3%B3n-limitada-exige-acotar-el-error-de-la-cola-con-alta-probabilidad"><i class="fa fa-check"></i>4.1.3 El estándar de fluctuación limitada exige acotar el error de la cola con alta probabilidad</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-ra%C3%ADz-cuadrada-de-la-exposici%C3%B3n-rescata-el-valor-informativo-de-las-muestras-peque%C3%B1as"><i class="fa fa-check"></i>4.1.4 La raíz cuadrada de la exposición rescata el valor informativo de las muestras pequeñas</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-estimaci%C3%B3n-ponderada-devuelve-el-precio-hacia-el-centro-de-gravedad-de-la-cartera"><i class="fa fa-check"></i>4.1.5 La estimación ponderada devuelve el precio hacia el centro de gravedad de la cartera</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-est%C3%A1ndar-pertenece-a-la-variable-de-riesgo-y-no-se-transfiere-de-forma-autom%C3%A1tica"><i class="fa fa-check"></i>4.1.6 El estándar pertenece a la variable de riesgo y no se transfiere de forma automática</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#cierre-y-puente-final-8"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html"><i class="fa fa-check"></i>5 - Pricing and Reserving for Short-Term Insurance Coverages</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.1---loss-reserving-expected-loss-ratio-chain-ladder-y-bornhuetter-ferguson"><i class="fa fa-check"></i>Section 5.1 - Loss Reserving: Expected Loss Ratio, Chain-Ladder y Bornhuetter-Ferguson</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-costo-%C3%BAltimo-de-un-a%C3%B1o-de-accidentes-no-es-la-cifra-que-hoy-registra-la-diagonal"><i class="fa fa-check"></i>5.1.1 El costo último de un año de accidentes no es la cifra que hoy registra la diagonal</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-esperada-se-aferra-a-la-expectativa-previa-e-ignora-la-inmadurez-de-la-diagonal"><i class="fa fa-check"></i>5.1.2 El método de Razón de Siniestralidad Esperada se aferra a la expectativa previa e ignora la inmadurez de la diagonal</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-chain-ladder-cree-en-la-inercia-de-la-siniestralidad-emergente-para-proyectar-su-escala-final"><i class="fa fa-check"></i>5.1.3 El método Chain-Ladder cree en la inercia de la siniestralidad emergente para proyectar su escala final</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-bornhuetter-ferguson-aplica-el-priori-%C3%BAnicamente-a-la-porci%C3%B3n-de-desarrollo-pendiente"><i class="fa fa-check"></i>5.1.4 El método Bornhuetter-Ferguson aplica el priori únicamente a la porción de desarrollo pendiente</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-los-m%C3%A9todos-se-revela-ante-perturbaciones-en-los-datos-o-en-el-priori"><i class="fa fa-check"></i>5.1.5 La asimetría de los métodos se revela ante perturbaciones en los datos o en el priori</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-9"><i class="fa fa-check"></i>Cierre y puente final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.2---data-preparation-for-ratemaking"><i class="fa fa-check"></i>Section 5.2 - Data Preparation for Ratemaking</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ratio-de-siniestralidad-crudo-es-una-ilusi%C3%B3n-temporal-y-operativa"><i class="fa fa-check"></i>5.2.1 El ratio de siniestralidad crudo es una ilusión temporal y operativa</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ajuste-por-desarrollo-traduce-la-inmadurez-de-la-diagonal-en-escala-%C3%BAltima"><i class="fa fa-check"></i>5.2.2 El ajuste por desarrollo traduce la inmadurez de la diagonal en escala última</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-tendencia-de-costo-proyecta-la-severidad-y-frecuencia-hacia-el-futuro-econ%C3%B3mico"><i class="fa fa-check"></i>5.2.3 La tendencia de costo proyecta la severidad y frecuencia hacia el futuro económico</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-premium-on-leveling-reconstruye-los-ingresos-bajo-la-estructura-tarifaria-actual"><i class="fa fa-check"></i>5.2.4 La premium on-leveling reconstruye los ingresos bajo la estructura tarifaria actual</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-de-gastos-fijos-y-variables-proh%C3%ADbe-el-recargo-porcentual-simple"><i class="fa fa-check"></i>5.2.5 La estructura de gastos fijos y variables prohíbe el recargo porcentual simple</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-intuici%C3%B3n-que-falla---el-recargo-porcentual-simple-subfinancia-la-operaci%C3%B3n"><i class="fa fa-check"></i>La intuición que falla - El recargo porcentual simple subfinancia la operación</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-10"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.3---ratemaking-loss-cost-and-loss-ratio-methods"><i class="fa fa-check"></i>Section 5.3 - Ratemaking: Loss Cost and Loss Ratio Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-costo-de-siniestralidad-calcula-el-financiamiento-directo-por-exposici%C3%B3n"><i class="fa fa-check"></i>5.3.1 El método de Costo de Siniestralidad calcula el financiamiento directo por exposición</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-traduce-la-necesidad-en-ratios-de-prima-actual"><i class="fa fa-check"></i>5.3.2 El método de Razón de Siniestralidad traduce la necesidad en ratios de prima actual</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#dos-m%C3%A9todos-un-solo-balance-la-reconciliaci%C3%B3n-algebraica-perfecta"><i class="fa fa-check"></i>5.3.3 Dos métodos, un solo balance: la reconciliación algebraica perfecta</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-las-indicaciones-se-revela-ante-shocks-en-el-entorno-de-suscripci%C3%B3n"><i class="fa fa-check"></i>5.3.4 La asimetría de las indicaciones se revela ante shocks en el entorno de suscripción</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-t%C3%A9cnica-de-la-tarifa-requiere-transparencia-en-la-composici%C3%B3n-de-cada-d%C3%B3lar"><i class="fa fa-check"></i>5.3.5 La estructura técnica de la tarifa requiere transparencia en la composición de cada dólar</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-de-paradigm-shift-tr%C3%A1nsito-a-part-6"><i class="fa fa-check"></i>Cierre y Puente de Paradigm Shift (Tránsito a Part 6)</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-1---determinaci%C3%B3n-de-la-tarifa-t%C3%A9cnica-mediante-el-loss-cost-method"><i class="fa fa-check"></i>Ejercicio 1 - Determinación de la Tarifa Técnica mediante el Loss Cost Method</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-2---reconstrucci%C3%B3n-de-tarifas-mediante-el-loss-ratio-method"><i class="fa fa-check"></i>Ejercicio 2 - Reconstrucción de Tarifas mediante el Loss Ratio Method</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-3---auditor%C3%ADa-de-una-discrepancia-entre-m%C3%A9todos"><i class="fa fa-check"></i>Ejercicio 3 - Auditoría de una discrepancia entre métodos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html"><i class="fa fa-check"></i>6 - Option Pricing Fundamentals</a>
+<ul>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#section-6.1---introduction-to-options"><i class="fa fa-check"></i>Section 6.1 - Introduction to Options</a>
+<ul>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-compra-define-un-derecho-asim%C3%A9trico-a-adquirir-sin-obligaci%C3%B3n"><i class="fa fa-check"></i>6.1.1 La opción de compra define un derecho asimétrico a adquirir sin obligación</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-venta-define-un-derecho-asim%C3%A9trico-a-vender-para-proteger-la-ca%C3%ADda"><i class="fa fa-check"></i>6.1.2 La opción de venta define un derecho asimétrico a vender para proteger la caída</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#el-tiempo-separa-la-prima-pagada-hoy-del-pago-contingente-recibido-ma%C3%B1ana"><i class="fa fa-check"></i>6.1.3 El tiempo separa la prima pagada hoy del pago contingente recibido mañana</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#tenedor-frente-a-emisor-la-transferencia-sim%C3%A9trica-de-suma-cero"><i class="fa fa-check"></i>6.1.4 Tenedor frente a emisor: la transferencia simétrica de suma cero</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#estar-in-the-money-define-viabilidad-de-ejercicio-no-rentabilidad-final"><i class="fa fa-check"></i>6.1.5 Estar <em>in-the-money</em> define viabilidad de ejercicio, no rentabilidad final</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-venta-como-cobertura-el-portafolio-protector"><i class="fa fa-check"></i>6.1.6 La opción de venta como cobertura: el portafolio protector</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#cierre-y-puente-hacia-section-6.2"><i class="fa fa-check"></i>Cierre y puente hacia Section 6.2</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fundamentals of Actuarial Mathematics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="short-term-insurance-and-reinsurance-coverages" class="section level1 hasAnchor">
+<h1>1 - Short-Term Insurance and Reinsurance Coverages<a href="short-term-insurance-and-reinsurance-coverages.html#short-term-insurance-and-reinsurance-coverages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="coverage-modifications-and-reinsurance" class="section level2 hasAnchor">
+<h2>1.1 - Coverage Modifications and Reinsurance<a href="short-term-insurance-and-reinsurance-coverages.html#coverage-modifications-and-reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><em>El mismo siniestro cambia de tamaño según el contrato y el balance desde el que se mire</em></p>
+</blockquote>
+<div id="el-siniestro-original-no-es-la-pérdida-final-de-la-aseguradora" class="section level3 hasAnchor">
+<h3>1.1.1 El siniestro original no es la pérdida final de la aseguradora<a href="short-term-insurance-and-reinsurance-coverages.html#el-siniestro-original-no-es-la-p%C3%A9rdida-final-de-la-aseguradora" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cuando ocurre un siniestro en el seguro de daños comerciales, la primera cifra que se registra es el daño físico directo sufrido por el asegurado, conocido técnicamente como pérdida original o pérdida <em>ground-up</em>. Consideremos el Siniestro A, caso canónico del universo ficticio de Meridiano Seguros. Un asegurado de su cartera de seguros de propiedad comercial para pequeñas y medianas empresas sufre un siniestro de gran magnitud en sus instalaciones, cuya pérdida <em>ground-up</em> se evalúa en exactamente <span class="math inline">\(80,000\)</span> USD. Ante este escenario, la primera pregunta parece directa: ¿cuánto perdió Meridiano Seguros?</p>
+<p>Para un lector no familiarizado con la práctica actuarial, la respuesta obvia sería <span class="math inline">\(80,000\)</span> USD. Sin embargo, la pérdida que experimenta el asegurado y el desembolso que realiza la aseguradora rara vez coinciden. La pregunta completa que gobernará esta sección es más precisa: <strong>¿quién termina pagando cada porción de esos <span class="math inline">\(80,000\)</span> USD entre el asegurado, la aseguradora y, cuando existe reaseguro, el reasegurador?</strong></p>
+<p>Entre el siniestro original y el pago final intervienen las condiciones del contrato de seguro directo, diseñadas para repartir el costo del evento entre el asegurado y la compañía. Para el contrato base de Meridiano Seguros, estas condiciones están compuestas por tres elementos secuenciales: un deducible (<em>deductible</em>) de <span class="math inline">\(2,500\)</span> USD, un límite de pago por encima del deducible (<em>payment limit above deductible</em>) de <span class="math inline">\(75,000\)</span> USD y una proporción de coaseguro (<em>coinsurance</em>) bajo la cual la aseguradora asume el <span class="math inline">\(90\%\)</span>.</p>
+<p><strong>Desafío al lector.</strong> Antes de continuar, calcule cuánto debería pagar Meridiano Seguros por el Siniestro A si el orden contractual es: deducible, límite y, finalmente, coaseguro. La respuesta no es <span class="math inline">\(80,000\)</span> USD.</p>
+<p>La existencia de estas cláusulas exige desterrar el lenguaje ambiguo. Irene, en su función de <em>chief actuary</em> de Meridiano Seguros, advierte que expresiones vagas como “la pérdida es de <span class="math inline">\(80,000\)</span> USD” conducen a errores de interpretación. En la práctica actuarial es necesario clasificar cada importe según la perspectiva económica a la que pertenezca. El daño original, el importe después del deducible, el monto sujeto a coaseguro y el pago bruto de la aseguradora son cantidades distintas. Ninguna es intercambiable con las demás.</p>
+</div>
+<div id="el-deducible-el-límite-de-cobertura-y-el-coaseguro-esculpen-el-pago-bruto" class="section level3 hasAnchor">
+<h3>1.1.2 El deducible, el límite de cobertura y el coaseguro esculpen el pago bruto<a href="short-term-insurance-and-reinsurance-coverages.html#el-deducible-el-l%C3%ADmite-de-cobertura-y-el-coaseguro-esculpen-el-pago-bruto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La transformación de una pérdida <em>ground-up</em> <span class="math inline">\(X\)</span> en el pago bruto de la aseguradora <span class="math inline">\(Y\)</span> se rige por un orden de aplicación de las condiciones contractuales que es estrictamente secuencial y no conmutativo. Esto significa que no debemos aplicar las cláusulas como si fueran operaciones independientes cuyo orden careciera de importancia.</p>
+<p>La secuencia contractual correcta es:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Absorción del deducible.</strong> El deducible traslada la primera porción de la pérdida directamente al asegurado. Para el Siniestro A:</li>
+</ol>
+<p><span class="math display">\[
+80,000\text{ USD}-2,500\text{ USD}
+=
+77,500\text{ USD}.
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Tope del límite de pago.</strong> El contrato establece un máximo de <span class="math inline">\(75,000\)</span> USD pagaderos por encima del deducible. Como el importe después del deducible es <span class="math inline">\(77,500\)</span> USD:</li>
+</ol>
+<p><span class="math display">\[
+\min(77,500\text{ USD},75,000\text{ USD})
+=
+75,000\text{ USD}.
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Aplicación del coaseguro.</strong> Meridiano asume el <span class="math inline">\(90\%\)</span> del importe cubierto y limitado:</li>
+</ol>
+<p><span class="math display">\[
+0.90(75,000\text{ USD})
+=
+67,500\text{ USD}.
+\]</span></p>
+<p>Por tanto, el pago bruto realizado por la aseguradora es:</p>
+<p><span class="math display">\[
+\boxed{Y=67,500\text{ USD}}.
+\]</span></p>
+<p>Solo después de comprender el mecanismo contractual resulta útil escribir la regla general:</p>
+<p><span class="math display">\[
+Y
+=
+c\min\left((X-d)_+,\ell\right),
+\]</span></p>
+<p>donde:</p>
+<p><span class="math display">\[
+(X-d)_+
+=
+\max(X-d,0),
+\]</span></p>
+<p><span class="math inline">\(d\)</span> es el deducible nominal, <span class="math inline">\(\ell\)</span> es el límite de pago por encima del deducible y <span class="math inline">\(c\)</span> es la proporción del importe cubierto que paga la aseguradora.</p>
+<p>Las cuatro cantidades del Siniestro A pueden verse simultáneamente:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Cantidad económica</th>
+<th align="right">Importe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pérdida <em>ground-up</em> <span class="math inline">\(X\)</span></td>
+<td align="right"><span class="math inline">\(80,000\)</span> USD</td>
+</tr>
+<tr class="even">
+<td>Importe después del deducible</td>
+<td align="right"><span class="math inline">\(77,500\)</span> USD</td>
+</tr>
+<tr class="odd">
+<td>Importe después del límite</td>
+<td align="right"><span class="math inline">\(75,000\)</span> USD</td>
+</tr>
+<tr class="even">
+<td>Pago bruto de la aseguradora <span class="math inline">\(Y\)</span></td>
+<td align="right"><span class="math inline">\(67,500\)</span> USD</td>
+</tr>
+</tbody>
+</table>
+<p>¿Cuál de estas cuatro cifras es “la pérdida”? La pregunta está mal formulada si no se especifica la variable económica. <span class="math inline">\(80,000\)</span> USD es la pérdida <em>ground-up</em>; <span class="math inline">\(67,500\)</span> USD es el pago bruto de la aseguradora.</p>
+<p>Para verificar la conservación del costo económico del evento, podemos reconstruir los <span class="math inline">\(80,000\)</span> USD originales:</p>
+<ul>
+<li><p>El asegurado absorbe los primeros <span class="math inline">\(2,500\)</span> USD por el deducible.</p></li>
+<li><p>El límite de <span class="math inline">\(75,000\)</span> USD por encima del deducible implica que el contrato alcanza su máximo cubierto cuando la pérdida <em>ground-up</em> llega a:</p></li>
+</ul>
+<p><span class="math display">\[
+d+\ell
+=
+2,500+75,000
+=
+77,500\text{ USD}.
+\]</span></p>
+<p>Como el Siniestro A asciende a <span class="math inline">\(80,000\)</span> USD, el importe no cubierto por encima de ese umbral es:</p>
+<p><span class="math display">\[
+80,000-(2,500+75,000)
+=
+2,500\text{ USD}.
+\]</span></p>
+<ul>
+<li>El asegurado soporta además el <span class="math inline">\(10\%\)</span> del importe cubierto y limitado:</li>
+</ul>
+<p><span class="math display">\[
+0.10(75,000\text{ USD})
+=
+7,500\text{ USD}.
+\]</span></p>
+<ul>
+<li>Meridiano Seguros paga el <span class="math inline">\(90\%\)</span> restante:</li>
+</ul>
+<p><span class="math display">\[
+67,500\text{ USD}.
+\]</span></p>
+<p>La reconciliación completa es:</p>
+<p><span class="math display">\[
+2,500
++
+2,500
++
+7,500
++
+67,500
+=
+80,000\text{ USD}.
+\]</span></p>
+<p>Las cláusulas contractuales no hacen desaparecer el costo de un siniestro. Determinan quién soporta cada porción.</p>
+</div>
+<div id="el-factor-de-eliminación-de-pérdidas-ler-mide-dólares-de-siniestro-no-cantidad-de-reclamaciones" class="section level3 hasAnchor">
+<h3>1.1.3 El factor de eliminación de pérdidas (LER) mide dólares de siniestro, no cantidad de reclamaciones<a href="short-term-insurance-and-reinsurance-coverages.html#el-factor-de-eliminaci%C3%B3n-de-p%C3%A9rdidas-ler-mide-d%C3%B3lares-de-siniestro-no-cantidad-de-reclamaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para analizar el impacto de las modificaciones de cobertura en una cartera completa, los actuarios deben pasar del análisis de un único siniestro a cantidades agregadas observadas. Supongamos que Meridiano Seguros quiere cuantificar qué proporción de sus pérdidas <em>ground-up</em> observadas deja de convertirse en obligación de pago por el efecto exclusivo del deducible.</p>
+<p>El cálculo empírico utiliza el Accident Year 2024 completamente desarrollado del caso canónico. Durante ese año, la cartera registró:</p>
+<ul>
+<li><p><span class="math inline">\(12,000\)</span> pólizas-año de exposición (<em>policy-years</em>);</p></li>
+<li><p><span class="math inline">\(720\)</span> reclamaciones <em>ground-up</em>;</p></li>
+<li><p><span class="math inline">\(12.960\)</span> millones USD de pérdidas <em>ground-up</em> acumuladas.</p></li>
+</ul>
+<p>De las <span class="math inline">\(720\)</span> pérdidas, <span class="math inline">\(96\)</span> fueron menores o iguales al deducible de <span class="math inline">\(2,500\)</span> USD y registraron un costo promedio de <span class="math inline">\(1,250\)</span> USD. El deducible elimina completamente esos importes de la obligación considerada:</p>
+<p><span class="math display">\[
+96(1,250\text{ USD})
+=
+120,000\text{ USD}.
+\]</span></p>
+<p>Las otras <span class="math inline">\(624\)</span> pérdidas superaron el deducible, por lo que este elimina los primeros <span class="math inline">\(2,500\)</span> USD de cada una:</p>
+<p><span class="math display">\[
+624(2,500\text{ USD})
+=
+1,560,000\text{ USD}.
+\]</span></p>
+<p>El monto total eliminado exclusivamente por el deducible es entonces:</p>
+<p><span class="math display">\[
+120,000
++
+1,560,000
+=
+1,680,000\text{ USD}
+=
+1.680\text{M USD}.
+\]</span></p>
+<p>El importe agregado remanente después del deducible, pero antes de límites y coaseguro, es:</p>
+<p><span class="math display">\[
+12.960\text{M USD}
+-
+1.680\text{M USD}
+=
+11.280\text{M USD}.
+\]</span></p>
+<p><strong>Desafío al lector.</strong> Si la cartera tenía <span class="math inline">\(12.960\)</span>M USD de pérdidas <em>ground-up</em> y conserva <span class="math inline">\(11.280\)</span>M USD después del deducible, ¿qué fracción de los dólares <em>ground-up</em> fue eliminada?</p>
+<p>El factor de eliminación de pérdidas o <em>loss elimination ratio</em> (LER) es:</p>
+<p><span class="math display">\[
+\text{LER}
+=
+\frac{\text{Monto de pérdida ground-up eliminado}}
+{\text{Monto total de pérdidas ground-up}}.
+\]</span></p>
+<p>Equivalentemente:</p>
+<p><span class="math display">\[
+\text{LER}
+=
+1-
+\frac{\text{Monto después del deducible}}
+{\text{Monto ground-up}}.
+\]</span></p>
+<p>Para la cartera 2024:</p>
+<p><span class="math display">\[
+\text{LER}
+=
+\frac{1.680\text{M USD}}{12.960\text{M USD}}
+=
+12.96296\ldots\%
+\approx
+\boxed{12.96\%}.
+\]</span></p>
+<p>El significado económico es específico: <strong>bajo esta cartera observada y este deducible, aproximadamente el <span class="math inline">\(12.96\%\)</span> de los dólares de pérdida <em>ground-up</em> queda eliminado de la obligación de pago considerada por efecto exclusivo del deducible, antes de aplicar límite y coaseguro.</strong></p>
+<p>Este resultado no significa que haya desaparecido aproximadamente el <span class="math inline">\(12.96\%\)</span> de las reclamaciones. Las <span class="math inline">\(96\)</span> reclamaciones que no superaron el deducible representan:</p>
+<p><span class="math display">\[
+\frac{96}{720}
+=
+13.33\%.
+\]</span></p>
+<p>El <span class="math inline">\(13.33\%\)</span> es una proporción de reclamaciones. El <span class="math inline">\(12.96\%\)</span> es una proporción de dólares de pérdida. La proximidad numérica de ambos valores en esta cartera no los convierte en la misma cantidad.</p>
+<p>Las demás modificaciones contractuales generan reducciones adicionales que deben etiquetarse por separado.</p>
+<p>Después de deducible y límite, antes de coaseguro, el importe agregado es <span class="math inline">\(10.400\)</span>M USD:</p>
+<p><span class="math display">\[
+1-
+\frac{10.400\text{M USD}}
+{12.960\text{M USD}}
+=
+19.753\ldots\%
+\approx
+19.75\%.
+\]</span></p>
+<p>Después de deducible, límite y coaseguro, el pago bruto agregado de Meridiano es <span class="math inline">\(9.360\)</span>M USD:</p>
+<p><span class="math display">\[
+1-
+\frac{9.360\text{M USD}}
+{12.960\text{M USD}}
+=
+27.777\ldots\%
+\approx
+27.78\%.
+\]</span></p>
+<p>La palabra “eliminación” por sí sola es insuficiente: siempre debe especificarse qué modificaciones contractuales están incluidas. En esta sección, LER se reserva para el efecto del deducible.</p>
+<p>Existe además una sensibilidad inmediata. Si el deducible aumentara, manteniendo todo lo demás constante, la proporción de dólares <em>ground-up</em> eliminados por el deducible debería aumentar. Todavía no necesitamos modelar una distribución completa para entender la dirección económica del cambio: un deducible mayor desplaza una porción mayor de cada pérdida hacia el asegurado.</p>
+</div>
+<div id="los-deducibles-nominales-fijos-distorsionan-la-transmisión-de-la-inflación" class="section level3 hasAnchor">
+<h3>1.1.4 Los deducibles nominales fijos distorsionan la transmisión de la inflación<a href="short-term-insurance-and-reinsurance-coverages.html#los-deducibles-nominales-fijos-distorsionan-la-transmisi%C3%B3n-de-la-inflaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La inflación de severidad aumenta el costo de reparación o reemplazo y, por tanto, modifica directamente la pérdida <em>ground-up</em> <span class="math inline">\(X\)</span>. Sin embargo, un aumento porcentual de <span class="math inline">\(X\)</span> no tiene por qué convertirse en el mismo aumento porcentual del pago bruto <span class="math inline">\(Y\)</span> cuando existen umbrales contractuales expresados en dólares nominales.</p>
+<p>Consideremos el Siniestro B, cuya pérdida <em>ground-up</em> inicial es:</p>
+<p><span class="math display">\[
+X=40,000\text{ USD}.
+\]</span></p>
+<p>Bajo el contrato base de Meridiano Seguros, el deducible es <span class="math inline">\(2,500\)</span> USD, el límite por encima del deducible es <span class="math inline">\(75,000\)</span> USD y el coaseguro de la aseguradora es del <span class="math inline">\(90\%\)</span>. En este caso el límite no es vinculante, porque:</p>
+<p><span class="math display">\[
+40,000-2,500
+=
+37,500
+&lt;
+75,000.
+\]</span></p>
+<p>El pago inicial es:</p>
+<p><span class="math display">\[
+Y
+=
+0.90(40,000-2,500)
+=
+\boxed{33,750\text{ USD}}.
+\]</span></p>
+<p><strong>Desafío al lector.</strong> Si la pérdida <em>ground-up</em> aumenta exactamente un <span class="math inline">\(6\%\)</span>, ¿debería aumentar también el pago de Meridiano exactamente un <span class="math inline">\(6\%\)</span>?</p>
+<p>La inflación de severidad lleva la pérdida a:</p>
+<p><span class="math display">\[
+X&#39;
+=
+40,000(1.06)
+=
+\boxed{42,400\text{ USD}}.
+\]</span></p>
+<p>El deducible y el límite del contrato permanecen nominalmente fijos. El límite continúa sin ser vinculante:</p>
+<p><span class="math display">\[
+42,400-2,500
+=
+39,900
+&lt;
+75,000.
+\]</span></p>
+<p>El nuevo pago bruto es:</p>
+<p><span class="math display">\[
+Y&#39;
+=
+0.90(42,400-2,500)
+=
+\boxed{35,910\text{ USD}}.
+\]</span></p>
+<p>La pérdida <em>ground-up</em> creció exactamente:</p>
+<p><span class="math display">\[
+\frac{42,400}{40,000}-1
+=
+\boxed{6.00\%}.
+\]</span></p>
+<p>El pago de la aseguradora creció:</p>
+<p><span class="math display">\[
+\frac{35,910}{33,750}-1
+=
+\boxed{6.40\%}.
+\]</span></p>
+<p>Por tanto, una inflación <em>ground-up</em> del <span class="math inline">\(6.00\%\)</span> se convierte, en este siniestro, en un crecimiento del pago bruto del <span class="math inline">\(6.40\%\)</span>.</p>
+<p>La causa es el deducible nominal fijo. La pérdida aumenta, pero se continúa restando la misma cantidad de <span class="math inline">\(2,500\)</span> USD. El deducible representa así una fracción menor del siniestro inflado, de modo que el importe restante sobre el cual actúa el coaseguro aumenta proporcionalmente más que la pérdida original.</p>
+<p>Una pequeña sensibilidad confirma el mecanismo. Supongamos que, en lugar de permanecer fijo, el deducible también se indexara un <span class="math inline">\(6\%\)</span>:</p>
+<p><span class="math display">\[
+d&#39;
+=
+2,500(1.06)
+=
+2,650\text{ USD}.
+\]</span></p>
+<p>Con la pérdida inflada de <span class="math inline">\(42,400\)</span> USD y manteniendo el mismo coaseguro, el pago sería:</p>
+<p><span class="math display">\[
+Y^{(\text{indexado})}
+=
+0.90(42,400-2,650)
+=
+0.90(39,750)
+=
+\boxed{35,775\text{ USD}}.
+\]</span></p>
+<p>Su crecimiento respecto del pago inicial sería:</p>
+<p><span class="math display">\[
+\frac{35,775}{33,750}-1
+=
+\boxed{6.00\%}.
+\]</span></p>
+<p>El contraste demuestra que la diferencia entre <span class="math inline">\(6.00\%\)</span> y <span class="math inline">\(6.40\%\)</span> no procede de la inflación por sí sola. Procede de la interacción entre la inflación de <span class="math inline">\(X\)</span> y un deducible contractual que permanece fijo en términos nominales.</p>
+<p>El límite puede producir el efecto opuesto. El pago bruto máximo bajo el contrato base es:</p>
+<p><span class="math display">\[
+0.90(75,000)
+=
+\boxed{67,500\text{ USD}}.
+\]</span></p>
+<p>Una vez alcanzado ese máximo, una pérdida <em>ground-up</em> puede seguir aumentando sin que el pago bruto supere <span class="math inline">\(67,500\)</span> USD. Los deducibles fijos pueden amplificar el crecimiento porcentual del pago en ciertos intervalos; los límites pueden frenarlo o detenerlo en otros.</p>
+<p>La regla que debemos conservar es sencilla: <strong>la inflación actúa sobre <span class="math inline">\(X\)</span>; los umbrales contractuales determinan cómo ese cambio se transmite a <span class="math inline">\(Y\)</span>.</strong></p>
+</div>
+<div id="el-reaseguro-no-reduce-la-deuda-con-el-asegurado-redistribuye-el-costo-de-los-pagos" class="section level3 hasAnchor">
+<h3>1.1.5 El reaseguro no reduce la deuda con el asegurado: redistribuye el costo de los pagos<a href="short-term-insurance-and-reinsurance-coverages.html#el-reaseguro-no-reduce-la-deuda-con-el-asegurado-redistribuye-el-costo-de-los-pagos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una vez determinado el pago bruto <span class="math inline">\(Y\)</span> que Meridiano Seguros debe realizar al asegurado, aparece una segunda relación contractual: el reaseguro (<em>reinsurance</em>).</p>
+<p>El reaseguro permite que Meridiano Seguros, como compañía cedente, transfiera económicamente una parte del costo de sus pagos a una reaseguradora. No sustituye el contrato original entre Meridiano y su asegurado.</p>
+<p>En el Siniestro A:</p>
+<p><span class="math display">\[
+Y=67,500\text{ USD}.
+\]</span></p>
+<p>La pregunta es ahora distinta: <strong>Meridiano debe pagar <span class="math inline">\(67,500\)</span> USD al asegurado; ¿significa eso que los <span class="math inline">\(67,500\)</span> USD permanecerán íntegramente como costo retenido por Meridiano?</strong></p>
+<p>No necesariamente.</p>
+<p>Mateo enfatiza una distinción fundamental: el reaseguro no extingue ni reduce la obligación directa de Meridiano frente al asegurado. Si el contrato de seguro directo exige un pago bruto de <span class="math inline">\(67,500\)</span> USD, Meridiano continúa debiendo esos <span class="math inline">\(67,500\)</span> USD al cliente con independencia de la estructura de reaseguro analizada.</p>
+<p>El tratado de reaseguro determina cómo se distribuye económicamente ese pago bruto entre la cedente y la reaseguradora. Definimos:</p>
+<ul>
+<li><p><span class="math inline">\(Y^{ced}\)</span>: recuperación de reaseguro o importe cedido;</p></li>
+<li><p><span class="math inline">\(Y^{net}\)</span>: importe neto retenido por Meridiano.</p></li>
+</ul>
+<p>La identidad fundamental es:</p>
+<p><span class="math display">\[
+\boxed{
+Y
+=
+Y^{ced}
++
+Y^{net}
+}.
+\]</span></p>
+<p>El contrato directo transforma:</p>
+<p><span class="math display">\[
+X
+\longrightarrow
+Y.
+\]</span></p>
+<p>El tratado de reaseguro transforma después la financiación económica de <span class="math inline">\(Y\)</span>:</p>
+<p><span class="math display">\[
+Y
+\longrightarrow
+Y^{ced}+Y^{net}.
+\]</span></p>
+<p>Los dos niveles contractuales no deben confundirse.</p>
+</div>
+<div id="quota-share-y-exceso-de-pérdida-reestructuran-el-perfil-de-riesgo-retenido-de-formas-opuestas" class="section level3 hasAnchor">
+<h3>1.1.6 Quota Share y Exceso de Pérdida reestructuran el perfil de riesgo retenido de formas opuestas<a href="short-term-insurance-and-reinsurance-coverages.html#quota-share-y-exceso-de-p%C3%A9rdida-reestructuran-el-perfil-de-riesgo-retenido-de-formas-opuestas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Meridiano Seguros analiza dos tratados de reaseguro <strong>alternativos y excluyentes</strong>, no simultáneos. Ambos se aplican sobre el pago bruto <span class="math inline">\(Y\)</span>, no directamente sobre la pérdida <em>ground-up</em> <span class="math inline">\(X\)</span>.</p>
+<div id="tratado-1-reaseguro-quota-share-proporcional" class="section level4 hasAnchor">
+<h4>Tratado 1: Reaseguro Quota Share (Proporcional)<a href="short-term-insurance-and-reinsurance-coverages.html#tratado-1-reaseguro-quota-share-proporcional" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el tratado Quota Share canónico, la proporción cedida es:</p>
+<p><span class="math display">\[
+q=0.30.
+\]</span></p>
+<p>La reaseguradora participa en una proporción fija del <span class="math inline">\(30\%\)</span> de cada pago bruto:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+qY
+=
+0.30Y.
+\]</span></p>
+<p>La retención neta de Meridiano es:</p>
+<p><span class="math display">\[
+Y^{net}
+=
+Y-Y^{ced}
+=
+0.70Y.
+\]</span></p>
+<p>Para el Siniestro A:</p>
+<p><span class="math display">\[
+Y=67,500\text{ USD}.
+\]</span></p>
+<p>La recuperación de reaseguro es:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+0.30(67,500)
+=
+\boxed{20,250\text{ USD}}.
+\]</span></p>
+<p>La retención neta es:</p>
+<p><span class="math display">\[
+Y^{net}
+=
+67,500-20,250
+=
+\boxed{47,250\text{ USD}}.
+\]</span></p>
+<p>La reconciliación es exacta:</p>
+<p><span class="math display">\[
+67,500
+=
+20,250
++
+47,250.
+\]</span></p>
+<p>El mismo mecanismo proporcional opera sobre el pago bruto agregado observado de la cartera 2024:</p>
+<p><span class="math display">\[
+Y_{\text{agg}}
+=
+9.360\text{M USD}.
+\]</span></p>
+<p>El importe cedido agregado es:</p>
+<p><span class="math display">\[
+Y^{ced}_{\text{agg}}
+=
+0.30(9.360\text{M})
+=
+\boxed{2.808\text{M USD}}.
+\]</span></p>
+<p>La retención neta agregada es:</p>
+<p><span class="math display">\[
+Y^{net}_{\text{agg}}
+=
+9.360\text{M}
+-
+2.808\text{M}
+=
+\boxed{6.552\text{M USD}}.
+\]</span></p>
+<p>Y nuevamente:</p>
+<p><span class="math display">\[
+9.360\text{M}
+=
+2.808\text{M}
++
+6.552\text{M}.
+\]</span></p>
+<p>La característica estructural del Quota Share es la proporcionalidad: la misma fracción del pago se cede en todos los niveles a los que se aplica el tratado.</p>
+</div>
+<div id="tratado-2-reaseguro-de-exceso-de-pérdida-no-proporcional" class="section level4 hasAnchor">
+<h4>Tratado 2: Reaseguro de Exceso de Pérdida (No Proporcional)<a href="short-term-insurance-and-reinsurance-coverages.html#tratado-2-reaseguro-de-exceso-de-p%C3%A9rdida-no-proporcional" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El tratado de exceso de pérdida o <em>excess-of-loss</em> (XoL) funciona de forma distinta. Meridiano retiene los primeros <span class="math inline">\(25,000\)</span> USD del pago bruto y la reaseguradora cubre después una capa de hasta <span class="math inline">\(40,000\)</span> USD.</p>
+<p>El tratado se expresa como:</p>
+<p><span class="math display">\[
+40,000\text{ xs }25,000.
+\]</span></p>
+<p>La recuperación es:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+\min\left((Y-25,000)_+,40,000\right).
+\]</span></p>
+<p>Para el Siniestro A:</p>
+<p><span class="math display">\[
+Y=67,500\text{ USD}.
+\]</span></p>
+<p>El importe por encima del <em>attachment</em> es:</p>
+<p><span class="math display">\[
+67,500-25,000
+=
+42,500\text{ USD}.
+\]</span></p>
+<p>Como la capa solo puede ceder <span class="math inline">\(40,000\)</span> USD:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+\boxed{40,000\text{ USD}}.
+\]</span></p>
+<p>La retención neta es:</p>
+<p><span class="math display">\[
+Y^{net}
+=
+67,500-40,000
+=
+\boxed{27,500\text{ USD}}.
+\]</span></p>
+<p>La capa se agota cuando el pago bruto alcanza:</p>
+<p><span class="math display">\[
+25,000+40,000
+=
+\boxed{65,000\text{ USD}}.
+\]</span></p>
+<p>El Siniestro A tiene un pago bruto de <span class="math inline">\(67,500\)</span> USD, por lo que los <span class="math inline">\(2,500\)</span> USD situados entre <span class="math inline">\(65,000\)</span> y <span class="math inline">\(67,500\)</span> quedan nuevamente retenidos por Meridiano.</p>
+<p>Así:</p>
+<p><span class="math display">\[
+27,500
+=
+25,000
++
+2,500.
+\]</span></p>
+<p>Esto desmonta una intuición frecuente: una retención XoL de <span class="math inline">\(25,000\)</span> USD no significa que la aseguradora nunca pueda terminar reteniendo más de <span class="math inline">\(25,000\)</span> USD. Con una capa finita, los importes posteriores al agotamiento vuelven a la cedente.</p>
+<p>El Siniestro B permite ver otro comportamiento del mismo tratado.</p>
+<p>Antes de inflación:</p>
+<p><span class="math display">\[
+Y=33,750\text{ USD}.
+\]</span></p>
+<p>La recuperación XoL es:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+33,750-25,000
+=
+\boxed{8,750\text{ USD}}.
+\]</span></p>
+<p>La retención neta es:</p>
+<p><span class="math display">\[
+Y^{net}
+=
+33,750-8,750
+=
+\boxed{25,000\text{ USD}}.
+\]</span></p>
+<p>La reconciliación es:</p>
+<p><span class="math display">\[
+33,750
+=
+8,750
++
+25,000.
+\]</span></p>
+<p>Después de la inflación del <span class="math inline">\(6\%\)</span>:</p>
+<p><span class="math display">\[
+Y&#39;=35,910\text{ USD}.
+\]</span></p>
+<p>La recuperación pasa a ser:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+35,910-25,000
+=
+\boxed{10,910\text{ USD}}.
+\]</span></p>
+<p>La retención neta continúa siendo:</p>
+<p><span class="math display">\[
+Y^{net}
+=
+35,910-10,910
+=
+\boxed{25,000\text{ USD}}.
+\]</span></p>
+<p>Y:</p>
+<p><span class="math display">\[
+35,910
+=
+10,910
++
+25,000.
+\]</span></p>
+<p>En este tramo concreto de la capa XoL, el aumento de <span class="math inline">\(2,160\)</span> USD del pago bruto se refleja íntegramente en el aumento de la recuperación de reaseguro:</p>
+<p><span class="math display">\[
+10,910-8,750
+=
+2,160\text{ USD},
+\]</span></p>
+<p>mientras que la retención neta permanece en <span class="math inline">\(25,000\)</span> USD. Esta conclusión depende de que ambos pagos permanezcan dentro de la capa; no debe generalizarse a pagos por debajo del <em>attachment</em> ni por encima de su punto de agotamiento.</p>
+<p><strong>Desafío al lector.</strong> Antes de observar la tabla siguiente, determine para pagos brutos de <span class="math inline">\(20,000\)</span>, <span class="math inline">\(40,000\)</span> y <span class="math inline">\(67,500\)</span> USD cuánto cedería un Quota Share del <span class="math inline">\(30\%\)</span> y cuánto cedería el XoL de <span class="math inline">\(40,000\text{ xs }25,000\)</span>. ¿Qué tratado cede más en cada nivel?</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">Pago bruto directo <span class="math inline">\(Y\)</span></th>
+<th align="right">Cedido bajo QS <span class="math inline">\((30\%)\)</span></th>
+<th align="right">Neto de Meridiano - QS</th>
+<th align="right">Cedido bajo XoL <span class="math inline">\(40\text{k xs }25\text{k}\)</span></th>
+<th align="right">Neto de Meridiano - XoL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><span class="math inline">\(20,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(6,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(14,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(0\)</span> USD</td>
+<td align="right"><span class="math inline">\(20,000\)</span> USD</td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(40,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(12,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(28,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(15,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(25,000\)</span> USD</td>
+</tr>
+<tr class="odd">
+<td align="right"><span class="math inline">\(67,500\)</span> USD</td>
+<td align="right"><span class="math inline">\(20,250\)</span> USD</td>
+<td align="right"><span class="math inline">\(47,250\)</span> USD</td>
+<td align="right"><span class="math inline">\(40,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(27,500\)</span> USD</td>
+</tr>
+</tbody>
+</table>
+<p>Las cifras de <span class="math inline">\(20,000\)</span> y <span class="math inline">\(40,000\)</span> USD son escenarios locales estrictamente pedagógicos y no nuevos registros históricos del Accident Year 2024.</p>
+<p>La comparación muestra dos estructuras distintas:</p>
+<ul>
+<li><p><strong>Quota Share:</strong> cede una proporción fija desde el primer dólar relevante del pago. Los pagos pequeños y grandes se comparten con la misma proporción.</p></li>
+<li><p><strong>XoL:</strong> no cede nada por debajo del <em>attachment</em>, absorbe los dólares comprendidos dentro de la capa y, después del agotamiento, deja nuevamente los importes adicionales con la cedente.</p></li>
+</ul>
+<p>Por tanto, los dos tratados no son versiones casi equivalentes de una misma reducción. Modifican la retención de formas estructuralmente distintas. Determinar cuál conviene económicamente exigiría además considerar el costo y el objetivo del programa de reaseguro, cuestiones que no se cuantifican en esta sección.</p>
+<p>El contraste principal del Siniestro A puede resumirse de la siguiente manera:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Perspectiva</th>
+<th align="right">Variable</th>
+<th align="right">Claim A - Quota Share</th>
+<th align="right">Claim A - XoL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pérdida económica <em>ground-up</em></td>
+<td align="right"><span class="math inline">\(X\)</span></td>
+<td align="right"><span class="math inline">\(80,000\)</span> USD</td>
+<td align="right"><span class="math inline">\(80,000\)</span> USD</td>
+</tr>
+<tr class="even">
+<td>Pago bruto al asegurado</td>
+<td align="right"><span class="math inline">\(Y\)</span></td>
+<td align="right"><span class="math inline">\(67,500\)</span> USD</td>
+<td align="right"><span class="math inline">\(67,500\)</span> USD</td>
+</tr>
+<tr class="odd">
+<td>Recuperación de reaseguro</td>
+<td align="right"><span class="math inline">\(Y^{ced}\)</span></td>
+<td align="right"><span class="math inline">\(20,250\)</span> USD</td>
+<td align="right"><span class="math inline">\(40,000\)</span> USD</td>
+</tr>
+<tr class="even">
+<td>Pago neto retenido</td>
+<td align="right"><span class="math inline">\(Y^{net}\)</span></td>
+<td align="right"><span class="math inline">\(47,250\)</span> USD</td>
+<td align="right"><span class="math inline">\(27,500\)</span> USD</td>
+</tr>
+</tbody>
+</table>
+<p>La elección del tratado cambia la división entre <span class="math inline">\(Y^{ced}\)</span> y <span class="math inline">\(Y^{net}\)</span>; no cambia ni el evento <em>ground-up</em> <span class="math inline">\(X\)</span> ni el pago bruto <span class="math inline">\(Y\)</span> debido al asegurado.</p>
+</div>
+</div>
+<div id="la-tarificación-y-la-constitución-de-reservas-exigen-definir-si-la-base-es-bruta-o-neta" class="section level3 hasAnchor">
+<h3>1.1.7 La tarificación y la constitución de reservas exigen definir si la base es bruta o neta<a href="short-term-insurance-and-reinsurance-coverages.html#la-tarificaci%C3%B3n-y-la-constituci%C3%B3n-de-reservas-exigen-definir-si-la-base-es-bruta-o-neta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La transferencia de parte del costo al reasegurador afecta las cantidades que posteriormente importarán para tarificación (<em>pricing</em>) y constitución de reservas (<em>reserving</em>), pero esos dos temas requieren marcos que se desarrollarán más adelante.</p>
+<p>En tarificación, Lucía debe distinguir entre:</p>
+<ol style="list-style-type: decimal">
+<li><p>siniestralidad esperada bruta (<em>gross expected losses</em>);</p></li>
+<li><p>siniestralidad esperada cedida (<em>ceded expected losses</em>);</p></li>
+<li><p>siniestralidad esperada neta retenida (<em>net retained expected losses</em>);</p></li>
+<li><p>costo económico del reaseguro.</p></li>
+</ol>
+<p>Una reducción de <span class="math inline">\(Y^{net}\)</span> no significa automáticamente que la prima del asegurado deba disminuir en la misma cantidad. El reaseguro tiene un costo económico propio, pero esta sección no dispone de una prima de reaseguro canónica y, por tanto, no la inventará ni la descompondrá.</p>
+<p>Para reserving, Mateo enfatiza una disciplina semejante. La existencia de reaseguro no borra la obligación bruta derivada del contrato directo. Posteriormente será necesario distinguir entre la obligación bruta por siniestros, las recuperaciones de reaseguro esperadas y la posición neta resultante.</p>
+<p>Por tanto, antes de interpretar una cifra de pricing o reserving habrá que responder una pregunta básica:</p>
+<p><strong>¿La cantidad que estamos analizando está expresada sobre una base bruta o neta de reaseguro?</strong></p>
+<p>Esta sección no desarrolla todavía métodos de tarificación ni técnicas de reserving. Solo establece la distinción de base que esos métodos necesitarán.</p>
+</div>
+<div id="cierre-y-puente-final" class="section level3 hasAnchor">
+<h3>Cierre y Puente Final<a href="short-term-insurance-and-reinsurance-coverages.html#cierre-y-puente-final" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Al inicio de esta sección, el Siniestro A parecía ofrecer una única cifra: <span class="math inline">\(80,000\)</span> USD. Ahora podemos distinguir una cadena completa de cantidades.</p>
+<p>Para el Siniestro A:</p>
+<p><span class="math display">\[
+X
+=
+80,000\text{ USD},
+\]</span></p>
+<p>y:</p>
+<p><span class="math display">\[
+Y
+=
+67,500\text{ USD}.
+\]</span></p>
+<p>Bajo el Quota Share del <span class="math inline">\(30\%\)</span>:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+20,250\text{ USD},
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}
+=
+47,250\text{ USD}.
+\]</span></p>
+<p>Bajo el XoL de <span class="math inline">\(40,000\text{ xs }25,000\)</span>:</p>
+<p><span class="math display">\[
+Y^{ced}
+=
+40,000\text{ USD},
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}
+=
+27,500\text{ USD}.
+\]</span></p>
+<p>Todas estas cifras son correctas porque responden preguntas distintas.</p>
+<p>El Siniestro B añadió otra disciplina. Una pérdida <em>ground-up</em> de:</p>
+<p><span class="math display">\[
+40,000\text{ USD}
+\]</span></p>
+<p>produce un pago bruto de:</p>
+<p><span class="math display">\[
+33,750\text{ USD}.
+\]</span></p>
+<p>Después de una inflación del <span class="math inline">\(6\%\)</span>:</p>
+<p><span class="math display">\[
+X&#39;
+=
+42,400\text{ USD},
+\]</span></p>
+<p>mientras que:</p>
+<p><span class="math display">\[
+Y&#39;
+=
+35,910\text{ USD},
+\]</span></p>
+<p>un crecimiento del:</p>
+<p><span class="math display">\[
+6.40\%.
+\]</span></p>
+<p>Bajo el XoL analizado, y específicamente mientras ambos pagos permanecen dentro de su capa, la recuperación aumenta de:</p>
+<p><span class="math display">\[
+8,750\text{ USD}
+\]</span></p>
+<p>a:</p>
+<p><span class="math display">\[
+10,910\text{ USD},
+\]</span></p>
+<p>mientras que la retención neta de Meridiano permanece en:</p>
+<p><span class="math display">\[
+25,000\text{ USD}.
+\]</span></p>
+<p>La conclusión operativa es fundamental: antes de modelar un riesgo o interrogar una base de datos, debemos definir sin ambigüedad qué variable económica estamos midiendo.</p>
+<p>Una modificación de cobertura transforma:</p>
+<p><span class="math display">\[
+X
+\longrightarrow
+Y.
+\]</span></p>
+<p>El reaseguro divide después:</p>
+<p><span class="math display">\[
+Y
+=
+Y^{ced}
++
+Y^{net}.
+\]</span></p>
+<p>No existe un único “claim amount” que sirva indistintamente para todas las preguntas actuariales.</p>
+<p>Hasta aquí hemos trabajado con siniestros cuyos importes ya conocemos. Pero Lucía plantea la pregunta que abre el siguiente problema: <strong>si queremos modelar el costo de un siniestro futuro, ¿debemos describir <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> o <span class="math inline">\(Y^{net}\)</span>, y cómo describimos matemáticamente una cantidad cuyo valor todavía no conocemos?</strong></p>
+<p>Ese cambio exige pasar de un siniestro conocido a una variable aleatoria. Antes de seleccionar modelos de severidad, necesitaremos recuperar las herramientas con las que describiremos esas variables: probabilidades, percentiles, momentos, centro y dispersión.</p>
+<p>Ese es el punto de partida de <strong>Section 2.1 - Basics</strong>.</p>
+</div>
+<div id="ejercicios" class="section level3 hasAnchor">
+<h3>Ejercicios<a href="short-term-insurance-and-reinsurance-coverages.html#ejercicios" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ejercicio-1---contract-transformation-and-allocation" class="section level4 hasAnchor">
+<h4>Ejercicio 1 - Contract transformation and allocation<a href="short-term-insurance-and-reinsurance-coverages.html#ejercicio-1---contract-transformation-and-allocation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Un asegurado de la cartera de propiedad comercial sufre un siniestro cuya pérdida <em>ground-up</em> <span class="math inline">\(X\)</span> se evalúa en exactamente <span class="math inline">\(90,000\)</span> USD. El contrato directo cuenta con las condiciones del contrato base de Meridiano Seguros: deducible <span class="math inline">\(d=2,500\)</span> USD, límite de pago por encima del deducible <span class="math inline">\(\ell=75,000\)</span> USD y proporción de coaseguro <span class="math inline">\(c=90\%\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcule el monto retenido por el asegurado por concepto de deducible, coaseguro y pérdida excedente del límite.</p></li>
+<li><p>Calcule el pago bruto final <span class="math inline">\(Y\)</span> que realiza Meridiano Seguros.</p></li>
+<li><p>Asumiendo que Meridiano cuenta con un tratado XoL de <span class="math inline">\(40,000\text{ xs }25,000\)</span> aplicado sobre <span class="math inline">\(Y\)</span>, calcule <span class="math inline">\(Y^{ced}\)</span> y <span class="math inline">\(Y^{net}\)</span>.</p></li>
+<li><p>Reconcilie los <span class="math inline">\(90,000\)</span> USD de pérdida original demostrando que la suma de la retención del asegurado, el importe financiado económicamente por el reasegurador y el pago neto retenido por Meridiano equivale a la pérdida <em>ground-up</em>.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<p><span class="math display">\[
+Y
+=
+0.90\min\left((90,000-2,500)_+,75,000\right)
+=
+0.90(75,000)
+=
+67,500\text{ USD}.
+\]</span></p>
+<p><span class="math display">\[
+Y^{ced}
+=
+\min\left((67,500-25,000)_+,40,000\right)
+=
+40,000\text{ USD}.
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}
+=
+67,500-40,000
+=
+27,500\text{ USD}.
+\]</span></p>
+<p>El límite de cobertura se agota cuando la pérdida <em>ground-up</em> alcanza:</p>
+<p><span class="math display">\[
+d+\ell
+=
+77,500\text{ USD}.
+\]</span></p>
+<p>Por tanto, el exceso no cubierto es:</p>
+<p><span class="math display">\[
+90,000-77,500
+=
+12,500\text{ USD}.
+\]</span></p>
+<p>La retención total del asegurado es:</p>
+<p><span class="math display">\[
+2,500
++
+12,500
++
+7,500
+=
+22,500\text{ USD}.
+\]</span></p>
+<p>Y la reconciliación completa es:</p>
+<p><span class="math display">\[
+22,500
++
+40,000
++
+27,500
+=
+90,000\text{ USD}.
+\]</span></p>
+</div>
+<div id="ejercicio-2---ler-and-inflation-interpretation" class="section level4 hasAnchor">
+<h4>Ejercicio 2 - LER and inflation interpretation<a href="short-term-insurance-and-reinsurance-coverages.html#ejercicio-2---ler-and-inflation-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Supongamos que una cartera de seguros de propiedad de Meridiano Seguros registra pérdidas agregadas <em>ground-up</em> por <span class="math inline">\(15.00\)</span> millones USD. Tras aplicar un deducible específico, el monto agregado remanente se reduce a <span class="math inline">\(13.00\)</span> millones USD.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcule el LER empírico del deducible.</p></li>
+<li><p>Considere un siniestro individual con una pérdida <em>ground-up</em> inicial de <span class="math inline">\(50,000\)</span> USD bajo un contrato con deducible de <span class="math inline">\(2,500\)</span> USD y coaseguro del <span class="math inline">\(90\%\)</span>, sin límite de cobertura. Calcule el pago bruto inicial.</p></li>
+<li><p>Si la pérdida <em>ground-up</em> experimenta una inflación exacta del <span class="math inline">\(10\%\)</span>, calcule la nueva pérdida y el nuevo pago bruto.</p></li>
+<li><p>Compare los incrementos relativos de la pérdida <em>ground-up</em> y del pago de la aseguradora, y explique la causa estructural de la diferencia.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<p><span class="math display">\[
+\text{LER}
+=
+\frac{15.00\text{M}-13.00\text{M}}
+{15.00\text{M}}
+=
+\boxed{13.33\%}.
+\]</span></p>
+<p>El pago inicial es:</p>
+<p><span class="math display">\[
+0.90(50,000-2,500)
+=
+\boxed{42,750\text{ USD}}.
+\]</span></p>
+<p>La pérdida inflada es:</p>
+<p><span class="math display">\[
+50,000(1.10)
+=
+\boxed{55,000\text{ USD}}.
+\]</span></p>
+<p>El nuevo pago es:</p>
+<p><span class="math display">\[
+0.90(55,000-2,500)
+=
+\boxed{47,250\text{ USD}}.
+\]</span></p>
+<p>El crecimiento del pago es:</p>
+<p><span class="math display">\[
+\frac{47,250}{42,750}-1
+=
+10.5263\ldots\%
+\approx
+\boxed{10.53\%}.
+\]</span></p>
+<p>El pago crece más que la pérdida <em>ground-up</em> porque el deducible nominal de <span class="math inline">\(2,500\)</span> USD permanece fijo.</p>
+</div>
+<div id="ejercicio-3---quota-share-vs.-excess-of-loss-comparison" class="section level4 hasAnchor">
+<h4>Ejercicio 3 - Quota Share vs. Excess of Loss comparison<a href="short-term-insurance-and-reinsurance-coverages.html#ejercicio-3---quota-share-vs.-excess-of-loss-comparison" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Supongamos que Meridiano Seguros tiene tres siniestros con pagos brutos <span class="math inline">\(Y\)</span> de exactamente <span class="math inline">\(20,000\)</span>, <span class="math inline">\(45,000\)</span> y <span class="math inline">\(67,500\)</span> USD. La aseguradora evalúa dos estructuras de reaseguro alternativas aplicables sobre el pago bruto: un Quota Share del <span class="math inline">\(30\%\)</span> cedido y un XoL de <span class="math inline">\(40,000\text{ xs }25,000\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Para cada uno de los tres pagos, calcule <span class="math inline">\(Y^{ced}\)</span> y <span class="math inline">\(Y^{net}\)</span> bajo el Quota Share.</p></li>
+<li><p>Para cada uno, calcule <span class="math inline">\(Y^{ced}\)</span> y <span class="math inline">\(Y^{net}\)</span> bajo el XoL.</p></li>
+<li><p>Identifique qué tratado cede una mayor cantidad de dólares en cada nivel.</p></li>
+<li><p>Explique cómo cambia la retención de Meridiano bajo ambas estructuras y por qué estos cálculos, por sí solos, no permiten afirmar que un tratado sea universalmente “mejor” sin considerar el objetivo y el costo del programa de reaseguro.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<p>Para <span class="math inline">\(Y=20,000\)</span> USD:</p>
+<p><span class="math display">\[
+Y^{ced}_{QS}
+=
+0.30(20,000)
+=
+6,000\text{ USD},
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}_{QS}
+=
+14,000\text{ USD}.
+\]</span></p>
+<p>Bajo XoL:</p>
+<p><span class="math display">\[
+Y^{ced}_{XoL}
+=
+0,
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}_{XoL}
+=
+20,000\text{ USD}.
+\]</span></p>
+<p>El Quota Share cede más.</p>
+<p>Para <span class="math inline">\(Y=45,000\)</span> USD:</p>
+<p><span class="math display">\[
+Y^{ced}_{QS}
+=
+13,500\text{ USD},
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}_{QS}
+=
+31,500\text{ USD}.
+\]</span></p>
+<p>Bajo XoL:</p>
+<p><span class="math display">\[
+Y^{ced}_{XoL}
+=
+45,000-25,000
+=
+20,000\text{ USD},
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}_{XoL}
+=
+25,000\text{ USD}.
+\]</span></p>
+<p>El XoL cede más.</p>
+<p>Para <span class="math inline">\(Y=67,500\)</span> USD:</p>
+<p><span class="math display">\[
+Y^{ced}_{QS}
+=
+20,250\text{ USD},
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}_{QS}
+=
+47,250\text{ USD}.
+\]</span></p>
+<p>Bajo XoL:</p>
+<p><span class="math display">\[
+Y^{ced}_{XoL}
+=
+\min(67,500-25,000,40,000)
+=
+40,000\text{ USD},
+\]</span></p>
+<p><span class="math display">\[
+Y^{net}_{XoL}
+=
+27,500\text{ USD}.
+\]</span></p>
+<p>El XoL cede más.</p>
+<p>El Quota Share reduce proporcionalmente todos los pagos a los que se aplica. El XoL no cede por debajo del <em>attachment</em>, absorbe una capa definida y vuelve a dejar importes con la cedente después del agotamiento. Los cálculos muestran diferencias de estructura y de allocation; una comparación económica completa requeriría además el costo y el objetivo del programa de reaseguro.</p>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="severity-frequency-and-aggregate-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": null,
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

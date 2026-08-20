@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 - Pricing and Reserving for Short-Term Insurance Coverages | Fundamentals of Actuarial Mathematics</title>
+  <meta name="description" content="5 - Pricing and Reserving for Short-Term Insurance Coverages | Fundamentals of Actuarial Mathematics" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 - Pricing and Reserving for Short-Term Insurance Coverages | Fundamentals of Actuarial Mathematics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 - Pricing and Reserving for Short-Term Insurance Coverages | Fundamentals of Actuarial Mathematics" />
+  
+  
+  
+
+<meta name="author" content="John Rodríguez" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-credibility.html"/>
+<link rel="next" href="option-pricing-fundamentals.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="estilo.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html"><i class="fa fa-check"></i>1 - Short-Term Insurance and Reinsurance Coverages</a>
+<ul>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#coverage-modifications-and-reinsurance"><i class="fa fa-check"></i>1.1 - Coverage Modifications and Reinsurance</a>
+<ul>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-siniestro-original-no-es-la-p%C3%A9rdida-final-de-la-aseguradora"><i class="fa fa-check"></i>1.1.1 El siniestro original no es la pérdida final de la aseguradora</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-deducible-el-l%C3%ADmite-de-cobertura-y-el-coaseguro-esculpen-el-pago-bruto"><i class="fa fa-check"></i>1.1.2 El deducible, el límite de cobertura y el coaseguro esculpen el pago bruto</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-factor-de-eliminaci%C3%B3n-de-p%C3%A9rdidas-ler-mide-d%C3%B3lares-de-siniestro-no-cantidad-de-reclamaciones"><i class="fa fa-check"></i>1.1.3 El factor de eliminación de pérdidas (LER) mide dólares de siniestro, no cantidad de reclamaciones</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#los-deducibles-nominales-fijos-distorsionan-la-transmisi%C3%B3n-de-la-inflaci%C3%B3n"><i class="fa fa-check"></i>1.1.4 Los deducibles nominales fijos distorsionan la transmisión de la inflación</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#el-reaseguro-no-reduce-la-deuda-con-el-asegurado-redistribuye-el-costo-de-los-pagos"><i class="fa fa-check"></i>1.1.5 El reaseguro no reduce la deuda con el asegurado: redistribuye el costo de los pagos</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#quota-share-y-exceso-de-p%C3%A9rdida-reestructuran-el-perfil-de-riesgo-retenido-de-formas-opuestas"><i class="fa fa-check"></i>1.1.6 Quota Share y Exceso de Pérdida reestructuran el perfil de riesgo retenido de formas opuestas</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#la-tarificaci%C3%B3n-y-la-constituci%C3%B3n-de-reservas-exigen-definir-si-la-base-es-bruta-o-neta"><i class="fa fa-check"></i>1.1.7 La tarificación y la constitución de reservas exigen definir si la base es bruta o neta</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#cierre-y-puente-final"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="short-term-insurance-and-reinsurance-coverages.html"><a href="short-term-insurance-and-reinsurance-coverages.html#ejercicios"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html"><i class="fa fa-check"></i>2 - Severity, Frequency, and Aggregate Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#basics"><i class="fa fa-check"></i>2.1 - Basics</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-media-de-18000-d%C3%B3lares-puede-ocultar-casi-toda-la-historia"><i class="fa fa-check"></i>2.1.1 Una media de 18,000 dólares puede ocultar casi toda la historia</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-probabilidad-acumulada-y-la-supervivencia-describen-los-umbrales-del-contrato"><i class="fa fa-check"></i>2.1.2 La probabilidad acumulada y la supervivencia describen los umbrales del contrato</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-intervalo-mide-el-evento-y-la-probabilidad-condicional-cambia-el-denominador"><i class="fa fa-check"></i>2.1.3 El intervalo mide el evento y la probabilidad condicional cambia el denominador</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-percentiles-marcan-fronteras-pero-no-describen-el-riesgo-de-cola"><i class="fa fa-check"></i>2.1.4 Los percentiles marcan fronteras pero no describen el riesgo de cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-momentos-resumen-la-forma-de-la-incertidumbre-en-unidades-f%C3%ADsicas-y-cuadr%C3%A1ticas"><i class="fa fa-check"></i>2.1.5 Los momentos resumen la forma de la incertidumbre en unidades físicas y cuadráticas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-observado-en-el-mundo-no-es-la-distribuci%C3%B3n-te%C3%B3rica-del-actuario"><i class="fa fa-check"></i>2.1.6 El valor observado en el mundo no es la distribución teórica del actuario</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-1"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-1"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#severity-models"><i class="fa fa-check"></i>2.2 - Severity Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-candidatos-que-comparten-la-media-pueden-esconder-colas-opuestas"><i class="fa fa-check"></i>2.2.1 Dos candidatos que comparten la media pueden esconder colas opuestas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-escala-expande-la-dimensi%C3%B3n-monetaria-sin-alterar-la-forma-relativa"><i class="fa fa-check"></i>2.2.2 El parámetro de escala expande la dimensión monetaria sin alterar la forma relativa</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-forma-esculpe-la-asimetr%C3%ADa-y-el-espesor-de-la-cola"><i class="fa fa-check"></i>2.2.3 El parámetro de forma esculpe la asimetría y el espesor de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#lognormal-y-lomax-revelan-la-divergencia-invisible-en-la-cola-extrema"><i class="fa fa-check"></i>2.2.4 Lognormal y Lomax revelan la divergencia invisible en la cola extrema</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#las-familias-de-distribuciones-se-entrelazan-mediante-transformaciones-y-l%C3%ADmites"><i class="fa fa-check"></i>2.2.5 Las familias de distribuciones se entrelazan mediante transformaciones y límites</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-2"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-2"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#severity-models-with-coverage-modifications"><i class="fa fa-check"></i>2.3 - Severity Models with Coverage Modifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-promedios-correctos-revelan-que-el-denominador-determina-el-significado-del-pago"><i class="fa fa-check"></i>2.3.1 Dos promedios correctos revelan que el denominador determina el significado del pago</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-deducible-acumula-masa-en-el-cero-y-desplaza-los-pagos-positivos"><i class="fa fa-check"></i>2.3.2 El deducible acumula masa en el cero y desplaza los pagos positivos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-factor-de-eliminaci%C3%B3n-de-p%C3%A9rdidas-mide-d%C3%B3lares-no-conteos-de-siniestros"><i class="fa fa-check"></i>2.3.3 El factor de eliminación de pérdidas mide dólares, no conteos de siniestros</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-l%C3%ADmite-trunca-la-cola-extrema-y-crea-un-punto-de-acumulaci%C3%B3n-contractual"><i class="fa fa-check"></i>2.3.4 El límite trunca la cola extrema y crea un punto de acumulación contractual</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#los-l%C3%ADmites-incrementados-dependen-del-comportamiento-asint%C3%B3tico-de-la-cola"><i class="fa fa-check"></i>2.3.5 Los límites incrementados dependen del comportamiento asintótico de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-inflaci%C3%B3n-interact%C3%BAa-de-forma-no-lineal-con-los-umbrales-nominales-fijos"><i class="fa fa-check"></i>2.3.6 La inflación interactúa de forma no lineal con los umbrales nominales fijos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-3"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-3"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#frequency-models"><i class="fa fa-check"></i>2.4 - Frequency Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-frecuencia-media-de-0.060-no-decide-cu%C3%A1ntos-claims-veremos"><i class="fa fa-check"></i>2.4.1 Una frecuencia media de 0.060 no decide cuántos claims veremos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-clase-ab0-unifica-las-distribuciones-discretas-mediante-su-relaci%C3%B3n-recursiva"><i class="fa fa-check"></i>2.4.2 La clase <span class="math inline">\((a,b,0)\)</span> unifica las distribuciones discretas mediante su relación recursiva</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#poisson-binomial-y-binomial-negativa-representan-tres-estructuras-de-dispersi%C3%B3n-distintas"><i class="fa fa-check"></i>2.4.3 Poisson, Binomial y Binomial Negativa representan tres estructuras de dispersión distintas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-clase-ab1-flexibiliza-el-origen-para-modelar-ceros-modificados-o-truncados"><i class="fa fa-check"></i>2.4.4 La clase <span class="math inline">\((a,b,1)\)</span> flexibiliza el origen para modelar ceros modificados o truncados</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-selecci%C3%B3n-del-modelo-de-frecuencia-exige-interrogar-la-naturaleza-del-proceso"><i class="fa fa-check"></i>2.4.5 La selección del modelo de frecuencia exige interrogar la naturaleza del proceso</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-4"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-4"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#aggregate-models"><i class="fa fa-check"></i>2.5 - Aggregate Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-cartera-no-paga-el-presupuesto-esperado-el-costo-anual-es-una-suma-aleatoria"><i class="fa fa-check"></i>2.5.1 La cartera no paga el presupuesto esperado: el costo anual es una suma aleatoria</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-fuentes-de-incertidumbre-componen-la-volatilidad-agregada-de-la-cartera"><i class="fa fa-check"></i>2.5.2 Dos fuentes de incertidumbre componen la volatilidad agregada de la cartera</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#una-misma-media-agregada-puede-esconder-perfiles-de-riesgo-y-volatilidades-incompatibles"><i class="fa fa-check"></i>2.5.3 Una misma media agregada puede esconder perfiles de riesgo y volatilidades incompatibles</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-modelo-de-riesgo-individual-expone-el-aporte-espec%C3%ADfico-de-cada-exposici%C3%B3n"><i class="fa fa-check"></i>2.5.4 El modelo de riesgo individual expone el aporte específico de cada exposición</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-aproximaci%C3%B3n-normal-impone-simetr%C3%ADa-pero-simplifica-el-c%C3%A1lculo-del-centro"><i class="fa fa-check"></i>2.5.5 La aproximación Normal impone simetría pero simplifica el cálculo del centro</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#la-aproximaci%C3%B3n-lognormal-respeta-la-naturaleza-no-negativa-y-asim%C3%A9trica-de-las-p%C3%A9rdidas"><i class="fa fa-check"></i>2.5.6 La aproximación Lognormal respeta la naturaleza no negativa y asimétrica de las pérdidas</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#dos-momentos-id%C3%A9nticos-no-determinan-la-cola-de-la-distribuci%C3%B3n-agregada"><i class="fa fa-check"></i>2.5.7 Dos momentos idénticos no determinan la cola de la distribución agregada</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-5"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-5"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#risk-measures"><i class="fa fa-check"></i>2.6 - Risk Measures</a>
+<ul>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-percentil-define-la-frontera-de-la-cola-pero-ignora-lo-que-ocurre-dentro-de-ella"><i class="fa fa-check"></i>2.6.1 El percentil define la frontera de la cola pero ignora lo que ocurre dentro de ella</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-en-riesgo-de-cola-integra-la-severidad-promedio-de-los-escenarios-extremos"><i class="fa fa-check"></i>2.6.2 El Valor en Riesgo de Cola integra la severidad promedio de los escenarios extremos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#lognormal-y-lomax-revelan-por-qu%C3%A9-el-umbral-de-entrada-no-determina-el-costo-de-la-cola"><i class="fa fa-check"></i>2.6.3 Lognormal y Lomax revelan por qué el umbral de entrada no determina el costo de la cola</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#las-propiedades-deseables-exigen-un-comportamiento-l%C3%B3gico-de-la-medida-de-riesgo"><i class="fa fa-check"></i>2.6.4 Las propiedades deseables exigen un comportamiento lógico de la medida de riesgo</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-valor-en-riesgo-puede-fallar-la-subaditividad"><i class="fa fa-check"></i>2.6.5 El Valor en Riesgo puede fallar la subaditividad</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#el-par%C3%A1metro-de-cola-determina-qu%C3%A9-momentos-existen-y-qu%C3%A9-c%C3%A1lculos-siguen-siendo-v%C3%A1lidos"><i class="fa fa-check"></i>2.6.6 El parámetro de cola determina qué momentos existen y qué cálculos siguen siendo válidos</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#un-percentil-finito-puede-convivir-con-un-tvar-infinito"><i class="fa fa-check"></i>2.6.7 Un percentil finito puede convivir con un TVaR infinito</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#cierre-y-puente-final-6"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="severity-frequency-and-aggregate-models.html"><a href="severity-frequency-and-aggregate-models.html#ejercicios-6"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html"><i class="fa fa-check"></i>3 - Parametric Estimation</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#section-3.1---maximum-likelihood-estimators"><i class="fa fa-check"></i>Section 3.1 - Maximum Likelihood Estimators</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-verosimilitud-mide-la-compatibilidad-de-los-par%C3%A1metros-con-los-datos-que-alcanzamos-a-observar"><i class="fa fa-check"></i>3.1.1 La verosimilitud mide la compatibilidad de los parámetros con los datos que alcanzamos a observar</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-logaritmo-convierte-la-acumulaci%C3%B3n-multiplicativa-en-una-suma-anal%C3%ADticamente-manejable"><i class="fa fa-check"></i>3.1.2 El logaritmo convierte la acumulación multiplicativa en una suma analíticamente manejable</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-volumen-de-exposici%C3%B3n-define-la-escala-de-la-verosimilitud-de-frecuencia"><i class="fa fa-check"></i>3.1.3 El volumen de exposición define la escala de la verosimilitud de frecuencia</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#las-carteras-agregadas-exigen-distinguir-entre-observar-componentes-y-observar-%C3%BAnicamente-el-total"><i class="fa fa-check"></i>3.1.4 Las carteras agregadas exigen distinguir entre observar componentes y observar únicamente el total</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#agrupar-datos-destruye-la-precisi%C3%B3n-individual-pero-conserva-la-estructura-del-intervalo"><i class="fa fa-check"></i>3.1.5 Agrupar datos destruye la precisión individual pero conserva la estructura del intervalo</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#el-truncamiento-condicional-cambia-la-distribuci%C3%B3n-de-las-observaciones-que-alcanzan-la-muestra"><i class="fa fa-check"></i>3.1.6 El truncamiento condicional cambia la distribución de las observaciones que alcanzan la muestra</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-censura-preserva-la-existencia-de-la-observaci%C3%B3n-pero-limita-el-conocimiento-de-su-magnitud"><i class="fa fa-check"></i>3.1.7 La censura preserva la existencia de la observación pero limita el conocimiento de su magnitud</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#la-contribuci%C3%B3n-a-la-likelihood-depende-del-evento-que-realmente-qued%C3%B3-registrado"><i class="fa fa-check"></i>3.1.8 La contribución a la likelihood depende del evento que realmente quedó registrado</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicios-7"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-1---datos-completos-de-severity-y-frequency"><i class="fa fa-check"></i>Ejercicio 1 - Datos completos de severity y frequency</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-2---datos-agrupados-de-severity"><i class="fa fa-check"></i>Ejercicio 2 - Datos agrupados de severity</a></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#ejercicio-3---truncation-y-censoring"><i class="fa fa-check"></i>Ejercicio 3 - Truncation y censoring</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parametric-estimation.html"><a href="parametric-estimation.html#cierre-y-puente-final-7"><i class="fa fa-check"></i>Cierre y puente final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html"><i class="fa fa-check"></i>4 - Introduction to Credibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#section-4.1---classical-credibility"><i class="fa fa-check"></i>Section 4.1 - Classical Credibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-especificidad-del-dato-propio-no-garantiza-la-estabilidad-de-su-promedio"><i class="fa fa-check"></i>4.1.1 La especificidad del dato propio no garantiza la estabilidad de su promedio</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-factor-de-credibilidad-es-una-ponderaci%C3%B3n-de-evidencia-no-una-probabilidad-de-certeza"><i class="fa fa-check"></i>4.1.2 El factor de credibilidad es una ponderación de evidencia, no una probabilidad de certeza</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-est%C3%A1ndar-de-fluctuaci%C3%B3n-limitada-exige-acotar-el-error-de-la-cola-con-alta-probabilidad"><i class="fa fa-check"></i>4.1.3 El estándar de fluctuación limitada exige acotar el error de la cola con alta probabilidad</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-ra%C3%ADz-cuadrada-de-la-exposici%C3%B3n-rescata-el-valor-informativo-de-las-muestras-peque%C3%B1as"><i class="fa fa-check"></i>4.1.4 La raíz cuadrada de la exposición rescata el valor informativo de las muestras pequeñas</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#la-estimaci%C3%B3n-ponderada-devuelve-el-precio-hacia-el-centro-de-gravedad-de-la-cartera"><i class="fa fa-check"></i>4.1.5 La estimación ponderada devuelve el precio hacia el centro de gravedad de la cartera</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#el-est%C3%A1ndar-pertenece-a-la-variable-de-riesgo-y-no-se-transfiere-de-forma-autom%C3%A1tica"><i class="fa fa-check"></i>4.1.6 El estándar pertenece a la variable de riesgo y no se transfiere de forma automática</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#cierre-y-puente-final-8"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-credibility.html"><a href="introduction-to-credibility.html#ejercicios-8"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html"><i class="fa fa-check"></i>5 - Pricing and Reserving for Short-Term Insurance Coverages</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.1---loss-reserving-expected-loss-ratio-chain-ladder-y-bornhuetter-ferguson"><i class="fa fa-check"></i>Section 5.1 - Loss Reserving: Expected Loss Ratio, Chain-Ladder y Bornhuetter-Ferguson</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-costo-%C3%BAltimo-de-un-a%C3%B1o-de-accidentes-no-es-la-cifra-que-hoy-registra-la-diagonal"><i class="fa fa-check"></i>5.1.1 El costo último de un año de accidentes no es la cifra que hoy registra la diagonal</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-esperada-se-aferra-a-la-expectativa-previa-e-ignora-la-inmadurez-de-la-diagonal"><i class="fa fa-check"></i>5.1.2 El método de Razón de Siniestralidad Esperada se aferra a la expectativa previa e ignora la inmadurez de la diagonal</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-chain-ladder-cree-en-la-inercia-de-la-siniestralidad-emergente-para-proyectar-su-escala-final"><i class="fa fa-check"></i>5.1.3 El método Chain-Ladder cree en la inercia de la siniestralidad emergente para proyectar su escala final</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-bornhuetter-ferguson-aplica-el-priori-%C3%BAnicamente-a-la-porci%C3%B3n-de-desarrollo-pendiente"><i class="fa fa-check"></i>5.1.4 El método Bornhuetter-Ferguson aplica el priori únicamente a la porción de desarrollo pendiente</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-los-m%C3%A9todos-se-revela-ante-perturbaciones-en-los-datos-o-en-el-priori"><i class="fa fa-check"></i>5.1.5 La asimetría de los métodos se revela ante perturbaciones en los datos o en el priori</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-9"><i class="fa fa-check"></i>Ejercicios</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-9"><i class="fa fa-check"></i>Cierre y puente final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.2---data-preparation-for-ratemaking"><i class="fa fa-check"></i>Section 5.2 - Data Preparation for Ratemaking</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ratio-de-siniestralidad-crudo-es-una-ilusi%C3%B3n-temporal-y-operativa"><i class="fa fa-check"></i>5.2.1 El ratio de siniestralidad crudo es una ilusión temporal y operativa</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ajuste-por-desarrollo-traduce-la-inmadurez-de-la-diagonal-en-escala-%C3%BAltima"><i class="fa fa-check"></i>5.2.2 El ajuste por desarrollo traduce la inmadurez de la diagonal en escala última</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-tendencia-de-costo-proyecta-la-severidad-y-frecuencia-hacia-el-futuro-econ%C3%B3mico"><i class="fa fa-check"></i>5.2.3 La tendencia de costo proyecta la severidad y frecuencia hacia el futuro económico</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-premium-on-leveling-reconstruye-los-ingresos-bajo-la-estructura-tarifaria-actual"><i class="fa fa-check"></i>5.2.4 La premium on-leveling reconstruye los ingresos bajo la estructura tarifaria actual</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-de-gastos-fijos-y-variables-proh%C3%ADbe-el-recargo-porcentual-simple"><i class="fa fa-check"></i>5.2.5 La estructura de gastos fijos y variables prohíbe el recargo porcentual simple</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-intuici%C3%B3n-que-falla---el-recargo-porcentual-simple-subfinancia-la-operaci%C3%B3n"><i class="fa fa-check"></i>La intuición que falla - El recargo porcentual simple subfinancia la operación</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-10"><i class="fa fa-check"></i>Cierre y Puente Final</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-10"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.3---ratemaking-loss-cost-and-loss-ratio-methods"><i class="fa fa-check"></i>Section 5.3 - Ratemaking: Loss Cost and Loss Ratio Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-costo-de-siniestralidad-calcula-el-financiamiento-directo-por-exposici%C3%B3n"><i class="fa fa-check"></i>5.3.1 El método de Costo de Siniestralidad calcula el financiamiento directo por exposición</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-traduce-la-necesidad-en-ratios-de-prima-actual"><i class="fa fa-check"></i>5.3.2 El método de Razón de Siniestralidad traduce la necesidad en ratios de prima actual</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#dos-m%C3%A9todos-un-solo-balance-la-reconciliaci%C3%B3n-algebraica-perfecta"><i class="fa fa-check"></i>5.3.3 Dos métodos, un solo balance: la reconciliación algebraica perfecta</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-las-indicaciones-se-revela-ante-shocks-en-el-entorno-de-suscripci%C3%B3n"><i class="fa fa-check"></i>5.3.4 La asimetría de las indicaciones se revela ante shocks en el entorno de suscripción</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-t%C3%A9cnica-de-la-tarifa-requiere-transparencia-en-la-composici%C3%B3n-de-cada-d%C3%B3lar"><i class="fa fa-check"></i>5.3.5 La estructura técnica de la tarifa requiere transparencia en la composición de cada dólar</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-de-paradigm-shift-tr%C3%A1nsito-a-part-6"><i class="fa fa-check"></i>Cierre y Puente de Paradigm Shift (Tránsito a Part 6)</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-11"><i class="fa fa-check"></i>Ejercicios</a>
+<ul>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-1---determinaci%C3%B3n-de-la-tarifa-t%C3%A9cnica-mediante-el-loss-cost-method"><i class="fa fa-check"></i>Ejercicio 1 - Determinación de la Tarifa Técnica mediante el Loss Cost Method</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-2---reconstrucci%C3%B3n-de-tarifas-mediante-el-loss-ratio-method"><i class="fa fa-check"></i>Ejercicio 2 - Reconstrucción de Tarifas mediante el Loss Ratio Method</a></li>
+<li class="chapter" data-level="" data-path="pricing-and-reserving-for-short-term-insurance-coverages.html"><a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-3---auditor%C3%ADa-de-una-discrepancia-entre-m%C3%A9todos"><i class="fa fa-check"></i>Ejercicio 3 - Auditoría de una discrepancia entre métodos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html"><i class="fa fa-check"></i>6 - Option Pricing Fundamentals</a>
+<ul>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#section-6.1---introduction-to-options"><i class="fa fa-check"></i>Section 6.1 - Introduction to Options</a>
+<ul>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-compra-define-un-derecho-asim%C3%A9trico-a-adquirir-sin-obligaci%C3%B3n"><i class="fa fa-check"></i>6.1.1 La opción de compra define un derecho asimétrico a adquirir sin obligación</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-venta-define-un-derecho-asim%C3%A9trico-a-vender-para-proteger-la-ca%C3%ADda"><i class="fa fa-check"></i>6.1.2 La opción de venta define un derecho asimétrico a vender para proteger la caída</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#el-tiempo-separa-la-prima-pagada-hoy-del-pago-contingente-recibido-ma%C3%B1ana"><i class="fa fa-check"></i>6.1.3 El tiempo separa la prima pagada hoy del pago contingente recibido mañana</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#tenedor-frente-a-emisor-la-transferencia-sim%C3%A9trica-de-suma-cero"><i class="fa fa-check"></i>6.1.4 Tenedor frente a emisor: la transferencia simétrica de suma cero</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#estar-in-the-money-define-viabilidad-de-ejercicio-no-rentabilidad-final"><i class="fa fa-check"></i>6.1.5 Estar <em>in-the-money</em> define viabilidad de ejercicio, no rentabilidad final</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#la-opci%C3%B3n-de-venta-como-cobertura-el-portafolio-protector"><i class="fa fa-check"></i>6.1.6 La opción de venta como cobertura: el portafolio protector</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#cierre-y-puente-hacia-section-6.2"><i class="fa fa-check"></i>Cierre y puente hacia Section 6.2</a></li>
+<li class="chapter" data-level="" data-path="option-pricing-fundamentals.html"><a href="option-pricing-fundamentals.html#ejercicios-12"><i class="fa fa-check"></i>Ejercicios</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fundamentals of Actuarial Mathematics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pricing-and-reserving-for-short-term-insurance-coverages" class="section level1 hasAnchor">
+<h1>5 - Pricing and Reserving for Short-Term Insurance Coverages<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#pricing-and-reserving-for-short-term-insurance-coverages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="section-5.1---loss-reserving-expected-loss-ratio-chain-ladder-y-bornhuetter-ferguson" class="section level2 hasAnchor">
+<h2>Section 5.1 - Loss Reserving: Expected Loss Ratio, Chain-Ladder y Bornhuetter-Ferguson<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.1---loss-reserving-expected-loss-ratio-chain-ladder-y-bornhuetter-ferguson" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><em>El costo final de un año de accidentes no está escrito en el triángulo de pérdidas actual</em></p>
+</blockquote>
+<div id="el-costo-último-de-un-año-de-accidentes-no-es-la-cifra-que-hoy-registra-la-diagonal" class="section level3 hasAnchor">
+<h3>5.1.1 El costo último de un año de accidentes no es la cifra que hoy registra la diagonal<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-costo-%C3%BAltimo-de-un-a%C3%B1o-de-accidentes-no-es-la-cifra-que-hoy-registra-la-diagonal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En la práctica de la contabilidad y la gestión actuarial de una compañía de seguros de daños como <strong>Meridiano Seguros</strong>, el cálculo de provisiones técnicas para siniestros pendientes de liquidación constituye la base de la solvencia institucional. Al situarnos en la fecha de valoración del <strong>31 de diciembre de 2025</strong>, el actuario jefe de Reservas, <strong>Mateo</strong>, se enfrenta a un desafío analítico central: determinar el costo último de los siniestros que ya comenzaron a ocurrir durante los periodos de cobertura pasados (Accident Years 2021 a 2025), pero que aún no han terminado de reportarse o de reflejarse plenamente en la base de pérdidas incurridas.</p>
+<p>Para ilustrar este conflicto temporal, consideremos la siniestralidad acumulada del Accident Year 2025. Al cierre de este año, los registros contables de Meridiano Seguros muestran pérdidas acumuladas incurridas -pagos acumulados más estimaciones de casos individuales- por un importe de exactamente <strong>8.25 millones de USD</strong> a la edad de desarrollo de 12 meses.</p>
+<p><strong>Desafío al lector 1.</strong> El AY 2021 registra <span class="math inline">\(8.70M\)</span> USD a los 60 meses y el AY 2025 registra <span class="math inline">\(8.25M\)</span> USD a los 12 meses. ¿Podemos concluir, solo por comparar esas dos cifras, que AY 2025 terminará siendo más barato?</p>
+<p>La respuesta es no: pertenecen a edades de desarrollo distintas. Las reclamaciones de la cartera de seguros comerciales de daños pueden continuar reportándose y revisándose durante meses o años después del accidente.</p>
+<p>Para modelar este proceso de maduración, los actuarios organizan la información en estructuras triangulares. El triángulo canónico de Meridiano Seguros registra las <strong>pérdidas brutas acumuladas reportadas/incurridas</strong>, expresadas en <strong>millones de USD</strong>:</p>
+<p><span class="math display">\[
+\mathbf{C}=
+\begin{pmatrix}
+7.30 &amp; 8.20 &amp; 8.53 &amp; 8.66 &amp; \mathbf{8.70} \\
+7.48 &amp; 8.40 &amp; 8.74 &amp; \mathbf{8.87} &amp; - \\
+7.68 &amp; 8.62 &amp; \mathbf{8.96} &amp; - &amp; - \\
+7.90 &amp; \mathbf{8.86} &amp; - &amp; - &amp; - \\
+\mathbf{8.25} &amp; - &amp; - &amp; - &amp; -
+\end{pmatrix}.
+\]</span></p>
+<p>Las filas representan los años de accidente, <span class="math inline">\(i=2021,\ldots,2025\)</span>, y las columnas las edades de desarrollo, <span class="math inline">\(j=12,24,36,48,60\)</span> meses. En la fecha de valoración del 31 de diciembre de 2025, las últimas edades observadas son:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">AY</th>
+<th align="right">Última edad observada</th>
+<th align="right">Pérdida acumulada observada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="right">60 meses</td>
+<td align="right">8.70M USD</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="right">48 meses</td>
+<td align="right">8.87M USD</td>
+</tr>
+<tr class="odd">
+<td align="right">2023</td>
+<td align="right">36 meses</td>
+<td align="right">8.96M USD</td>
+</tr>
+<tr class="even">
+<td align="right">2024</td>
+<td align="right">24 meses</td>
+<td align="right">8.86M USD</td>
+</tr>
+<tr class="odd">
+<td align="right">2025</td>
+<td align="right">12 meses</td>
+<td align="right">8.25M USD</td>
+</tr>
+</tbody>
+</table>
+<p>La diagonal más reciente es, por tanto, <span class="math inline">\(\{8.70,8.87,8.96,8.86,8.25\}\)</span> millones de USD. Cada cifra resume el desarrollo acumulado disponible para un año de accidente distinto.</p>
+<p><strong>Desafío al lector 2.</strong> En AY 2021, ¿el valor <span class="math inline">\(8.20M\)</span> USD a los 24 meses significa que durante el segundo año aparecieron <span class="math inline">\(8.20M\)</span> USD adicionales?</p>
+<p>No. El triángulo es <strong>acumulado</strong>. El desarrollo incremental entre 12 y 24 meses para AY 2021 es:</p>
+<p><span class="math display">\[
+8.20-7.30=\mathbf{0.90M\text{ USD}}.
+\]</span></p>
+<p>No necesitamos transformar todo el triángulo a formato incremental, pero sí conservar esta distinción para no interpretar una celda acumulada como flujo adicional del intervalo.</p>
+<p>El objetivo de reserving es estimar el <strong>costo último</strong> <span class="math inline">\(U_i\)</span> de cada año inmaduro y, a partir de él, la <strong>reserva de siniestros pendientes</strong> <span class="math inline">\(R_i\)</span>:</p>
+<p><span class="math display">\[
+R_i=U_i-C_{i,\text{latest}}.
+\]</span></p>
+<p>El ultimate y la reserve no son sinónimos. Si un año tiene <span class="math inline">\(8.25M\)</span> USD observados y un método estima un ultimate de aproximadamente <span class="math inline">\(9.82M\)</span> USD, la reserve es la diferencia, no el ultimate completo. La reserva global del portafolio será la suma de las reservas de los años correspondientes.</p>
+</div>
+<div id="el-método-de-razón-de-siniestralidad-esperada-se-aferra-a-la-expectativa-previa-e-ignora-la-inmadurez-de-la-diagonal" class="section level3 hasAnchor">
+<h3>5.1.2 El método de Razón de Siniestralidad Esperada se aferra a la expectativa previa e ignora la inmadurez de la diagonal<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-esperada-se-aferra-a-la-expectativa-previa-e-ignora-la-inmadurez-de-la-diagonal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El método de <strong>Razón de Siniestralidad Esperada</strong> (<em>Expected Loss Ratio</em>, <strong>ELR</strong>) parte de una expectativa técnica previa. Para Meridiano Seguros, la razón de siniestralidad esperada canónica es <strong>75%</strong>. Para un año de accidente inmaduro, el método estima la pérdida última esperada aplicando ese priori a la prima ganada:</p>
+<p><span class="math display">\[
+U_i^{ELR}=\Pi_i\times ELR.
+\]</span></p>
+<p>Después obtiene la reserva como diferencia entre ese ultimate esperado y lo ya observado:</p>
+<p><span class="math display">\[
+R_i^{ELR}=U_i^{ELR}-C_{i,\text{latest}}.
+\]</span></p>
+<p><strong>Desafío al lector 3.</strong> Si las pérdidas acumuladas de un año joven aumentaran mañana pero su prima ganada y el ELR de 75% permanecieran fijos, ¿cambiaría el ultimate ELR o únicamente la reserva?</p>
+<p>La estructura de la fórmula muestra que el ultimate permanece anclado al priori mientras la reserva absorbe la diferencia frente a lo observado.</p>
+<p>Antes de aceptar esa estabilidad, el actuario debe defender los supuestos que la sostienen: que la prima ganada esté en una base comparable, que el 75% continúe siendo una expectativa relevante para el año analizado, que no hayan cambiado de forma material el rate level, la cobertura o el business mix, y que el priori represente razonablemente el riesgo de ese Accident Year. La preparación formal de primas a una base tarifaria comparable pertenece a la Section 5.2; aquí basta reconocer que la calidad del ELR depende de la calidad de su priori y de la base de prima utilizada.</p>
+<div id="compuerta-canónica-de-ay-2024" class="section level4 hasAnchor">
+<h4>Compuerta canónica de AY 2024<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#compuerta-can%C3%B3nica-de-ay-2024" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La Biblia Numérica v1.0 contiene una incidencia de continuidad que no ha sido resuelta por una versión posterior: el dataset central de 2024 utiliza <strong>12,000 policy-years</strong>, mientras que la tabla histórica de Reserving/Ratemaking utiliza <strong>12,500 exposures</strong> para ese mismo año. Como esa diferencia afecta directamente la prima ganada de AY 2024, también afecta su ultimate y su reserve bajo ELR y BF.</p>
+<p>Por tanto, esta sección <strong>no adopta silenciosamente ninguna de las dos bases</strong>. Los resultados de ELR y BF para AY 2024, así como los totales globales de esos dos métodos que dependan de AY 2024, permanecen sin cerrar hasta que el canon sea reconciliado. Esta incidencia no afecta el triángulo ni los cálculos de Chain-Ladder.</p>
+<p>Los años no afectados por esa incidencia permiten aplicar ELR sin ambigüedad:</p>
+<ul>
+<li><p><strong>AY 2022:</strong> prima ganada de <span class="math inline">\(11.900M\)</span> USD,</p>
+<p><span class="math display">\[
+U_{2022}^{ELR}=11.90(0.75)=\mathbf{8.925M\text{ USD}},
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+R_{2022}^{ELR}=8.925-8.87=\mathbf{0.055M\text{ USD}}.
+\]</span></p></li>
+<li><p><strong>AY 2023:</strong> prima ganada de <span class="math inline">\(12.360M\)</span> USD,</p>
+<p><span class="math display">\[
+U_{2023}^{ELR}=12.36(0.75)=\mathbf{9.270M\text{ USD}},
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+R_{2023}^{ELR}=9.270-8.96=\mathbf{0.310M\text{ USD}}.
+\]</span></p></li>
+<li><p><strong>AY 2025:</strong> prima ganada de <span class="math inline">\(13.789125M\)</span> USD,</p>
+<p><span class="math display">\[
+U_{2025}^{ELR}=13.789125(0.75)=\mathbf{10.341844M\text{ USD}},
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+R_{2025}^{ELR}=10.341844-8.25=\mathbf{2.091844M\text{ USD}}.
+\]</span></p></li>
+</ul>
+<p>Es también esencial el tratamiento de <strong>AY 2021</strong>. Al 31 de diciembre de 2025, ese año ha alcanzado 60 meses y, bajo el supuesto operativo canónico, se considera completamente desarrollado: <span class="math inline">\(F_{60}=1\)</span>. Por tanto,</p>
+<p><span class="math display">\[
+R_{2021}=0,
+\]</span></p>
+<p>y su ultimate es el valor observado:</p>
+<p><span class="math display">\[
+U_{2021}=\mathbf{8.70M\text{ USD}},
+\]</span></p>
+<p>no el priori inicial de <span class="math inline">\(8.625M\)</span> USD. Una expectativa previa no debe sobrescribir un resultado ya maduro.</p>
+<p>ELR aporta estabilidad porque su ultimate no reacciona mecánicamente a cada movimiento temprano de la diagonal. Esa misma propiedad es también su vulnerabilidad: si la experiencia emergente contiene información que contradice el priori, el método no incorpora esa señal en el ultimate mientras el priori permanezca fijo.</p>
+</div>
+</div>
+<div id="el-método-chain-ladder-cree-en-la-inercia-de-la-siniestralidad-emergente-para-proyectar-su-escala-final" class="section level3 hasAnchor">
+<h3>5.1.3 El método Chain-Ladder cree en la inercia de la siniestralidad emergente para proyectar su escala final<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-chain-ladder-cree-en-la-inercia-de-la-siniestralidad-emergente-para-proyectar-su-escala-final" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En el extremo opuesto se sitúa <strong>Chain-Ladder</strong>. Este método no utiliza la prima ganada ni el ELR para construir su ultimate. Parte del patrón histórico observado en el propio triángulo y supone que ese patrón de desarrollo puede utilizarse para proyectar los años más jóvenes.</p>
+<p><strong>Desafío al lector 4.</strong> Para estimar cuánto crecen las pérdidas de 12 a 24 meses, ¿deberíamos utilizar únicamente el AY más reciente con ambas edades observadas, o combinar todos los años que contienen las dos celdas comparables?</p>
+<p>Chain-Ladder utiliza aquí factores de desarrollo de edad a edad volumen-ponderados:</p>
+<p><span class="math display">\[
+f_j=
+\frac{\sum_i C_{i,j+12}}{\sum_i C_{i,j}}.
+\]</span></p>
+<p>Para Meridiano:</p>
+<p><span class="math display">\[
+f_{12-24}
+=
+\frac{8.20+8.40+8.62+8.86}{7.30+7.48+7.68+7.90}
+=
+\frac{34.08}{30.36}
+=
+\mathbf{1.1225296443}.
+\]</span></p>
+<p><span class="math display">\[
+f_{24-36}
+=
+\frac{8.53+8.74+8.96}{8.20+8.40+8.62}
+=
+\frac{26.23}{25.22}
+=
+\mathbf{1.0400475813}.
+\]</span></p>
+<p><span class="math display">\[
+f_{36-48}
+=
+\frac{8.66+8.87}{8.53+8.74}
+=
+\frac{17.53}{17.27}
+=
+\mathbf{1.0150550087}.
+\]</span></p>
+<p><span class="math display">\[
+f_{48-60}
+=
+\frac{8.70}{8.66}
+=
+\mathbf{1.0046189376}.
+\]</span></p>
+<p>Los factores acumulados hasta 60 meses son:</p>
+<p><span class="math display">\[
+F_{48}=1.0046189376,
+\]</span></p>
+<p><span class="math display">\[
+F_{36}=1.0150550087(1.0046189376)=\mathbf{1.0197434845},
+\]</span></p>
+<p><span class="math display">\[
+F_{24}=1.0400475813(1.0197434845)=\mathbf{1.0605817446},
+\]</span></p>
+<p><span class="math display">\[
+F_{12}=1.1225296443(1.0605817446)=\mathbf{1.1905344484}.
+\]</span></p>
+<p>La proporción desarrollada a cada edad es:</p>
+<p><span class="math display">\[
+p_j=\frac{1}{F_j},
+\]</span></p>
+<p>por lo que las proporciones desarrolladas y pendientes son aproximadamente:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Edad</th>
+<th align="right">Desarrollado <span class="math inline">\(p_j\)</span></th>
+<th align="right">Pendiente <span class="math inline">\(1-p_j\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">12 meses</td>
+<td align="right">83.996%</td>
+<td align="right">16.004%</td>
+</tr>
+<tr class="even">
+<td align="right">24 meses</td>
+<td align="right">94.288%</td>
+<td align="right">5.712%</td>
+</tr>
+<tr class="odd">
+<td align="right">36 meses</td>
+<td align="right">98.064%</td>
+<td align="right">1.936%</td>
+</tr>
+<tr class="even">
+<td align="right">48 meses</td>
+<td align="right">99.540%</td>
+<td align="right">0.460%</td>
+</tr>
+<tr class="odd">
+<td align="right">60 meses</td>
+<td align="right">100.000%</td>
+<td align="right">0.000%</td>
+</tr>
+</tbody>
+</table>
+<p>Con esos factores, Chain-Ladder estima:</p>
+<p><span class="math display">\[
+U_i^{CL}=C_{i,\text{latest}}F_j,
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+R_i^{CL}=C_{i,\text{latest}}(F_j-1).
+\]</span></p>
+<p>Los resultados son:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">AY</th>
+<th align="right">Edad</th>
+<th align="right">Ultimate CL</th>
+<th align="right">Reserve CL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="right">60</td>
+<td align="right">8.700000M USD</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="right">48</td>
+<td align="right">8.910970M USD</td>
+<td align="right">0.040970M USD</td>
+</tr>
+<tr class="odd">
+<td align="right">2023</td>
+<td align="right">36</td>
+<td align="right">9.136902M USD</td>
+<td align="right">0.176902M USD</td>
+</tr>
+<tr class="even">
+<td align="right">2024</td>
+<td align="right">24</td>
+<td align="right">9.396754M USD</td>
+<td align="right">0.536754M USD</td>
+</tr>
+<tr class="odd">
+<td align="right">2025</td>
+<td align="right">12</td>
+<td align="right">9.821909M USD</td>
+<td align="right">1.571909M USD</td>
+</tr>
+</tbody>
+</table>
+<p>Así, la reserva pendiente total de Chain-Ladder es:</p>
+<p><span class="math display">\[
+R_{\text{total}}^{CL}
+=
+0+0.040970+0.176902+0.536754+1.571909
+=
+\mathbf{2.326535M\text{ USD}},
+\]</span></p>
+<p>redondeada en los controles canónicos a <strong>2.327 millones de USD</strong>.</p>
+<p><strong>Desafío al lector 5.</strong> Si mañana AY 2025 aumenta en <span class="math inline">\(0.50M\)</span> USD de pérdidas incurridas pero el factor <span class="math inline">\(F_{12}\)</span> permanece fijo, ¿deberíamos esperar que la reserve Chain-Ladder baje porque “ya apareció más pérdida”, o que suba porque la escala completa del año se proyectará desde una base mayor?</p>
+<p>La respuesta se comprobará en la sensibilidad de la siguiente subsección: con un factor acumulado superior a uno, un aumento de la diagonal también eleva el ultimate proyectado.</p>
+<p>Antes de aceptar Chain-Ladder, Mateo debe defender que el desarrollo histórico sea predictivo, que no hayan cambiado materialmente la velocidad de reporte o el claims handling, que las celdas mantengan una base consistente, que no existan eventos excepcionales que distorsionen el patrón y que el historial maduro sea suficiente para sostener los factores. Un retraso administrativo importante podría reducir artificialmente la pérdida acumulada observada; si se aplicara el patrón sin cuestionar esa ruptura, Chain-Ladder podría interpretar la lentitud operativa como una reducción de la escala del año.</p>
+</div>
+<div id="el-método-bornhuetter-ferguson-aplica-el-priori-únicamente-a-la-porción-de-desarrollo-pendiente" class="section level3 hasAnchor">
+<h3>5.1.4 El método Bornhuetter-Ferguson aplica el priori únicamente a la porción de desarrollo pendiente<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-bornhuetter-ferguson-aplica-el-priori-%C3%BAnicamente-a-la-porci%C3%B3n-de-desarrollo-pendiente" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Entre un ultimate fijado por el priori y un ultimate proyectado directamente desde la diagonal, <strong>Bornhuetter-Ferguson</strong> (<strong>BF</strong>) combina dos fuentes de información de una forma específica: conserva las pérdidas ya observadas y utiliza el priori de pérdida última solamente para estimar la porción que, según el patrón de desarrollo, todavía no ha emergido.</p>
+<p><strong>Desafío al lector 6.</strong> ¿BF es simplemente el promedio de ELR y Chain-Ladder?</p>
+<p>No. Su estructura no promedia dos ultimates. Si</p>
+<p><span class="math display">\[
+p_j=\frac{1}{F_j},
+\]</span></p>
+<p>entonces la proporción pendiente es:</p>
+<p><span class="math display">\[
+1-p_j=1-\frac{1}{F_j}.
+\]</span></p>
+<p>Con un priori de pérdida última</p>
+<p><span class="math display">\[
+U_i^{prior}=\Pi_i\times ELR,
+\]</span></p>
+<p>la reserva BF es:</p>
+<p><span class="math display">\[
+R_i^{BF}
+=
+U_i^{prior}\left(1-p_j\right)
+=
+U_i^{prior}\left(1-\frac{1}{F_j}\right),
+\]</span></p>
+<p>y el ultimate estimado es:</p>
+<p><span class="math display">\[
+U_i^{BF}=C_{i,\text{latest}}+R_i^{BF}.
+\]</span></p>
+<p>Para los años no afectados por la incidencia canónica de AY 2024:</p>
+<ul>
+<li><p><strong>AY 2021 (60 meses):</strong> <span class="math inline">\(p_{60}=1\)</span>, por lo que</p>
+<p><span class="math display">\[
+R_{2021}^{BF}=0,
+\qquad
+U_{2021}^{BF}=\mathbf{8.700000M\text{ USD}}.
+\]</span></p></li>
+<li><p><strong>AY 2022 (48 meses):</strong> el priori es <span class="math inline">\(8.925M\)</span> USD y la proporción pendiente es aproximadamente <span class="math inline">\(0.45977\%\)</span>:</p>
+<p><span class="math display">\[
+R_{2022}^{BF}=8.925(0.00459770)=\mathbf{0.041034M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U_{2022}^{BF}=8.87+0.041034=\mathbf{8.911034M\text{ USD}}.
+\]</span></p></li>
+<li><p><strong>AY 2023 (36 meses):</strong> el priori es <span class="math inline">\(9.270M\)</span> USD y la proporción pendiente es aproximadamente <span class="math inline">\(1.93612\%\)</span>:</p>
+<p><span class="math display">\[
+R_{2023}^{BF}=9.270(0.01936123)=\mathbf{0.179479M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U_{2023}^{BF}=8.96+0.179479=\mathbf{9.139479M\text{ USD}}.
+\]</span></p></li>
+<li><p><strong>AY 2025 (12 meses):</strong> el priori es <span class="math inline">\(10.341844M\)</span> USD y la proporción pendiente es aproximadamente <span class="math inline">\(16.00411\%\)</span>:</p>
+<p><span class="math display">\[
+R_{2025}^{BF}=10.341844(0.16004110)=\mathbf{1.655120M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U_{2025}^{BF}=8.25+1.655120=\mathbf{9.905120M\text{ USD}}.
+\]</span></p></li>
+</ul>
+<p>El cálculo de AY 2024 bajo BF no se presenta como definitivo porque depende del priori construido sobre una prima ganada cuya base de exposure continúa en disputa. Por la misma razón, tampoco se presenta un total BF global definitivo.</p>
+<p><strong>Desafío al lector 7.</strong> A 12 meses, <span class="math inline">\(16.004\%\)</span> permanece sin desarrollar. ¿Significa eso que BF asigna “la gran mayoría” del peso al priori?</p>
+<p>No. Significa exactamente que el priori se aplica a la <strong>porción pendiente del 16.004%</strong>. El <span class="math inline">\(83.996\%\)</span> desarrollado ya está representado por la pérdida acumulada observada dentro de la estructura aditiva de BF. A medida que el año madura, la fracción pendiente disminuye y, con ella, disminuye la parte de la reserva que depende del priori.</p>
+<p>BF exige defender simultáneamente dos elementos: el patrón de desarrollo y el priori esperado. Combinar dos fuentes no garantiza por sí mismo un mejor resultado; si una de ellas deja de ser representativa, la estimación puede deteriorarse.</p>
+</div>
+<div id="la-asimetría-de-los-métodos-se-revela-ante-perturbaciones-en-los-datos-o-en-el-priori" class="section level3 hasAnchor">
+<h3>5.1.5 La asimetría de los métodos se revela ante perturbaciones en los datos o en el priori<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-los-m%C3%A9todos-se-revela-ante-perturbaciones-en-los-datos-o-en-el-priori" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para consolidar el aprendizaje, Irene somete al Accident Year 2025 de Meridiano a dos pruebas de sensibilidad. Antes de calcular, la pregunta es siempre la misma: <strong>¿qué información está creyendo este número?</strong></p>
+<div id="experimento-1-shock-de-siniestralidad-reportada" class="section level4 hasAnchor">
+<h4>Experimento 1: shock de siniestralidad reportada<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#experimento-1-shock-de-siniestralidad-reportada" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las pérdidas acumuladas incurridas de AY 2025 aumentan en <strong>0.50 millones de USD</strong>, de <span class="math inline">\(8.25M\)</span> a <span class="math inline">\(8.75M\)</span> USD. Los link ratios históricos y el priori permanecen fijos.</p>
+<p>Antes de mirar las operaciones, anticipe la dirección: ¿debería bajar la reserve de los tres métodos?</p>
+<ul>
+<li><p><strong>ELR:</strong> el ultimate permanece en <span class="math inline">\(10.341844M\)</span> USD. La nueva reserve es</p>
+<p><span class="math display">\[
+R_{2025}^{ELR}=10.341844-8.75=\mathbf{1.591844M\text{ USD}},
+\]</span></p>
+<p>una disminución de <span class="math inline">\(0.50M\)</span> USD.</p></li>
+<li><p><strong>Chain-Ladder:</strong> el nuevo ultimate es</p>
+<p><span class="math display">\[
+8.75(1.19053445)=\mathbf{10.417176M\text{ USD}},
+\]</span></p>
+<p>un aumento de aproximadamente <span class="math inline">\(0.595267M\)</span> USD. La nueva reserve es</p>
+<p><span class="math display">\[
+10.417176-8.75=\mathbf{1.667176M\text{ USD}},
+\]</span></p>
+<p>un aumento de aproximadamente <span class="math inline">\(0.095267M\)</span> USD.</p></li>
+<li><p><strong>Bornhuetter-Ferguson:</strong> como el priori y la proporción pendiente no cambian, la reserve permanece en</p>
+<p><span class="math display">\[
+\mathbf{1.655120M\text{ USD}}.
+\]</span></p>
+<p>El ultimate absorbe el aumento observado:</p>
+<p><span class="math display">\[
+8.75+1.655120=\mathbf{10.405120M\text{ USD}}.
+\]</span></p></li>
+</ul>
+<p>La intuición de que “más pérdida observada siempre reduce la reserve” solo se cumple aquí para ELR. En CL, la nueva observación eleva la escala que se desarrolla; en BF, el cambio observado modifica el ultimate, pero no la reserve mientras el priori y el patrón permanezcan fijos.</p>
+</div>
+<div id="experimento-2-shock-en-el-priori-esperado" class="section level4 hasAnchor">
+<h4>Experimento 2: shock en el priori esperado<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#experimento-2-shock-en-el-priori-esperado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Ahora las pérdidas observadas vuelven a <span class="math inline">\(8.25M\)</span> USD y el priori de pérdida última de AY 2025 aumenta <strong>5%</strong>, desde <span class="math inline">\(10.341844M\)</span> hasta <span class="math inline">\(10.858936M\)</span> USD. El incremento es:</p>
+<p><span class="math display">\[
+10.858936-10.341844=\mathbf{0.517092M\text{ USD}}.
+\]</span></p>
+<p>Antes de calcular, anticipe qué método debería absorber todo el cambio, cuál debería ignorarlo y cuál debería absorber únicamente una fracción.</p>
+<ul>
+<li><p><strong>ELR:</strong> ultimate y reserve aumentan en el 100% del shock. La nueva reserve es</p>
+<p><span class="math display">\[
+10.858936-8.25=\mathbf{2.608936M\text{ USD}}.
+\]</span></p></li>
+<li><p><strong>Chain-Ladder:</strong> no cambia, porque ni la diagonal ni los factores de desarrollo cambiaron:</p>
+<p><span class="math display">\[
+U_{2025}^{CL}=\mathbf{9.821909M\text{ USD}},
+\qquad
+R_{2025}^{CL}=\mathbf{1.571909M\text{ USD}}.
+\]</span></p></li>
+<li><p><strong>Bornhuetter-Ferguson:</strong> solo la porción pendiente del <span class="math inline">\(16.00411\%\)</span> absorbe el cambio del priori:</p>
+<p><span class="math display">\[
+0.517092(0.1600411)=\mathbf{0.082756M\text{ USD}}.
+\]</span></p>
+<p>La nueva reserve es aproximadamente</p>
+<p><span class="math display">\[
+\mathbf{1.737876M\text{ USD}},
+\]</span></p>
+<p>y el nuevo ultimate es aproximadamente</p>
+<p><span class="math display">\[
+\mathbf{9.987876M\text{ USD}}.
+\]</span></p></li>
+</ul>
+<p>La comparación puede resumirse así:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Reacción ante shock (millones de USD)</th>
+<th align="right">ELR</th>
+<th align="right">Chain-Ladder</th>
+<th align="right">BF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Línea base AY 2025 ultimate</td>
+<td align="right">10.342</td>
+<td align="right">9.822</td>
+<td align="right">9.905</td>
+</tr>
+<tr class="even">
+<td>Shock incurrido <span class="math inline">\(+0.50M\)</span>: ultimate</td>
+<td align="right">10.342</td>
+<td align="right">10.417</td>
+<td align="right">10.405</td>
+</tr>
+<tr class="odd">
+<td>Shock incurrido <span class="math inline">\(+0.50M\)</span>: reserve</td>
+<td align="right">1.592</td>
+<td align="right">1.667</td>
+<td align="right">1.655</td>
+</tr>
+<tr class="even">
+<td>Shock prior <span class="math inline">\(+5\%\)</span>: ultimate</td>
+<td align="right">10.859</td>
+<td align="right">9.822</td>
+<td align="right">9.988</td>
+</tr>
+<tr class="odd">
+<td>Shock prior <span class="math inline">\(+5\%\)</span>: reserve</td>
+<td align="right">2.609</td>
+<td align="right">1.572</td>
+<td align="right">1.738</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="el-método-correcto-no-puede-elegirse-después-de-mirar-el-ultimate" class="section level4 hasAnchor">
+<h4>El método correcto no puede elegirse después de mirar el ultimate<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-correcto-no-puede-elegirse-despu%C3%A9s-de-mirar-el-ultimate" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Desafío al lector 8.</strong> La verdad sintética del autor para AY 2024 es <span class="math inline">\(9.360M\)</span> USD. ¿Puede Mateo utilizar esa cifra en la fecha de valoración del 31 de diciembre de 2025 para seleccionar factores, modificar el priori o escoger el método que “mejor” reserve?</p>
+<p>No. Esa cifra es una <strong>retrospectiva pedagógica no disponible al 31/12/2025</strong>. Solo después de cerrar la decisión ex ante puede utilizarse para estudiar qué ocurrió.</p>
+<p>Chain-Ladder, que no depende de la incidencia de prima de AY 2024, había estimado:</p>
+<p><span class="math display">\[
+U_{2024}^{CL}=9.396754M\text{ USD}.
+\]</span></p>
+<p>Frente a la verdad sintética:</p>
+<p><span class="math display">\[
+9.396754-9.360=\mathbf{0.036754M\text{ USD}}.
+\]</span></p>
+<p>Esa proximidad retrospectiva no demuestra que Chain-Ladder fuera universalmente superior. Una realización histórica puede favorecer o perjudicar un método por razones que solo se conocen después. La pregunta correcta sigue siendo qué información estaba disponible el 31 de diciembre de 2025 y qué supuestos eran defendibles entonces.</p>
+<p>La comparación retrospectiva numérica de ELR y BF para AY 2024 permanece deliberadamente suspendida hasta resolver la base canónica de su prima ganada. No se utiliza la rama legacy para declarar un ganador.</p>
+<p>La lección central no es que un método “acierte” y otro “falle”, sino que cada uno responde de forma distinta porque utiliza información distinta: ELR se apoya en el priori, Chain-Ladder en la experiencia de desarrollo observada y BF conserva lo observado mientras aplica el priori únicamente a la fracción pendiente.</p>
+</div>
+</div>
+<div id="ejercicios-9" class="section level3 hasAnchor">
+<h3>Ejercicios<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ejercicio-1---cálculo-y-derivación-de-chain-ladder-sobre-un-portafolio-de-transportes" class="section level4 hasAnchor">
+<h4>Ejercicio 1 - Cálculo y derivación de Chain-Ladder sobre un portafolio de transportes<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-1---c%C3%A1lculo-y-derivaci%C3%B3n-de-chain-ladder-sobre-un-portafolio-de-transportes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Un actuario analiza la siniestralidad acumulada reportada de un segmento independiente de transporte de mercancías. La base de datos, valorada al 31 de diciembre de 2025, registra el siguiente triángulo de pérdidas brutas acumuladas incurridas, expresadas en millones de USD:</p>
+<p><span class="math display">\[
+\mathbf{C}=
+\begin{pmatrix}
+4.00 &amp; 4.80 &amp; 5.00 \\
+4.20 &amp; 5.04 &amp; - \\
+4.50 &amp; - &amp; -
+\end{pmatrix}.
+\]</span></p>
+<p>Se asume que el desarrollo está completamente terminado a 36 meses, por lo que <span class="math inline">\(F_{36}=1\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcule los factores volumen-ponderados <span class="math inline">\(f_{12-24}\)</span> y <span class="math inline">\(f_{24-36}\)</span>, mostrando numeradores y denominadores.</p></li>
+<li><p>Construya los factores acumulados <span class="math inline">\(F_{24}\)</span> y <span class="math inline">\(F_{12}\)</span>.</p></li>
+<li><p>Calcule el porcentaje desarrollado <span class="math inline">\(p_j=1/F_j\)</span> para 12, 24 y 36 meses.</p></li>
+<li><p>Estime los ultimates <span class="math inline">\(U_i^{CL}\)</span> de AY 2023, AY 2024 y AY 2025.</p></li>
+<li><p>Calcule las reserves <span class="math inline">\(R_i^{CL}\)</span> de cada año.</p></li>
+<li><p>Determine la reserve total del portafolio.</p></li>
+<li><p>Identifique al menos dos supuestos cuya ruptura podría hacer que el patrón histórico dejara de ser representativo.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<ul>
+<li><p>Factores age-to-age:</p>
+<p><span class="math display">\[
+f_{12-24}=\frac{4.80+5.04}{4.00+4.20}=\frac{9.84}{8.20}=\mathbf{1.20000},
+\]</span></p>
+<p><span class="math display">\[
+f_{24-36}=\frac{5.00}{4.80}=\mathbf{1.04167}.
+\]</span></p></li>
+<li><p>Factores acumulados:</p>
+<p><span class="math display">\[
+F_{24}=\mathbf{1.04167},
+\qquad
+F_{12}=1.04166667(1.20)=\mathbf{1.25000}.
+\]</span></p></li>
+<li><p>Porcentajes desarrollados:</p>
+<p><span class="math display">\[
+p_{12}=\frac{1}{1.25}=\mathbf{80.00\%},
+\qquad
+p_{24}=\frac{1}{1.04166667}=\mathbf{96.00\%},
+\qquad
+p_{36}=\mathbf{100.00\%}.
+\]</span></p></li>
+<li><p>Ultimates:</p>
+<p><span class="math display">\[
+U_{2023}^{CL}=\mathbf{5.00M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U_{2024}^{CL}=5.04(1.04166667)=\mathbf{5.25M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U_{2025}^{CL}=4.50(1.25)=\mathbf{5.625M\text{ USD}}.
+\]</span></p></li>
+<li><p>Reserves:</p>
+<p><span class="math display">\[
+R_{2023}^{CL}=0,
+\qquad
+R_{2024}^{CL}=\mathbf{0.21M\text{ USD}},
+\qquad
+R_{2025}^{CL}=\mathbf{1.125M\text{ USD}},
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+R_{\text{total}}^{CL}=0+0.21+1.125=\mathbf{1.335M\text{ USD}}.
+\]</span></p></li>
+<li><p>Entre los supuestos relevantes están la estabilidad de reporting/claims handling, la consistencia de la base del triángulo y la representatividad del historial de desarrollo. Un retraso operativo en 2025 podría reducir artificialmente el acumulado observado y producir una proyección demasiado baja si se aplicara el factor de forma mecánica.</p></li>
+</ul>
+</div>
+<div id="ejercicio-2---elr-frente-a-bornhuetter-ferguson" class="section level4 hasAnchor">
+<h4>Ejercicio 2 - ELR frente a Bornhuetter-Ferguson<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-2---elr-frente-a-bornhuetter-ferguson" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para el mismo portafolio de transportes, suponga primas ganadas de <span class="math inline">\(\Pi_{2024}=6.40M\)</span> USD y <span class="math inline">\(\Pi_{2025}=6.80M\)</span> USD, con un ELR esperado de <strong>80%</strong>. Las pérdidas acumuladas actuales son <span class="math inline">\(5.04M\)</span> USD para AY 2024 y <span class="math inline">\(4.50M\)</span> USD para AY 2025. Utilice <span class="math inline">\(F_{24}=1.04166667\)</span> y <span class="math inline">\(F_{12}=1.25\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcule el ultimate ELR de cada año.</p></li>
+<li><p>Calcule la reserve ELR de cada año.</p></li>
+<li><p>Calcule el porcentaje pendiente y la expected unreported loss de BF.</p></li>
+<li><p>Calcule el ultimate BF de cada año.</p></li>
+<li><p>Explique por qué BF no es el promedio entre ELR y Chain-Ladder.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<ul>
+<li><p>Ultimates ELR:</p>
+<p><span class="math display">\[
+U_{2024}^{ELR}=6.40(0.80)=\mathbf{5.12M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U_{2025}^{ELR}=6.80(0.80)=\mathbf{5.44M\text{ USD}}.
+\]</span></p></li>
+<li><p>Reserves ELR:</p>
+<p><span class="math display">\[
+R_{2024}^{ELR}=5.12-5.04=\mathbf{0.08M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+R_{2025}^{ELR}=5.44-4.50=\mathbf{0.94M\text{ USD}}.
+\]</span></p></li>
+<li><p>Porciones pendientes:</p>
+<p><span class="math display">\[
+1-p_{24}=\mathbf{4.00\%},
+\qquad
+1-p_{12}=\mathbf{20.00\%}.
+\]</span></p></li>
+<li><p>Expected unreported BF:</p>
+<p><span class="math display">\[
+R_{2024}^{BF}=5.12(0.04)=\mathbf{0.2048M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+R_{2025}^{BF}=5.44(0.20)=\mathbf{1.088M\text{ USD}}.
+\]</span></p></li>
+<li><p>Ultimates BF:</p>
+<p><span class="math display">\[
+U_{2024}^{BF}=5.04+0.2048=\mathbf{5.2448M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U_{2025}^{BF}=4.50+1.088=\mathbf{5.588M\text{ USD}}.
+\]</span></p></li>
+<li><p>BF no promedia dos ultimates: acepta la pérdida acumulada observada y aplica el priori solamente a la porción que el patrón identifica como todavía no desarrollada.</p></li>
+</ul>
+</div>
+<div id="ejercicio-3---la-información-cambia" class="section level4 hasAnchor">
+<h4>Ejercicio 3 - La información cambia<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-3---la-informaci%C3%B3n-cambia" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Considere AY 2025 del mismo segmento, con línea base <span class="math inline">\(C_{2025}=4.50M\)</span> USD, <span class="math inline">\(U_{2025}^{prior}=5.44M\)</span> USD y <span class="math inline">\(F_{12}=1.25\)</span>. Antes de hacer cada cálculo, anticipe si la reserve de ELR, Chain-Ladder y BF debería subir, bajar o permanecer sin cambio.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Shock A - pérdidas incurridas:</strong> las pérdidas acumuladas aumentan en <span class="math inline">\(0.30M\)</span> USD, de <span class="math inline">\(4.50M\)</span> a <span class="math inline">\(4.80M\)</span> USD, manteniendo fijos el priori y <span class="math inline">\(F_{12}\)</span>. Calcule el nuevo ultimate y la nueva reserve bajo ELR, Chain-Ladder y BF.</p></li>
+<li><p><strong>Shock B - priori:</strong> las pérdidas observadas vuelven a <span class="math inline">\(4.50M\)</span> USD y el priori aumenta 10%, de <span class="math inline">\(5.44M\)</span> a <span class="math inline">\(5.984M\)</span> USD, manteniendo fijo <span class="math inline">\(F_{12}\)</span>. Calcule el nuevo ultimate y la nueva reserve bajo los tres métodos.</p></li>
+<li><p>Compare sus predicciones previas con los resultados y explique qué fuente de información hizo reaccionar a cada método.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<ul>
+<li><p><strong>Shock A:</strong></p>
+<ul>
+<li><p>ELR:</p>
+<p><span class="math display">\[
+U^{ELR}=\mathbf{5.44M\text{ USD}},
+\qquad
+R^{ELR}=5.44-4.80=\mathbf{0.64M\text{ USD}}.
+\]</span></p></li>
+<li><p>Chain-Ladder:</p>
+<p><span class="math display">\[
+U^{CL}=4.80(1.25)=\mathbf{6.00M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+R^{CL}=4.80(0.25)=\mathbf{1.20M\text{ USD}}.
+\]</span></p></li>
+<li><p>BF:</p>
+<p><span class="math display">\[
+R^{BF}=5.44(0.20)=\mathbf{1.088M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U^{BF}=4.80+1.088=\mathbf{5.888M\text{ USD}}.
+\]</span></p></li>
+</ul></li>
+<li><p><strong>Shock B:</strong></p>
+<ul>
+<li><p>ELR:</p>
+<p><span class="math display">\[
+U^{ELR}=\mathbf{5.984M\text{ USD}},
+\qquad
+R^{ELR}=5.984-4.50=\mathbf{1.484M\text{ USD}}.
+\]</span></p></li>
+<li><p>Chain-Ladder:</p>
+<p><span class="math display">\[
+U^{CL}=\mathbf{5.625M\text{ USD}},
+\qquad
+R^{CL}=\mathbf{1.125M\text{ USD}}.
+\]</span></p></li>
+<li><p>BF:</p>
+<p><span class="math display">\[
+R^{BF}=5.984(0.20)=\mathbf{1.1968M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+U^{BF}=4.50+1.1968=\mathbf{5.6968M\text{ USD}}.
+\]</span></p></li>
+</ul></li>
+</ul>
+<p>El primer shock reduce la reserve ELR, eleva la reserve CL y deja fija la reserve BF. El segundo eleva por completo ELR, no afecta CL y modifica BF únicamente en la proporción pendiente del 20%.</p>
+</div>
+</div>
+<div id="cierre-y-puente-final-9" class="section level3 hasAnchor">
+<h3>Cierre y puente final<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Regresemos al dato que abrió la sección. Al 31 de diciembre de 2025, AY 2025 tiene:</p>
+<p><span class="math display">\[
+C_{2025,12}=\mathbf{8.25M\text{ USD}}.
+\]</span></p>
+<p>Sin embargo, los tres métodos producen reservas distintas:</p>
+<p><span class="math display">\[
+R_{2025}^{ELR}=\mathbf{2.091844M\text{ USD}}\approx\mathbf{2.092M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+R_{2025}^{CL}=\mathbf{1.571909M\text{ USD}}\approx\mathbf{1.572M\text{ USD}},
+\]</span></p>
+<p><span class="math display">\[
+R_{2025}^{BF}=\mathbf{1.655120M\text{ USD}}\approx\mathbf{1.655M\text{ USD}}.
+\]</span></p>
+<p>No son tres respuestas aleatorias. ELR cree principalmente el priori de pérdida última; Chain-Ladder cree el patrón de desarrollo que emerge del triángulo; Bornhuetter-Ferguson conserva lo observado y utiliza el priori únicamente para la porción que todavía no se ha desarrollado. La diferencia entre reservas revela una diferencia sobre qué información consideramos más confiable, no únicamente una diferencia de fórmula.</p>
+<p>Antes de aceptar una reserve, el actuario debería poder responder: ¿qué loss basis utiliza?, ¿cuál es la fecha de valoración?, ¿qué parte de la pérdida ya está observada?, ¿qué development assumption sostiene la proyección?, ¿qué prior interviene?, y ¿qué nueva información haría cambiar el resultado?</p>
+<p>Una última distinción temporal prepara la siguiente sección. <strong>Development</strong> responde cuánto de la pérdida de un mismo Accident Year todavía no ha emergido; <strong>trend</strong> responde cómo cambia el nivel esperado de costo entre fechas económicas distintas. No son la misma transformación. Reserving ha mirado hacia atrás, hacia eventos que ya ocurrieron pero todavía no terminaron de desarrollarse. Ratemaking mirará hacia adelante, hacia un periodo futuro cuyo costo todavía no ocurrió.</p>
+<p>Incluso después de estimar correctamente las pérdidas últimas históricas, esos importes no son automáticamente comparables con una tarifa futura. Antes de pricing habrá que preguntar si las pérdidas están en un cost level comparable y si las primas históricas están en una base tarifaria comparable, sin confundir esos ajustes con el development que acabamos de estudiar.</p>
+<p>Esa necesidad abre directamente la <strong>Section 5.2 - Data Preparation for Ratemaking</strong>.</p>
+</div>
+</div>
+<div id="section-5.2---data-preparation-for-ratemaking" class="section level2 hasAnchor">
+<h2>Section 5.2 - Data Preparation for Ratemaking<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.2---data-preparation-for-ratemaking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><em>El mismo riesgo mira hacia atrás y hacia adelante</em></p>
+</blockquote>
+<div id="el-ratio-de-siniestralidad-crudo-es-una-ilusión-temporal-y-operativa" class="section level3 hasAnchor">
+<h3>5.2.1 El ratio de siniestralidad crudo es una ilusión temporal y operativa<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ratio-de-siniestralidad-crudo-es-una-ilusi%C3%B3n-temporal-y-operativa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En el análisis de suficiencia tarifaria, el actuario busca determinar si las primas que se recaudarán en el futuro serán suficientes para financiar las pérdidas esperadas, los gastos operativos y la provisión de ganancia y contingencias de la compañía. Para iniciar este proceso en <strong>Meridiano Seguros</strong>, la actuaria de Pricing, <strong>Lucía</strong>, decide evaluar la experiencia del Accident Year 2025.</p>
+<p>Al revisar los registros de la compañía al <strong>31 de diciembre de 2025</strong>, Lucía observa que el subportafolio de seguros comerciales de daños registra pérdidas acumuladas incurridas por un importe de <strong><span class="math inline">\(8.25\)</span> millones de USD</strong>. Por su parte, la prima ganada contable acumulada durante ese mismo periodo asciende a <strong><span class="math inline">\(13.789125\)</span> millones de USD</strong>. Al realizar una división directa entre ambas cifras contables, Lucía obtiene un ratio de siniestralidad bruto (<em>raw loss ratio</em>) de:</p>
+<p><span class="math display">\[
+\text{Raw Loss Ratio}_{2025}
+=
+\frac{8.25\text{ millones de USD}}{13.789125\text{ millones de USD}}
+\approx
+59.83\%.
+\]</span></p>
+<p>Satisfecha con este resultado preliminar, Lucía comenta a la actuaria jefa, <strong>Irene</strong>: <em>«Una siniestralidad de <span class="math inline">\(59.83\%\)</span> parece, a primera vista, dejar un margen cómodo para competir en el mercado el próximo año»</em>.</p>
+<p>Irene, sin embargo, frena el entusiasmo con una advertencia de comparabilidad fundamental: <em>«Tu cálculo del <span class="math inline">\(59.83\%\)</span> es aritméticamente impecable, Lucía, pero todavía no es una base defendible para tomar decisiones de precios hacia el futuro. Ese número mezcla tres mundos económicos incompatibles en el tiempo. Las pérdidas de <span class="math inline">\(8.25\)</span> millones de USD corresponden a un año de accidentes inmaduro, valorado a apenas <span class="math inline">\(12\)</span> meses de desarrollo. Las primas de <span class="math inline">\(13.789125\)</span> millones de USD se ganaron bajo una tarifa promedio que ya no es la que cobramos hoy. Y la tarifa que pretendemos diseñar entrará en vigor el <strong>1 de enero de 2027</strong>, para una exposición cuya fecha media de pérdidas se situará a mediados de ese año. En este caso, decidir directamente con el ratio crudo sesgaría la lectura del costo que queremos financiar»</em>.</p>
+<p>Este intercambio ilustra el dilema central de la preparación de datos para tarifas (<em>ratemaking</em>): <strong>el mismo riesgo que Reserving analiza hacia atrás para cuantificar obligaciones pendientes, Pricing debe proyectarlo hacia adelante para estimar el costo de la exposición futura</strong>. Para que los datos históricos sirvan como una base defendible para el futuro, el actuario debe corregir incompatibilidades distintas mediante <strong>desarrollo, tendencia y puesta a nivel de primas</strong>.</p>
+<p>El caso trabajado mantiene una <strong>base gross del asegurador</strong>. Las pérdidas utilizadas son pérdidas acumuladas incurridas gross y el costo de pérdida prospectivo se interpreta también sobre base gross. No se construye aquí una base neta de reaseguro porque no existe en el canon suministrado una serie congelada y reconciliada de primas cedidas y recuperaciones para este ejercicio. Asimismo, se mantiene la misma base contractual del producto; no se introduce un cambio de cobertura entre la experiencia histórica y el periodo prospectivo.</p>
+<p>El mapa mínimo de datos deja visible qué representa cada cantidad antes de combinarla:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cantidad</th>
+<th>Fecha o periodo</th>
+<th>Development / cost-rate basis</th>
+<th>Units</th>
+<th>Naturaleza</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(C_{2025,12}=8.25\)</span></td>
+<td>AY 2025; valoración 31/12/2025</td>
+<td>Incurrida acumulada a <span class="math inline">\(12\)</span> meses; nivel histórico 2025</td>
+<td>millones de USD</td>
+<td>Observada, gross</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Pi_{2025}=13.789125\)</span></td>
+<td>AY 2025; valoración 31/12/2025</td>
+<td>Prima ganada bajo tarifa promedio 2025</td>
+<td>millones de USD</td>
+<td>Observada</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(U_{2025}=9.821909\)</span></td>
+<td>AY 2025; valoración 31/12/2025</td>
+<td>Estimada a último, <span class="math inline">\(60\)</span> meses</td>
+<td>millones de USD</td>
+<td>Derivada del modelo de desarrollo, gross</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(LC_{\text{base}}=780\)</span></td>
+<td>Base económica seleccionada 1/7/2025</td>
+<td>Costo último seleccionado al nivel económico de esa fecha</td>
+<td>USD por exposición</td>
+<td>Input canónico seleccionado, gross</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(LC_{\text{projected}}=894.02\)</span></td>
+<td>Fecha media prospectiva 1/7/2027</td>
+<td>Nivel de costo prospectivo</td>
+<td>USD por exposición</td>
+<td>Derivada por tendencia, gross</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(r_{\text{current}}=1,124.76\)</span></td>
+<td>31/12/2025</td>
+<td>Nivel tarifario vigente</td>
+<td>USD por exposición</td>
+<td>Tarifa actual</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(FE=60\)</span></td>
+<td>Periodo prospectivo</td>
+<td>Gasto fijo</td>
+<td>USD por exposición</td>
+<td>Input seleccionado</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(v=18\%\)</span>, <span class="math inline">\(q=5\%\)</span></td>
+<td>Periodo prospectivo</td>
+<td>Proporciones de prima</td>
+<td>porcentaje de prima</td>
+<td>Inputs seleccionados</td>
+</tr>
+</tbody>
+</table>
+<p>Este mapa también muestra por qué <strong>no todos los datos se ajustan de la misma manera</strong>:</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ajuste</th>
+<th>Cantidad transformada</th>
+<th>Pregunta que resuelve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Development</td>
+<td>Historical losses</td>
+<td>¿Cuánto de la pérdida histórica todavía no ha emergido?</td>
+</tr>
+<tr class="even">
+<td>Trend</td>
+<td>Loss cost</td>
+<td>¿Cómo cambia el nivel esperado de costo entre dos fechas económicas?</td>
+</tr>
+<tr class="odd">
+<td>Premium on-leveling</td>
+<td>Historical earned premium</td>
+<td>¿Qué prima habría generado esa exposición al nivel tarifario actual?</td>
+</tr>
+</tbody>
+</table>
+<p>La selección de experiencia también exige juicio temporal. Los años recientes suelen ser más relevantes para el entorno económico actual, pero pueden estar más inmaduros; los años antiguos suelen estar más desarrollados, pero requieren más trend y más ajuste de rate level. Una serie larga no es automáticamente superior si mezcla bases incompatibles.</p>
+</div>
+<div id="el-ajuste-por-desarrollo-traduce-la-inmadurez-de-la-diagonal-en-escala-última" class="section level3 hasAnchor">
+<h3>5.2.2 El ajuste por desarrollo traduce la inmadurez de la diagonal en escala última<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-ajuste-por-desarrollo-traduce-la-inmadurez-de-la-diagonal-en-escala-%C3%BAltima" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El primer desajuste que debe corregirse en el numerador del ratio de siniestralidad es la inmadurez de las pérdidas históricas. Como se analizó en Section 5.1, los siniestros ocurridos durante un año de accidentes tardan meses o años en reportarse, liquidarse y registrarse por completo. Utilizar la siniestralidad observada en la última diagonal del triángulo de pérdidas -<span class="math inline">\(8.25\)</span> millones de USD para Accident Year 2025- ignoraría la parte del costo que todavía no ha emergido en la experiencia observada.</p>
+<p>Para neutralizar ese problema, Lucía reutiliza el factor acumulado de desarrollo de Chain-Ladder ya seleccionado en Reserving. Para AY 2025, el factor acumulado de <span class="math inline">\(12\)</span> a <span class="math inline">\(60\)</span> meses es:</p>
+<p><span class="math display">\[
+F_{12\to60}=1.19053445.
+\]</span></p>
+<p>El factor no cambia el nivel económico de los siniestros. Responde únicamente a una pregunta de <strong>madurez</strong>: dado lo observado a <span class="math inline">\(12\)</span> meses, ¿qué ultimate implica el patrón de desarrollo seleccionado?</p>
+<p>Aplicándolo al importe acumulado observado:</p>
+<p><span class="math display">\[
+U_{2025}
+=
+C_{2025,12}F_{12\to60}
+=
+8.25\times1.19053445
+=
+9.821909\text{ millones de USD}.
+\]</span></p>
+<p>La diferencia:</p>
+<p><span class="math display">\[
+9.821909-8.25
+=
+1.571909\text{ millones de USD}
+\]</span></p>
+<p>es la parte adicional que el método de desarrollo estima que todavía falta por emerger hasta la edad terminal de <span class="math inline">\(60\)</span> meses del caso canónico.</p>
+<p>Si Lucía recalcula el ratio de 2025 corrigiendo únicamente la inmadurez del numerador, obtiene:</p>
+<p><span class="math display">\[
+\text{Loss Ratio Desarrollado}_{2025}
+=
+\frac{9.821909}{13.789125}
+\approx
+71.23\%.
+\]</span></p>
+<p>El <span class="math inline">\(71.23\%\)</span> no es una nueva observación ni una “siniestralidad real” conocida. Es un <strong>ratio derivado del modelo</strong>, construido con pérdidas últimas estimadas en el numerador y prima ganada histórica todavía no puesta a nivel en el denominador. Por eso sigue siendo insuficiente para una decisión prospectiva.</p>
+</div>
+<div id="la-tendencia-de-costo-proyecta-la-severidad-y-frecuencia-hacia-el-futuro-económico" class="section level3 hasAnchor">
+<h3>5.2.3 La tendencia de costo proyecta la severidad y frecuencia hacia el futuro económico<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-tendencia-de-costo-proyecta-la-severidad-y-frecuencia-hacia-el-futuro-econ%C3%B3mico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una vez que las pérdidas históricas se expresan en una base de madurez adecuada, aparece un problema distinto: su <strong>nivel económico</strong> puede pertenecer al pasado. El desarrollo mueve una pérdida desde una edad de desarrollo hacia ultimate; la tendencia mueve un costo desde una fecha económica hacia otra.</p>
+<p>Para el caso canónico, Meridiano selecciona una tendencia anual de severidad de:</p>
+<p><span class="math display">\[
+t_s=6\%,
+\]</span></p>
+<p>mientras que la tendencia anual de frecuencia es:</p>
+<p><span class="math display">\[
+t_f=1\%.
+\]</span></p>
+<p>La combinación es multiplicativa porque el costo de pérdida esperado por exposición refleja simultáneamente frecuencia y severidad. Si cada componente cambia mediante su propio factor anual, el factor de cambio del producto es:</p>
+<p><span class="math display">\[
+1+t_{\text{combined}}
+=
+(1+t_s)(1+t_f)
+=
+1.06(1.01)
+=
+1.0706.
+\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[
+t_{\text{combined}}
+=
+1.0706-1
+=
+0.0706
+=
+7.06\%\text{ anual}.
+\]</span></p>
+<p>La tendencia combinada no es exactamente <span class="math inline">\(6\%+1\%=7\%\)</span>. El producto conserva el término cruzado:</p>
+<p><span class="math display">\[
+0.06(0.01)=0.0006=0.06\%.
+\]</span></p>
+<p>Para el prospective ratemaking case, la nueva tarifa será efectiva el <strong>1 de enero de 2027</strong> y cubrirá un periodo de un año. Bajo el supuesto canónico de exposición uniforme, la fecha media prospectiva de pérdidas es el <strong>1 de julio de 2027</strong>.</p>
+<p>El canon utiliza:</p>
+<p><span class="math display">\[
+LC_{\text{base}}=780\text{ USD por exposición}
+\]</span></p>
+<p>como <strong>selected base loss cost ya expresado en una base económica cuya fecha media canónica es el 1 de julio de 2025</strong>. En esta sección no se deriva ese <span class="math inline">\(780\)</span> de la verdad sintética de AY 2024 ni se lo describe como un raw AY2024 loss cost. Esa separación evita utilizar retrospectivamente un ultimate que no estaba disponible al 31 de diciembre de 2025 y evita mezclar una fecha media de 2024 con un periodo de tendencia de solo dos años.</p>
+<p>La distancia entre el <strong>1 de julio de 2025</strong> y el <strong>1 de julio de 2027</strong> es:</p>
+<p><span class="math display">\[
+n=2\text{ años}.
+\]</span></p>
+<p>Por tanto, el factor acumulado de tendencia es:</p>
+<p><span class="math display">\[
+(1.0706)^2
+=
+1.14618436.
+\]</span></p>
+<p>Y el costo de pérdida prospectivo resulta:</p>
+<p><span class="math display">\[
+LC_{\text{projected}}
+=
+LC_{\text{base}}(1.0706)^2
+=
+780(1.14618436)
+=
+894.0238008
+\approx
+894.02\text{ USD por exposición}.
+\]</span></p>
+<p>Este resultado es una cantidad <strong>model-derived</strong>: depende del costo base seleccionado, de las fechas de origen y destino, y de los supuestos de tendencia. No es una observación histórica.</p>
+<div id="sensibilidad---un-punto-adicional-de-tendencia-de-severidad-cambia-la-base-prospectiva" class="section level4 hasAnchor">
+<h4>Sensibilidad - un punto adicional de tendencia de severidad cambia la base prospectiva<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#sensibilidad---un-punto-adicional-de-tendencia-de-severidad-cambia-la-base-prospectiva" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para aislar el efecto de un solo supuesto, supongamos que la tendencia de severidad sube de <span class="math inline">\(6\%\)</span> a <span class="math inline">\(7\%\)</span>, mientras la tendencia de frecuencia permanece en <span class="math inline">\(1\%\)</span> y el periodo sigue siendo de dos años. El nuevo factor anual combinado es:</p>
+<p><span class="math display">\[
+1.07(1.01)
+=
+1.0807,
+\]</span></p>
+<p>es decir, una tendencia combinada de:</p>
+<p><span class="math display">\[
+8.07\%\text{ anual}.
+\]</span></p>
+<p>El nuevo factor de dos años es:</p>
+<p><span class="math display">\[
+(1.0807)^2
+=
+1.16791249,
+\]</span></p>
+<p>y el costo prospectivo pasa a:</p>
+<p><span class="math display">\[
+780(1.16791249)
+=
+910.9717422
+\approx
+910.97\text{ USD por exposición}.
+\]</span></p>
+<p>Manteniendo todo lo demás constante, una selección mayor de tendencia de severidad eleva el costo prospectivo de <span class="math inline">\(894.02\)</span> a <span class="math inline">\(910.97\)</span> USD por exposición. La sensitivity no cambia la observación histórica; cambia la cantidad prospectiva producida por el modelo.</p>
+</div>
+</div>
+<div id="la-premium-on-leveling-reconstruye-los-ingresos-bajo-la-estructura-tarifaria-actual" class="section level3 hasAnchor">
+<h3>5.2.4 La premium on-leveling reconstruye los ingresos bajo la estructura tarifaria actual<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-premium-on-leveling-reconstruye-los-ingresos-bajo-la-estructura-tarifaria-actual" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El tercer problema de comparabilidad aparece en el denominador. Si las tarifas cambiaron durante la historia, la prima ganada contable no es una medida neutral de exposición: dos periodos con la misma exposición pueden producir primas distintas únicamente porque se cobraron bajo rate levels diferentes.</p>
+<p>El historial de cambios tarifarios de Meridiano parte de una tarifa de:</p>
+<p><span class="math display">\[
+1,000\text{ USD por exposición}.
+\]</span></p>
+<p>Los cambios canónicos son:</p>
+<ul>
+<li><p><strong>1 de enero de 2023:</strong> <span class="math inline">\(+3\%\)</span>, llevando la tarifa a <span class="math inline">\(1,030.00\)</span> USD por exposición.</p></li>
+<li><p><strong>1 de julio de 2024:</strong> <span class="math inline">\(+5\%\)</span>, llevando la tarifa a <span class="math inline">\(1,081.50\)</span> USD por exposición.</p></li>
+<li><p><strong>1 de julio de 2025:</strong> <span class="math inline">\(+4\%\)</span>, llevando la tarifa a <span class="math inline">\(1,124.76\)</span> USD por exposición.</p></li>
+</ul>
+<p>La tarifa vigente al <strong>31 de diciembre de 2025</strong> es, por tanto:</p>
+<p><span class="math display">\[
+r_{\text{current}}
+=
+1,000(1.03)(1.05)(1.04)
+=
+1,124.76\text{ USD por exposición}.
+\]</span></p>
+<p>Los cambios no se suman como <span class="math inline">\(3\%+5\%+4\%=12\%\)</span>; cada cambio se aplica al nivel tarifario que existe en ese momento.</p>
+<p>Bajo el supuesto de ganancia uniforme dentro de cada año, un cambio efectivo a mitad de año produce una tarifa promedio ganada igual al promedio de los niveles anterior y posterior. Así:</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">AY</th>
+<th align="right">Tarifa promedio ganada <span class="math inline">\(\bar r_i\)</span></th>
+<th align="right">Factor on-level <span class="math inline">\(OLF_i=r_{\text{current}}/\bar r_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="right"><span class="math inline">\(1,000.00\)</span> USD</td>
+<td align="right"><span class="math inline">\(1.12476\)</span></td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="right"><span class="math inline">\(1,000.00\)</span> USD</td>
+<td align="right"><span class="math inline">\(1.12476\)</span></td>
+</tr>
+<tr class="odd">
+<td align="right">2023</td>
+<td align="right"><span class="math inline">\(1,030.00\)</span> USD</td>
+<td align="right"><span class="math inline">\(1.09200\)</span></td>
+</tr>
+<tr class="even">
+<td align="right">2024</td>
+<td align="right"><span class="math inline">\(1,055.75\)</span> USD</td>
+<td align="right"><span class="math inline">\(1.06536585\)</span></td>
+</tr>
+<tr class="odd">
+<td align="right">2025</td>
+<td align="right"><span class="math inline">\(1,103.13\)</span> USD</td>
+<td align="right"><span class="math inline">\(1.01960784\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El factor on-level se define como:</p>
+<p><span class="math display">\[
+OLF_i
+=
+\frac{r_{\text{current}}}{\bar r_i}.
+\]</span></p>
+<p>Y la prima puesta al nivel actual es:</p>
+<p><span class="math display">\[
+\Pi_i^{OL}
+=
+\Pi_i^{earned}OLF_i.
+\]</span></p>
+<p>Para los años cuya base de exposición y prima está reconciliada en el canon disponible:</p>
+<p><span class="math display">\[
+\Pi_{2021}^{OL}
+=
+11.500(1.12476)
+=
+12.934740\text{ millones de USD},
+\]</span></p>
+<p><span class="math display">\[
+\Pi_{2022}^{OL}
+=
+11.900(1.12476)
+=
+13.384644\text{ millones de USD},
+\]</span></p>
+<p><span class="math display">\[
+\Pi_{2023}^{OL}
+=
+12.360(1.09200)
+=
+13.497120\text{ millones de USD}.
+\]</span></p>
+<p>Para AY 2024, la Biblia Numérica v1.0 mantiene una incidencia no resuelta: el core portfolio usa <span class="math inline">\(12,000\)</span> policy-years, mientras la tabla histórica de Reserving/Ratemaking usa <span class="math inline">\(12,500\)</span> exposures. El <strong>rate level promedio de <span class="math inline">\(1,055.75\)</span> USD y el <span class="math inline">\(OLF_{2024}=1.06536585\)</span> no dependen de esa discrepancia</strong>, pero el earned premium 2024, el on-level premium 2024 y cualquier loss ratio o experiencia multi-year que los utilice sí dependen de la rama elegida. Por tanto, <strong>AY 2024 queda excluido de esos cálculos en esta sección y no se adopta silenciosamente ninguna base de exposición</strong>.</p>
+<p>El caso principal continúa con AY 2025, cuya base histórica está reconciliada en la tabla de Part 5. La tarifa promedio ganada es:</p>
+<p><span class="math display">\[
+\bar r_{2025}
+=
+\frac{1,081.50+1,124.76}{2}
+=
+1,103.13\text{ USD por exposición}.
+\]</span></p>
+<p>Por tanto:</p>
+<p><span class="math display">\[
+OLF_{2025}
+=
+\frac{1,124.76}{1,103.13}
+=
+1.01960784.
+\]</span></p>
+<p>Y la prima puesta a nivel actual es:</p>
+<p><span class="math display">\[
+\Pi_{2025}^{OL}
+=
+13.789125(1.01960784)
+=
+14.059500\text{ millones de USD}.
+\]</span></p>
+<p>La comprobación inmediata es:</p>
+<p><span class="math display">\[
+12,500\text{ exposures}\times1,124.76\text{ USD por exposure}
+=
+14,059,500\text{ USD}.
+\]</span></p>
+<p>Así, la prima puesta a nivel equivale exactamente a lo que esa exposición habría generado al current rate level del 31 de diciembre de 2025.</p>
+<p>El cambio de <span class="math inline">\(+4\%\)</span> efectivo el 1 de julio de 2025 <strong>no</strong> implica un on-level factor de <span class="math inline">\(1.04\)</span> para todo el año. La mitad de la exposición de 2025 se ganó antes del cambio y la otra mitad después bajo el supuesto uniforme; por eso el denominator correcto del factor es la tarifa promedio ganada de <span class="math inline">\(1,103.13\)</span> USD, no la tarifa anterior de <span class="math inline">\(1,081.50\)</span> USD.</p>
+<p>Una vez desarrollado el numerador y puesto a nivel el denominador, puede construirse un ratio más comparable para AY 2025:</p>
+<p><span class="math display">\[
+\text{Loss Ratio Desarrollado y Puesto a Nivel}_{2025}
+=
+\frac{U_{2025}}{\Pi_{2025}^{OL}}
+=
+\frac{9.821909}{14.059500}
+\approx
+69.86\%.
+\]</span></p>
+<p>El <span class="math inline">\(69.86\%\)</span> es un <strong>ratio ajustado</strong>, no una “verdadera siniestralidad” observada. Su numerador es una pérdida última estimada mediante desarrollo y su denominador es una prima histórica reconstruida al current rate level. Bajo esas bases declaradas, muestra que la lectura de AY 2025 cambia materialmente frente al raw <span class="math inline">\(59.83\%\)</span>.</p>
+</div>
+<div id="la-estructura-de-gastos-fijos-y-variables-prohíbe-el-recargo-porcentual-simple" class="section level3 hasAnchor">
+<h3>5.2.5 La estructura de gastos fijos y variables prohíbe el recargo porcentual simple<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-de-gastos-fijos-y-variables-proh%C3%ADbe-el-recargo-porcentual-simple" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una vez preparados los componentes de pérdidas y primas, el actuario debe clasificar los gastos según su comportamiento financiero. En el caso canónico de Meridiano:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Gastos fijos (<em>Fixed Expenses</em>, <span class="math inline">\(FE\)</span>):</strong> <span class="math inline">\(60\)</span> USD por exposición. Se comportan como una cantidad aditiva por unidad de exposición.</p></li>
+<li><p><strong>Gastos variables (<em>Variable Expenses</em>, <span class="math inline">\(v\)</span>):</strong> <span class="math inline">\(18\%\)</span> de la prima final. Se comportan como una proporción de premium.</p></li>
+<li><p><strong>Provisión de ganancia y contingencias (<span class="math inline">\(q\)</span>):</strong> <span class="math inline">\(5\%\)</span> de la prima final. Es una provisión seleccionada para el ejercicio, no una ganancia histórica observada.</p></li>
+</ol>
+<p>La fracción de cada dólar de prima que queda disponible para financiar pérdidas y gastos fijos es:</p>
+<p><span class="math display">\[
+1-v-q
+=
+1-0.18-0.05
+=
+0.77.
+\]</span></p>
+<p>Es decir:</p>
+<p><span class="math display">\[
+77\%\text{ de la prima final}
+\]</span></p>
+<p>queda disponible para pérdidas y gastos fijos bajo la estructura canónica.</p>
+</div>
+<div id="la-intuición-que-falla---el-recargo-porcentual-simple-subfinancia-la-operación" class="section level3 hasAnchor">
+<h3>La intuición que falla - El recargo porcentual simple subfinancia la operación<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-intuici%C3%B3n-que-falla---el-recargo-porcentual-simple-subfinancia-la-operaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos que un analista suma el costo prospectivo de pérdidas y el gasto fijo:</p>
+<p><span class="math display">\[
+894.02+60
+=
+954.02\text{ USD por exposición}.
+\]</span></p>
+<p>Luego aplica erróneamente un recargo directo del <span class="math inline">\(23\%\)</span>:</p>
+<p><span class="math display">\[
+\text{Tarifa Errónea}
+=
+954.02(1.23)
+=
+1,173.4446
+\approx
+1,173.44\text{ USD por exposición}.
+\]</span></p>
+<p>El procedimiento falla porque el <span class="math inline">\(18\%\)</span> de gastos variables y el <span class="math inline">\(5\%\)</span> de provisión de ganancia y contingencias se calculan como proporciones de la <strong>prima final</strong>, no como proporciones del loss cost.</p>
+<p>Si se cobrara la cantidad errónea sin redondeo intermedio, el importe disponible después de esas dos deducciones sería:</p>
+<p><span class="math display">\[
+1,173.4446(0.77)
+=
+903.552342
+\approx
+903.55\text{ USD por exposición}.
+\]</span></p>
+<p>Pero la necesidad de pérdidas más gasto fijo sigue siendo:</p>
+<p><span class="math display">\[
+954.02\text{ USD por exposición}.
+\]</span></p>
+<p>El déficit resultante sería:</p>
+<p><span class="math display">\[
+903.552342-954.02
+=
+-50.467658
+\approx
+-50.47\text{ USD por exposición}.
+\]</span></p>
+<p>La lección algebraica es que <span class="math inline">\(v\)</span> y <span class="math inline">\(q\)</span> reducen la fracción de la prima disponible para pérdidas y gastos fijos. No son un “<span class="math inline">\(23\%\)</span> que se añade” al numerador. La forma exacta de convertir estas cantidades preparadas en una indicated rate pertenece a la siguiente sección.</p>
+</div>
+<div id="cierre-y-puente-final-10" class="section level3 hasAnchor">
+<h3>Cierre y Puente Final<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-final-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Al concluir la preparación de datos, Lucía dispone de los inputs canónicos que sí pueden llevarse hacia la decisión prospectiva sin mezclar silenciosamente bases incompatibles:</p>
+<ul>
+<li>costo de pérdida prospectivo gross:</li>
+</ul>
+<p><span class="math display">\[
+LC_{\text{projected}}=894.02\text{ USD por exposición};
+\]</span></p>
+<ul>
+<li>gasto fijo:</li>
+</ul>
+<p><span class="math display">\[
+FE=60\text{ USD por exposición};
+\]</span></p>
+<ul>
+<li>gastos variables:</li>
+</ul>
+<p><span class="math display">\[
+v=18\%;
+\]</span></p>
+<ul>
+<li>provisión de ganancia y contingencias:</li>
+</ul>
+<p><span class="math display">\[
+q=5\%;
+\]</span></p>
+<ul>
+<li>fracción disponible para pérdidas y gastos fijos:</li>
+</ul>
+<p><span class="math display">\[
+1-v-q=0.77;
+\]</span></p>
+<ul>
+<li>tarifa vigente al 31 de diciembre de 2025:</li>
+</ul>
+<p><span class="math display">\[
+r_{\text{current}}=1,124.76\text{ USD por exposición}.
+\]</span></p>
+<p>Las pérdidas históricas inmaduras han sido llevadas a una escala última estimada; el costo base seleccionado ha sido proyectado desde el 1 de julio de 2025 hasta el 1 de julio de 2027; y la prima 2025 ha sido reconstruida al current rate level. La incidencia de exposure/premium de AY 2024 permanece explícitamente fuera de cualquier cálculo que dependa de escoger una de sus dos bases.</p>
+<p>La decisión de tarificación todavía no está resuelta: <strong>¿qué rate convierte <span class="math inline">\(894.02\)</span> USD de pérdidas esperadas por exposición, <span class="math inline">\(60\)</span> USD de gasto fijo y las provisiones porcentuales de <span class="math inline">\(18\%\)</span> y <span class="math inline">\(5\%\)</span> en una tarifa suficiente, y qué cambio representa respecto de los <span class="math inline">\(1,124.76\)</span> USD que Meridiano cobra actualmente?</strong> Esa pregunta abre directamente la <strong>Section 5.3 - Ratemaking: Loss Cost and Loss Ratio Methods</strong>.</p>
+</div>
+<div id="ejercicios-10" class="section level3 hasAnchor">
+<h3>Ejercicios<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ejercicio-1---ajuste-por-desarrollo-y-tendencia-compuesta-de-pérdidas" class="section level4 hasAnchor">
+<h4>Ejercicio 1 - Ajuste por desarrollo y tendencia compuesta de pérdidas<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-1---ajuste-por-desarrollo-y-tendencia-compuesta-de-p%C3%A9rdidas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Un actuario de Meridiano Seguros prepara los datos históricos de Accident Year 2025 para una revisión de tarifas. A la fecha de valoración del <strong>31 de diciembre de 2025</strong>, registra pérdidas acumuladas incurridas de <strong><span class="math inline">\(8.25\)</span> millones de USD</strong> a <span class="math inline">\(12\)</span> meses. El factor acumulado de desarrollo de <span class="math inline">\(12\)</span> a <span class="math inline">\(60\)</span> meses es:</p>
+<p><span class="math display">\[
+F_{12\to60}=1.19053445.
+\]</span></p>
+<p>La tendencia anual de severidad es <span class="math inline">\(6.0\%\)</span> y la tendencia anual de frecuencia es <span class="math inline">\(1.0\%\)</span>. La fecha media histórica de pérdidas es el <strong>1 de julio de 2025</strong> y la fecha media prospectiva es el <strong>1 de julio de 2027</strong>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcule el ultimate estimado <span class="math inline">\(U_{2025}\)</span> aplicando el ajuste de desarrollo.</p></li>
+<li><p>Calcule la tendencia anual combinada del costo de pérdida y explique por qué no es exactamente <span class="math inline">\(7\%\)</span>.</p></li>
+<li><p>Calcule el periodo de tendencia entre las dos fechas medias y el factor acumulado correspondiente.</p></li>
+<li><p>Proyecte <span class="math inline">\(U_{2025}\)</span> al nivel económico del 1 de julio de 2027.</p></li>
+<li><p>Explique por qué development y trend no son intercambiables y etiquete cada cantidad por fecha, madurez y units.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<p><span class="math display">\[
+U_{2025}
+=
+8.25(1.19053445)
+=
+9.821909\text{ millones de USD},
+\]</span></p>
+<p><span class="math display">\[
+1.06(1.01)-1
+=
+0.0706
+=
+7.06\%\text{ anual},
+\]</span></p>
+<p><span class="math display">\[
+n=2\text{ años},
+\]</span></p>
+<p><span class="math display">\[
+(1.0706)^2
+=
+1.14618436,
+\]</span></p>
+<p><span class="math display">\[
+8.25(1.19053445)(1.14618436)
+=
+11.2577187247\text{ millones de USD}
+\approx
+11.257719\text{ millones de USD}.
+\]</span></p>
+<p>La primera transformación cambia la <strong>madurez</strong> de la pérdida; la segunda cambia su <strong>nivel económico</strong> entre fechas declaradas.</p>
+</div>
+<div id="ejercicio-2---reconstrucción-de-primas-e-ingresos-homogeneizados-al-nivel-actual" class="section level4 hasAnchor">
+<h4>Ejercicio 2 - Reconstrucción de primas e ingresos homogeneizados al nivel actual<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-2---reconstrucci%C3%B3n-de-primas-e-ingresos-homogeneizados-al-nivel-actual" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para Accident Year 2025, Meridiano registra <strong><span class="math inline">\(12,500\)</span> exposures</strong> y una prima ganada contable de <strong><span class="math inline">\(13.789125\)</span> millones de USD</strong>. La tarifa base era <span class="math inline">\(1,000\)</span> USD por exposición y se aplicaron los siguientes cambios: <span class="math inline">\(+3\%\)</span> el 1 de enero de 2023, <span class="math inline">\(+5\%\)</span> el 1 de julio de 2024 y <span class="math inline">\(+4\%\)</span> el 1 de julio de 2025. Se asume ganancia uniforme dentro de cada año.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcule el current rate level al 31 de diciembre de 2025.</p></li>
+<li><p>Calcule la tarifa promedio ganada de 2025.</p></li>
+<li><p>Calcule <span class="math inline">\(OLF_{2025}\)</span>.</p></li>
+<li><p>Calcule <span class="math inline">\(\Pi_{2025}^{OL}\)</span>.</p></li>
+<li><p>Reconcilie <span class="math inline">\(\Pi_{2025}^{OL}\)</span> con exposure multiplicada por current rate.</p></li>
+<li><p>Explique por qué un cambio de <span class="math inline">\(+4\%\)</span> efectivo a mitad de 2025 no implica un <span class="math inline">\(OLF_{2025}=1.04\)</span> para todo el año.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<p><span class="math display">\[
+r_{\text{current}}
+=
+1,000(1.03)(1.05)(1.04)
+=
+1,124.76\text{ USD por exposición},
+\]</span></p>
+<p><span class="math display">\[
+\bar r_{2025}
+=
+\frac{1,081.50+1,124.76}{2}
+=
+1,103.13\text{ USD por exposición},
+\]</span></p>
+<p><span class="math display">\[
+OLF_{2025}
+=
+\frac{1,124.76}{1,103.13}
+=
+1.01960784,
+\]</span></p>
+<p><span class="math display">\[
+\Pi_{2025}^{OL}
+=
+13.789125(1.01960784)
+=
+14.059500\text{ millones de USD},
+\]</span></p>
+<p><span class="math display">\[
+12,500(1,124.76)
+=
+14,059,500\text{ USD}.
+\]</span></p>
+<p>El factor no es <span class="math inline">\(1.04\)</span> porque la historical earned premium de 2025 ya incorpora parcialmente el cambio efectivo el 1 de julio.</p>
+</div>
+<div id="ejercicio-3---clasificación-de-gastos-y-base-final" class="section level4 hasAnchor">
+<h4>Ejercicio 3 - Clasificación de gastos y base final<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-3---clasificaci%C3%B3n-de-gastos-y-base-final" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El departamento de Pricing dispone de los siguientes inputs preparados para el periodo prospectivo:</p>
+<p><span class="math display">\[
+LC_{\text{projected}}=894.02\text{ USD por exposición},
+\]</span></p>
+<p><span class="math display">\[
+FE=60\text{ USD por exposición},
+\]</span></p>
+<p><span class="math display">\[
+v=18\%,
+\]</span></p>
+<p><span class="math display">\[
+q=5\%.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Clasifique las units y el comportamiento algebraico de cada input.</p></li>
+<li><p>Calcule la fracción de la prima disponible para pérdidas y gastos fijos.</p></li>
+<li><p>Identifique qué cantidades deberán entrar como dollars por exposición y cuáles como proporciones de la prima en la siguiente sección.</p></li>
+<li><p>Explique por qué aplicar directamente un recargo de <span class="math inline">\(23\%\)</span> sobre <span class="math inline">\(LC_{\text{projected}}+FE\)</span> no financia correctamente una estructura donde <span class="math inline">\(v\)</span> y <span class="math inline">\(q\)</span> son porcentajes de la prima final.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<p><span class="math display">\[
+1-v-q
+=
+1-0.18-0.05
+=
+0.77.
+\]</span></p>
+<p>El costo de pérdidas y el gasto fijo conservan units de USD por exposición; <span class="math inline">\(v\)</span> y <span class="math inline">\(q\)</span> son proporciones adimensionales de la prima final. El lector debe terminar el ejercicio sabiendo qué inputs están preparados para Section 5.3 sin calcular todavía la indicated rate final.</p>
+</div>
+</div>
+</div>
+<div id="section-5.3---ratemaking-loss-cost-and-loss-ratio-methods" class="section level2 hasAnchor">
+<h2>Section 5.3 - Ratemaking: Loss Cost and Loss Ratio Methods<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#section-5.3---ratemaking-loss-cost-and-loss-ratio-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><em>Dos caminos algebraicos hacia el mismo equilibrio financiero</em></p>
+</blockquote>
+<div id="el-método-de-costo-de-siniestralidad-calcula-el-financiamiento-directo-por-exposición" class="section level3 hasAnchor">
+<h3>5.3.1 El método de Costo de Siniestralidad calcula el financiamiento directo por exposición<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-costo-de-siniestralidad-calcula-el-financiamiento-directo-por-exposici%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Al cerrar la preparación de datos de la sección anterior, la actuaria de Pricing, <strong>Lucía</strong>, recibe un input ya preparado para el periodo prospectivo: un <strong>Costo de Siniestralidad Proyectado (<em>Projected Loss Cost</em>, <span class="math inline">\(LC\)</span>) de 894.0238008 USD por exposición</strong>, expresado sobre la <strong>base gross</strong> seleccionada para el caso canónico y al nivel prospectivo cuya fecha media de pérdida es el <strong>1 de julio de 2027</strong>.</p>
+<p>La primera pregunta parece sencilla: <strong>si Meridiano Seguros espera 894.02 USD de pérdidas por exposición, ¿basta con cobrar exactamente 894.02 USD por exposición?</strong></p>
+<p>Irene introduce el elemento que falta: <strong>¿y quién financia los gastos?</strong> La tarifa indicada debe sostener, además de las pérdidas prospectivas, los siguientes componentes ya preparados en la Section 5.2:</p>
+<ul>
+<li><p><strong>Gastos Fijos por Exposición (<em>Fixed Expenses</em>, <span class="math inline">\(FE\)</span>):</strong> <strong>60.00 USD por exposición</strong>.</p></li>
+<li><p><strong>Gastos Variables de Suscripción (<em>Variable Expenses</em>, <span class="math inline">\(v\)</span>):</strong> <strong>18% de la prima final</strong> (<span class="math inline">\(v = 0.18\)</span>).</p></li>
+<li><p><strong>Provisión de Ganancia y Contingencias (<em>Profit and Contingencies</em>, <span class="math inline">\(q\)</span>):</strong> <strong>5% de la prima final</strong> (<span class="math inline">\(q = 0.05\)</span>).</p></li>
+</ul>
+<p>A la fecha de valoración del <strong>31 de diciembre de 2025</strong>, la tarifa comercial vigente (<span class="math inline">\(R_{\text{current}}\)</span>) es de <strong>1,124.76 USD por exposición</strong>. La pregunta central de esta sección queda entonces definida: <strong>¿qué tarifa promedio indicada financia la estructura prospectiva de pérdidas, gastos y provisión, y qué cambio porcentual representa respecto de la tarifa vigente?</strong></p>
+<p>Para determinar la tarifa técnica indicada (<span class="math inline">\(R_{\text{ind}}\)</span>), Lucía recurre en primer lugar al <strong>Método de Costo de Siniestralidad</strong> (<em>Loss Cost Method</em>). Este enfoque adopta una perspectiva absoluta y aditiva por unidad de exposición: construye la tarifa sumando los costos directos esperados en el numerador y reduciendo el denominador por la fracción de prima que consumirán los gastos porcentuales variables y la provisión de ganancia y contingencias.</p>
+<p>Formalmente, el balance económico del modelo exige que la tarifa indicada (<span class="math inline">\(R\)</span>) sea suficiente para financiar las pérdidas esperadas, los gastos fijos por exposición, los gastos variables proporcionales a la propia tarifa y la provisión de ganancia y contingencias:</p>
+<p><span class="math display">\[R = LC + FE + vR + qR\]</span></p>
+<p>Para aislar la variable de tarifa requerida (<span class="math inline">\(R\)</span>), Lucía desplaza todos los términos dependientes del precio final al miembro izquierdo de la ecuación de balance:</p>
+<p><span class="math display">\[R - vR - qR = LC + FE\]</span></p>
+<p><span class="math display">\[R(1 - v - q) = LC + FE\]</span></p>
+<p>La diferencia residual <span class="math inline">\((1 - v - q)\)</span> representa la <strong>fracción admisible para pérdidas y gastos fijos</strong> (<em>permissible fraction</em>), la cual se establece bajo la estructura de Meridiano Seguros en un <strong>77%</strong> de cada dólar de prima recaudado (<span class="math inline">\(1 - 0.18 - 0.05 = 0.77\)</span>). Al despejar la tarifa indicada, se obtiene la formulación clásica del método <em>Loss Cost</em>:</p>
+<p><span class="math display">\[R_{\text{ind}} = \frac{LC + FE}{1 - v - q}\]</span></p>
+<p>Al sustituir los parámetros canónicos auditados y congelados del portafolio en la ecuación, Lucía calcula de forma exacta la tarifa requerida:</p>
+<p><span class="math display">\[R_{\text{ind}} = \frac{894.0238008\text{ USD} + 60.00\text{ USD}}{0.77} = \frac{954.0238008\text{ USD}}{0.77} = \mathbf{1,238.991949\text{ USD}}\]</span></p>
+<p>Este resultado se redondea de forma operacional a <strong>1,238.99 USD por exposición</strong> para la presentación de la indicación tarifaria.</p>
+<p>Para de manera analítica deducir la variación de precios requerida, se calcula el <strong>factor de cambio de tarifa</strong> (<span class="math inline">\(I\)</span>) dividiendo la tarifa indicada entre la tarifa vigente actual (<span class="math inline">\(R_{\text{current}} = 1,124.76\)</span> USD):</p>
+<p><span class="math display">\[I = \frac{R_{\text{ind}}}{R_{\text{current}}} = \frac{1,238.991949\text{ USD}}{1,124.76\text{ USD}} = \mathbf{1.1015611767 \approx 1.10156118}\]</span></p>
+<p>Restando la unidad, obtenemos el <strong>cambio porcentual de tarifa indicado</strong> (<span class="math inline">\(\Delta r = I - 1\)</span>):</p>
+<p><span class="math display">\[\Delta r = 1.1015611767 - 1 = \mathbf{+10.1561177\% \approx +10.16\%}\]</span></p>
+<p>Este resultado significa que, bajo los supuestos prospectivos seleccionados de pérdidas, gastos y provisión, la <strong>indicación promedio</strong> se sitúa <strong>10.16%</strong> por encima del nivel tarifario vigente. La indicación no implica que la tarifa final implementada deba coincidir necesariamente con ese porcentaje.</p>
+</div>
+<div id="el-método-de-razón-de-siniestralidad-traduce-la-necesidad-en-ratios-de-prima-actual" class="section level3 hasAnchor">
+<h3>5.3.2 El método de Razón de Siniestralidad traduce la necesidad en ratios de prima actual<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#el-m%C3%A9todo-de-raz%C3%B3n-de-siniestralidad-traduce-la-necesidad-en-ratios-de-prima-actual" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Aunque el método <em>Loss Cost</em> resulta de enorme claridad intuitiva al trabajar con dólares absolutos por exposición, las compañías de seguros organizan frecuentemente sus revisiones de tarifas utilizando la perspectiva del <strong>Método de Razón de Siniestralidad</strong> (<em>Loss Ratio Method</em>). Este enfoque no busca fijar directamente el precio en dólares; en su lugar, evalúa qué porción de la estructura de tarifas actual está siendo consumida por los siniestros proyectados y los gastos fijos, para determinar la suficiencia o insuficiencia porcentual del nivel de precios vigente.</p>
+<p>Para aplicar este método, Lucía traduce en primer lugar los costos aditivos del numerador en ratios relativos a la tarifa actual (<span class="math inline">\(R_{\text{current}} = 1,124.76\)</span> USD):</p>
+<ol style="list-style-type: decimal">
+<li><strong>Razón de Siniestralidad Proyectada (<em>Projected Loss Ratio</em>, <span class="math inline">\(LR_{\text{proj}}\)</span>):</strong> Mide el costo esperado de pérdida futura como fracción de la prima técnica que cobramos hoy.</li>
+</ol>
+<p><span class="math display">\[LR_{\text{proj}} = \frac{LC}{R_{\text{current}}} = \frac{894.0238008\text{ USD}}{1,124.76\text{ USD}} = \mathbf{79.48573925\% \approx 79.49\%}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Razón de Gastos Fijos (<em>Fixed Expense Ratio</em>, <span class="math inline">\(FER\)</span>):</strong> Expresa el costo administrativo por exposición como fracción de la prima que cobramos hoy.</li>
+</ol>
+<p><span class="math display">\[FER = \frac{FE}{R_{\text{current}}} = \frac{60.00\text{ USD}}{1,124.76\text{ USD}} = \mathbf{5.33447135\% \approx 5.33\%}\]</span></p>
+<p>Al sumar ambos ratios, Lucía obtiene el <strong>ratio de costos totales requeridos a tarifa actual</strong> (<span class="math inline">\(79.485739\% + 5.334471\% = \mathbf{84.820211\%}\)</span>). Este porcentaje indica que, si mantuviéramos la tarifa actual de 1,124.76 USD sin modificaciones durante el periodo prospectivo, el 84.82% de cada dólar recaudado se consumiría exclusivamente en pagar siniestros proyectados y gastos fijos.</p>
+<p>Dado que el marco canónico destina el 23% de la prima a gastos variables (18%) y a la provisión de ganancia y contingencias (5%), la fracción de prima disponible para pérdidas y gastos fijos es del 77%. El factor de indicación tarifaria (<span class="math inline">\(I\)</span>) se calcula de forma directa dividiendo la necesidad de costo agregada entre la fracción admisible permitida:</p>
+<p><span class="math display">\[I = \frac{LR_{\text{proj}} + FER}{1 - v - q} = \frac{0.7948573925 + 0.0533447135}{0.77} = \frac{0.8482021060}{0.77} = \mathbf{1.1015611767 \approx 1.10156118}\]</span></p>
+<p>Restando la unidad, obtenemos el cambio porcentual indicado:</p>
+<p><span class="math display">\[\Delta r = 1.1015611767 - 1 = \mathbf{+10.1561177\% \approx +10.16\%}\]</span></p>
+<p>Para derivar la tarifa técnica requerida implícita, Lucía simplemente multiplica la tarifa comercial vigente por el factor de indicación obtenido:</p>
+<p><span class="math display">\[R_{\text{ind}} = R_{\text{current}} \times I = 1,124.76\text{ USD} \times 1.1015611767 = \mathbf{1,238.991949\text{ USD}}\]</span></p>
+<p>El resultado coincide con el obtenido mediante el método <em>Loss Cost</em>, como exige la equivalencia algebraica cuando ambos utilizan las mismas bases e inputs.</p>
+</div>
+<div id="dos-métodos-un-solo-balance-la-reconciliación-algebraica-perfecta" class="section level3 hasAnchor">
+<h3>5.3.3 Dos métodos, un solo balance: la reconciliación algebraica perfecta<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#dos-m%C3%A9todos-un-solo-balance-la-reconciliaci%C3%B3n-algebraica-perfecta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La perfecta coincidencia de los resultados anteriores no es una casualidad numérica ni el efecto de un redondeo afortunado de decimales; constituye una <strong>identidad algebraica fundamental</strong> de la ciencia actuarial. Para desvelar este comportamiento de manera transparente, la actuaria jefa, <strong>Irene</strong>, exige realizar una demostración formal de la equivalencia entre ambos métodos.</p>
+<p>Partimos de la definición del factor de cambio de tarifa (<span class="math inline">\(I\)</span>) derivado bajo el método de Costo de Siniestralidad:</p>
+<p><span class="math display">\[I = \frac{R_{\text{ind}}}{R_{\text{current}}}\]</span></p>
+<p>Sustituyendo la definición analítica de la tarifa indicada (<span class="math inline">\(R_{\text{ind}}\)</span>) en el numerador:</p>
+<p><span class="math display">\[I = \frac{\frac{LC + FE}{1 - v - q}}{R_{\text{current}}}\]</span></p>
+<p>Dado que la división entre la tarifa vigente actual (<span class="math inline">\(R_{\text{current}}\)</span>) afecta a todo el numerador, podemos distribuir esa división sobre la suma <span class="math inline">\(LC+FE\)</span>:</p>
+<p><span class="math display">\[I = \frac{\frac{LC}{R_{\text{current}}} + \frac{FE}{R_{\text{current}}}}{1 - v - q}\]</span></p>
+<p>Al sustituir las definiciones básicas del ratio de siniestralidad proyectada (<span class="math inline">\(LR_{\text{proj}} = LC / R_{\text{current}}\)</span>) y del ratio de gastos fijos (<span class="math inline">\(FER = FE / R_{\text{current}}\)</span>):</p>
+<p><span class="math display">\[I = \frac{LR_{\text{proj}} + FER}{1 - v - q}\]</span></p>
+<p>Esta última expresión es, precisamente, la fórmula del método de Razón de Siniestralidad. Queda demostrado de manera irrefutable que <strong>ambas formulaciones son idénticas y representan exactamente la misma ecuación de balance financiero expresada en dos sistemas de coordenadas cuantitativas distintos</strong>. El método <em>Loss Cost</em> trabaja con dólares absolutos por exposición, mientras que el método <em>Loss Ratio</em> opera con proporciones relativas respecto del nivel tarifario actual.</p>
+<p>Esta equivalencia impone una estricta disciplina de auditoría interna actuarial: <strong>si en la práctica de una aseguradora el método de Costo de Siniestralidad y el método de Razón de Siniestralidad produjeran indicaciones divergentes, esto constituiría una señal de error o desajuste de bases en los datos de entrada</strong>. Las discrepancias suelen surgir cuando se mezclan pérdidas nominales históricas con primas on-level, cuando se asumen periodos de tendencia asimétricos entre los métodos, cuando se omiten o reclasifican gastos, o cuando se utilizan bases gross y net incompatibles.</p>
+</div>
+<div id="la-asimetría-de-las-indicaciones-se-revela-ante-shocks-en-el-entorno-de-suscripción" class="section level3 hasAnchor">
+<h3>5.3.4 La asimetría de las indicaciones se revela ante shocks en el entorno de suscripción<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-asimetr%C3%ADa-de-las-indicaciones-se-revela-ante-shocks-en-el-entorno-de-suscripci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para consolidar la comprensión estructural de las tarifas, Irene y Lucía someten el modelo de tarificación de Meridiano Seguros a cuatro experimentos dinámicos de sensibilidad, modificando un supuesto técnico a la vez y manteniendo todos los demás elementos estrictamente constantes en sus valores base:</p>
+<p><strong>Experimento 1: Shock en la Inflación de Siniestros (Ruptura de Tendencia)</strong></p>
+<p>Supongamos que, debido a presiones macroeconómicas en el costo de reparaciones, la tendencia anual de severidad de Meridiano aumenta del 6.0% al <strong>7.0% anual</strong>, manteniendo la tendencia de frecuencia en el 1.0%.</p>
+<ul>
+<li>La tasa combinada anual de costo de pérdida se eleva de 7.06% a:</li>
+</ul>
+<p><span class="math display">\[1.07 \times 1.01 - 1 = 0.0807 \implies \mathbf{8.07\% \text{ anual}}\]</span></p>
+<ul>
+<li>El costo de pérdida proyectado para el Accident Year 2027 a los 2 años de tendencia sube a:</li>
+</ul>
+<p><span class="math display">\[780\text{ USD} \times (1.0807)^2 = \mathbf{910.9717422\text{ USD}}\]</span></p>
+<ul>
+<li>La nueva tarifa técnica indicada asciende a:</li>
+</ul>
+<p><span class="math display">\[R_{\text{ind}} = \frac{910.9717422 + 60.00}{0.77} = \mathbf{1,261.002263\text{ USD}}\]</span></p>
+<ul>
+<li>El cambio porcentual requerido pasa de +10.16% a:</li>
+</ul>
+<p><span class="math display">\[\Delta r = \frac{1,261.002263}{1,124.76} - 1 = \mathbf{+12.113007\% \approx +12.11\%}\]</span></p>
+<p><em>Lección:</em> Un incremento de solo 100 puntos básicos en la inflación anual de severidad se transmite de forma multiplicativa y compuesta durante el periodo de tendencia de 2 años, amplificando la indicación de cambio tarifario en casi 200 puntos básicos adicionales.</p>
+<p><strong>Experimento 2: Shock en Comisiones de Suscripción (Gastos Variables)</strong></p>
+<p>Supongamos ahora que, debido a una reestructuración de la red de intermediarios, los gastos variables de Meridiano Seguros se incrementan del 18% al <strong>20% de la prima técnica final</strong>.</p>
+<ul>
+<li>La fracción admisible para pérdidas y gastos fijos se contrae del 77% al:</li>
+</ul>
+<p><span class="math display">\[1 - 0.20 - 0.05 = \mathbf{0.75 \quad (75\%)}\]</span></p>
+<ul>
+<li>La nueva tarifa técnica indicada asciende a:</li>
+</ul>
+<p><span class="math display">\[R_{\text{ind}} = \frac{894.0238008 + 60.00}{0.75} = \mathbf{1,272.031734\text{ USD}}\]</span></p>
+<ul>
+<li>El cambio porcentual requerido se eleva de forma drástica de +10.16% a:</li>
+</ul>
+<p><span class="math display">\[\Delta r = \frac{1,272.0317344}{1,124.76} - 1 = \mathbf{+13.093614\% \approx +13.09\%}\]</span></p>
+<p><em>Lección:</em> El incremento de 2 puntos porcentuales en gastos variables eleva la tarifa indicada porque una fracción mayor de la prima queda destinada a gastos variables y una fracción menor permanece disponible para pérdidas y gastos fijos.</p>
+<p><strong>Experimento 3: Shock en Gastos Fijos de Operación</strong></p>
+<p>Supongamos que los gastos fijos administrativos por exposición sufren un incremento lineal debido a sistemas tecnológicos de la compañía, elevándose de 60.00 a <strong>70.00 USD por exposición</strong>.</p>
+<ul>
+<li>La nueva tarifa indicada asciende a:</li>
+</ul>
+<p><span class="math display">\[R_{\text{ind}} = \frac{894.0238008 + 70.00}{0.77} = \mathbf{1,251.978962\text{ USD}}\]</span></p>
+<ul>
+<li>El cambio porcentual indicado se desplaza de manera lineal de +10.16% a:</li>
+</ul>
+<p><span class="math display">\[\Delta r = \frac{1,251.978962}{1,124.76} - 1 = \mathbf{+11.310765\% \approx +11.31\%}\]</span></p>
+<p><em>Lección:</em> El aumento aditivo de 10 USD de gastos fijos en el numerador se traduce en un incremento en la tarifa indicada de aproximadamente 12.99 USD por exposición (<span class="math inline">\(10 / 0.77\)</span>) debido a que cada dólar de costo aditivo incorporado debe sostener su porción correspondiente de gastos variables y provisión de ganancia y contingencias.</p>
+<p><strong>Experimento 4: Ajuste de la Tarifa Comercial de Cierre (Cambio en Denominador)</strong></p>
+<p>Supongamos que Meridiano Seguros hubiera implementado un incremento comercial preventivo antes del cierre de 2025, de manera que su tarifa vigente actual de cierre no fuera 1,124.76 USD, sino de <strong>1,200.00 USD por exposición</strong>. Asumimos que los supuestos de costos futuros y márgenes permanecen estrictamente sin cambios.</p>
+<ul>
+<li><p>La tarifa técnica indicada calculada bajo el método <em>Loss Cost</em> se mantiene estrictamente fija e inalterada en <strong>1,238.99 USD por exposición</strong>.</p></li>
+<li><p>El factor de indicación tarifaria requerido se contrae a:</p></li>
+</ul>
+<p><span class="math display">\[I = \frac{1,238.991949}{1,200.00} = \mathbf{1.03249329}\]</span></p>
+<ul>
+<li>El cambio de tarifa indicado cae de forma sustancial de +10.16% a:</li>
+</ul>
+<p><span class="math display">\[\Delta r = 1.03249329 - 1 = \mathbf{+3.249329\% \approx +3.25\%}\]</span></p>
+<p><em>Lección:</em> Este experimento distingue dos objetos diferentes: <strong>la tarifa indicada absoluta (<span class="math inline">\(R_{\text{ind}}\)</span>) depende de la estructura de costos prospectivos y no cambia cuando solo cambia la tarifa vigente actual</strong>. En cambio, el cambio porcentual indicado (<span class="math inline">\(\Delta r\)</span>) depende de la tarifa actual mediante <span class="math inline">\(\Delta r=R_{\text{ind}}/R_{\text{current}}-1\)</span>; por tanto, su relación con <span class="math inline">\(R_{\text{current}}\)</span> es inversa, no lineal.</p>
+</div>
+<div id="la-estructura-técnica-de-la-tarifa-requiere-transparencia-en-la-composición-de-cada-dólar" class="section level3 hasAnchor">
+<h3>5.3.5 La estructura técnica de la tarifa requiere transparencia en la composición de cada dólar<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#la-estructura-t%C3%A9cnica-de-la-tarifa-requiere-transparencia-en-la-composici%C3%B3n-de-cada-d%C3%B3lar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para cerrar el análisis de la tarifa del Accident Year 2027, Lucía e Irene desglosan de forma analítica la composición de la tarifa técnica indicada de <strong>1,238.99 USD por exposición</strong>:</p>
+<ul>
+<li><p><strong>Pérdidas Esperadas Proyectadas (<span class="math inline">\(LC\)</span>):</strong> <strong>894.02 USD por exposición</strong>, equivalentes al <strong>72.16%</strong> de la tarifa técnica indicada, corresponden al costo esperado de los siniestros de la cartera.</p></li>
+<li><p><strong>Gastos Fijos por Exposición (<span class="math inline">\(FE\)</span>):</strong> <strong>60.00 USD por exposición</strong>, equivalentes al <strong>4.84%</strong> de la tarifa técnica indicada, corresponden a los costos administrativos fijos por exposición de la aseguradora.</p></li>
+<li><p><strong>Gastos Variables de Suscripción (<span class="math inline">\(vR_{\text{ind}}\)</span>):</strong> <strong>223.02 USD por exposición</strong> (<span class="math inline">\(0.18 \times 1,238.9919\)</span>) corresponden a la provisión de gastos variables.</p></li>
+<li><p><strong>Provisión de Ganancia y Contingencias (<span class="math inline">\(qR_{\text{ind}}\)</span>):</strong> <strong>61.95 USD por exposición</strong> (<span class="math inline">\(0.05 \times 1,238.9919\)</span>) corresponden a la provisión de ganancia y contingencias del marco de pricing.</p></li>
+</ul>
+<p>La reconciliación de la tarifa técnica indicada es perfecta:</p>
+<p><span class="math display">\[894.023801\text{ USD} + 60.00\text{ USD} + 223.018551\text{ USD} + 61.949597\text{ USD} = \mathbf{1,238.991949\text{ USD}}\]</span></p>
+<p><span class="math display">\[72.157354\% + 4.842646\% + 18.00\% + 5.00\% = \mathbf{100.00\%}\]</span></p>
+<p>Al finalizar este cálculo, Lucía e Irene contemplan la composición técnica final de la tarifa. El <strong>ratio de pérdidas esperado bajo la nueva tarifa indicada es de 72.16%</strong>, una cifra que se ubica por debajo de la razón proyectada original a tarifa actual de <strong>79.49%</strong>. Esta disminución porcentual no representa una mejora en el riesgo de la cartera ni una disminución en el costo absoluto de los siniestros, que siguen fijos en 894.02 USD; es la consecuencia de haber aumentado el denominador tarifario desde la base actual de 1,124.76 USD hasta la tarifa indicada de 1,238.99 USD.</p>
+<p>Este contraste numérico final cierra el bloque asegurador de la serie con un recordatorio del rigor metodológico: <strong>una cifra técnica actuarial jamás es una verdad absoluta por sí sola; es el resultado de un balance de flujos que debe ser interpretado respetando la base matemática que lo hace posible</strong>.</p>
+</div>
+</div>
+<div id="cierre-y-puente-de-paradigm-shift-tránsito-a-part-6" class="section level2 hasAnchor">
+<h2>Cierre y Puente de Paradigm Shift (Tránsito a Part 6)<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#cierre-y-puente-de-paradigm-shift-tr%C3%A1nsito-a-part-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Part 5 comenzó mirando hacia el pasado. En reserving, la exposición ya había ocurrido y la pregunta era cuánto costo último todavía no había emergido. Después, la preparación de datos para ratemaking llevó la experiencia histórica a una base económica comparable con el periodo futuro. Finalmente, esta sección convirtió esa estructura prospectiva en una tarifa indicada.</p>
+<p>La progresión completa de Part 5 queda así:</p>
+<p><span class="math display">\[
+\text{observación histórica}
+\rightarrow
+\text{estimación última}
+\rightarrow
+\text{costo prospectivo comparable}
+\rightarrow
+\boxed{\text{tarifa indicada}}.
+\]</span></p>
+<p>Reserving y ratemaking utilizan información histórica, pero apuntan en direcciones temporales distintas. <strong>Reserving</strong> estima lo que falta por reconocer de eventos que ya ocurrieron. <strong>Ratemaking</strong> estima qué tarifa puede financiar el costo esperado de una exposición futura. En ambos casos, la cifra solo es interpretable si su base temporal, contractual y económica está explícita.</p>
+<p>Sin embargo, Part 6 introduce un marco de valoración diferente para otro tipo de pago contingente. <em>Si un pago futuro incierto puede reproducirse mediante un portafolio de activos negociados, ¿qué cambia cuando su valor puede restringirse por replicación y ausencia de arbitraje en lugar de construirse principalmente desde su costo físico esperado?</em> Esa pregunta abre <strong>Part 6 - Option Pricing Fundamentals, Section 6.1 - Introduction to Options</strong>.</p>
+</div>
+<div id="ejercicios-11" class="section level2 hasAnchor">
+<h2>Ejercicios<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicios-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicio-1---determinación-de-la-tarifa-técnica-mediante-el-loss-cost-method" class="section level3 hasAnchor">
+<h3>Ejercicio 1 - Determinación de la Tarifa Técnica mediante el Loss Cost Method<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-1---determinaci%C3%B3n-de-la-tarifa-t%C3%A9cnica-mediante-el-loss-cost-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El departamento de Pricing de Meridiano Seguros analiza la indicación prospectiva para el Accident Year 2027. Tras la fase de preparación de datos, cuenta con un costo de pérdidas esperado (<span class="math inline">\(LC\)</span>) de exactamente <strong>894.0238008 USD por exposición</strong>, un gasto administrativo fijo por exposición (<span class="math inline">\(FE\)</span>) de <strong>60.00 USD por exposición</strong>, un ratio de gastos variables de suscripción (<span class="math inline">\(v\)</span>) del <strong>18% sobre la prima</strong> y una provisión para ganancia y contingencias (<span class="math inline">\(q\)</span>) del <strong>5% sobre la prima</strong>. La tarifa comercial de cierre vigente es de <strong>1,124.76 USD por exposición</strong>. El caso permanece sobre la misma <strong>base gross</strong> utilizada en la sección.</p>
+<ol style="list-style-type: decimal">
+<li><p>Derive la ecuación de equilibrio de flujos de caja y justifique algebraicamente por qué los gastos variables y la provisión de ganancia y contingencias se incorporan mediante la fracción admisible del denominador.</p></li>
+<li><p>Calcule de manera exacta la tarifa técnica indicada (<span class="math inline">\(R_{\text{ind}}\)</span>) por exposición aplicando el método <em>Loss Cost</em>.</p></li>
+<li><p>Calcule el factor de indicación tarifaria requerido (<span class="math inline">\(I\)</span>) y deduzca el cambio porcentual indicado (<span class="math inline">\(\Delta r\)</span>) respecto de la tarifa actual.</p></li>
+<li><p>Desglose la composición de cada unidad de la tarifa indicada calculando la porción en dólares destinada a siniestros, gastos fijos, gastos variables y provisión de ganancia y contingencias. Verifique que la suma de los componentes reconcilia con la tarifa indicada.</p></li>
+<li><p>Explique la consecuencia financiera de cometer el error de recargar directamente un 23% sobre la suma de pérdidas esperadas y gastos fijos, es decir, multiplicar esa suma por <span class="math inline">\(1.23\)</span>.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<ul>
+<li><p>Tarifa técnica indicada exacta: <span class="math inline">\(R_{\text{ind}} = (894.0238008 + 60) / 0.77 = \mathbf{1,238.991949\text{ USD}}\)</span>.</p></li>
+<li><p>Factor de indicación de tarifa: <span class="math inline">\(I = 1,238.991949 / 1,124.76 = \mathbf{1.1015611767 \approx 1.10156118}\)</span>.</p></li>
+<li><p>Cambio porcentual indicado exacto: <span class="math inline">\(\Delta r = 1.1015611767 - 1 = \mathbf{+10.1561177\% \approx +10.16\%}\)</span>.</p></li>
+<li><p>Composición en dólares por exposición: siniestros = <span class="math inline">\(\mathbf{894.02\text{ USD}}\)</span>; gastos fijos = <span class="math inline">\(\mathbf{60.00\text{ USD}}\)</span>; gastos variables = <span class="math inline">\(0.18 \times 1,238.9919 = \mathbf{223.02\text{ USD}}\)</span>; provisión de ganancia y contingencias = <span class="math inline">\(0.05 \times 1,238.9919 = \mathbf{61.95\text{ USD}}\)</span>. La suma exacta de los componentes utilizados en el cálculo es <span class="math inline">\(894.023801 + 60.00 + 223.018551 + 61.949597 = \mathbf{1,238.991949\text{ USD}}\)</span>.</p></li>
+<li><p>La tarifa errónea sería aproximadamente <strong>1,173.45 USD por exposición</strong>. Después de aplicar la fracción admisible de <span class="math inline">\(0.77\)</span>, quedarían aproximadamente <strong>903.56 USD por exposición</strong> para pérdidas y gastos fijos, frente a una necesidad de <strong>954.02 USD por exposición</strong>; el déficit sería aproximadamente <strong>50.47 USD por exposición</strong>.</p></li>
+</ul>
+</div>
+<div id="ejercicio-2---reconstrucción-de-tarifas-mediante-el-loss-ratio-method" class="section level3 hasAnchor">
+<h3>Ejercicio 2 - Reconstrucción de Tarifas mediante el Loss Ratio Method<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-2---reconstrucci%C3%B3n-de-tarifas-mediante-el-loss-ratio-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para el mismo portafolio de Meridiano Seguros analizado en el Ejercicio 1, suponga que la compañía audita la indicación utilizando la perspectiva relativa del método <em>Loss Ratio</em>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calcule de manera exacta la Razón de Siniestralidad Proyectada (<span class="math inline">\(LR_{\text{proj}}\)</span>) relativa al nivel de tarifa comercial de cierre actual (<span class="math inline">\(R_{\text{current}} = 1,124.76\)</span> USD por exposición).</p></li>
+<li><p>Calcule de manera exacta la Razón de Gastos Fijos (<span class="math inline">\(FER\)</span>) relativa al nivel de tarifa actual.</p></li>
+<li><p>Aplique la ecuación general del método <em>Loss Ratio</em> para calcular el factor de indicación de tarifa (<span class="math inline">\(I\)</span>) requerido.</p></li>
+<li><p>Deduzca el cambio porcentual indicado (<span class="math inline">\(\Delta r\)</span>) y compruebe que coincide con el obtenido en el Ejercicio 1.</p></li>
+<li><p>Derive la tarifa técnica indicada (<span class="math inline">\(R_{\text{ind}}\)</span>) implícita multiplicando el factor de indicación obtenido por la tarifa comercial actual.</p></li>
+<li><p>Proporcione la demostración algebraica formal que demuestra que el método de Razón de Siniestralidad es algebraicamente equivalente al de Costo de Siniestralidad, identificando cómo la división por <span class="math inline">\(R_{\text{current}}\)</span> transforma los costos absolutos del numerador en ratios de prima actual.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<ul>
+<li><p>Razón de Siniestralidad Proyectada exacta: <span class="math inline">\(LR_{\text{proj}} = 894.0238008 / 1,124.76 = \mathbf{79.48573925\% \approx 79.49\%}\)</span>.</p></li>
+<li><p>Razón de Gastos Fijos exacta: <span class="math inline">\(FER = 60.00 / 1,124.76 = \mathbf{5.33447135\% \approx 5.33\%}\)</span>.</p></li>
+<li><p>Factor de indicación de tarifa: <span class="math inline">\(I = (0.7948573925 + 0.0533447135) / 0.77 = \mathbf{1.1015611767 \approx 1.10156118}\)</span>.</p></li>
+<li><p>Cambio porcentual de tarifa: <span class="math inline">\(\Delta r = \mathbf{+10.16\%}\)</span>.</p></li>
+<li><p>Tarifa técnica indicada implícita: <span class="math inline">\(R_{\text{ind}} = 1,124.76 \times 1.1015611767 = \mathbf{1,238.991949\text{ USD}}\)</span> por exposición.</p></li>
+<li><p>La demostración matemática debe dividir la ecuación por <span class="math inline">\(R_{\text{current}}\)</span> y distribuir esa división sobre <span class="math inline">\(LC+FE\)</span> para reconstruir exactamente <span class="math inline">\(LR_{\text{proj}}+FER\)</span>.</p></li>
+</ul>
+</div>
+<div id="ejercicio-3---auditoría-de-una-discrepancia-entre-métodos" class="section level3 hasAnchor">
+<h3>Ejercicio 3 - Auditoría de una discrepancia entre métodos<a href="pricing-and-reserving-for-short-term-insurance-coverages.html#ejercicio-3---auditor%C3%ADa-de-una-discrepancia-entre-m%C3%A9todos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dos analistas revisan el mismo caso prospectivo de Meridiano Seguros y reportan resultados diferentes:</p>
+<ul>
+<li><p><strong>Analista A - Loss Cost Method:</strong> cambio indicado de <strong>+12%</strong>. Su hoja de trabajo muestra que el loss cost prospectivo fue sometido nuevamente a tendencia después de haber sido recibido como input preparado de la Section 5.2.</p></li>
+<li><p><strong>Analista B - Loss Ratio Method:</strong> cambio indicado de <strong>+8%</strong>. Su hoja de trabajo omite la razón de gastos fijos al construir el numerador del método.</p></li>
+</ul>
+<p>Ambos deberían utilizar la misma base canónica: <span class="math inline">\(LC=894.0238008\)</span> USD por exposición, <span class="math inline">\(FE=60.00\)</span> USD por exposición, <span class="math inline">\(v=18\%\)</span>, <span class="math inline">\(q=5\%\)</span> y <span class="math inline">\(R_{\text{current}}=1,124.76\)</span> USD por exposición, todos sobre la misma base gross y temporal.</p>
+<ol style="list-style-type: decimal">
+<li><p>Identifique cada incompatibilidad de base o tratamiento en las dos hojas de trabajo.</p></li>
+<li><p>Corrija ambos cálculos utilizando exclusivamente los inputs canónicos ya preparados.</p></li>
+<li><p>Reconcilie las dos indicaciones y demuestre que ambas producen el mismo factor de indicación antes de redondear.</p></li>
+<li><p>Explique por qué promediar <strong>+12%</strong> y <strong>+8%</strong> sería actuarialmente indefendible, aunque el promedio numérico parezca cercano a la indicación correcta.</p></li>
+</ol>
+<p><em>Criterio de éxito para la solución:</em></p>
+<ul>
+<li><p>El Analista A debe eliminar la segunda aplicación de trend y utilizar directamente <span class="math inline">\(LC=894.0238008\)</span> USD por exposición.</p></li>
+<li><p>El Analista B debe incluir <span class="math inline">\(FER=FE/R_{\text{current}}\)</span> junto con <span class="math inline">\(LR_{\text{proj}}\)</span>.</p></li>
+<li><p>Ambos métodos deben reconciliar en <span class="math inline">\(I=\mathbf{1.1015611767 \approx 1.10156118}\)</span> y <span class="math inline">\(\Delta r=\mathbf{+10.1561177\% \approx +10.16\%}\)</span> antes del redondeo editorial.</p></li>
+<li><p>La discrepancia debe tratarse como un problema de calidad y compatibilidad de bases; no debe resolverse promediando dos indicaciones construidas de manera inconsistente.</p></li>
+</ul>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-credibility.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="option-pricing-fundamentals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": null,
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
